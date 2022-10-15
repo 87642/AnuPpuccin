@@ -572,6 +572,11 @@ settings:
       color-scheme: light;
     --highlight-mix-blend-mode: darken;
 }
+body {
+  --anp-rainbow-folder-bg-opacity: 1;
+  --anp-rainbow-folder-border-opacity: 1;
+  --anp-rainbow-folder-collapse-border-custom: #00000044;
+}
 /*--------FOLDER OVERHAULS------------*/
 .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
   font-size: 130%;
