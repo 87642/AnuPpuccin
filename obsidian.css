@@ -114,6 +114,10 @@ settings:
         title: Disable tooltips
         type: class-toggle
     - 
+        id: anp-custom-vault-toggle
+        title: Enable custom vault title (Needs FontAwesome to work)
+        type: class-toggle
+    - 
         id: anp-toggle-scrollbars
         title: Disable scrollbars
         type: class-toggle
@@ -261,7 +265,7 @@ id: anp-rainbow-folder
 collapsed: false
 settings:
     - 
-        id: anp--rainbow-color-toggle
+        id: anp-full-rainbow-color-toggle
         title: Toggle to enable full folder theme
         type: class-toggle
     - 
@@ -578,12 +582,12 @@ body {
   --anp-rainbow-folder-collapse-border-custom: #00000044;
 }
 /*--------FOLDER OVERHAULS------------*/
-.nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
+.anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
   font-size: 130%;
   font-weight: bold;
   text-align: center;
 }
-.nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content:before {
+.anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content:before {
     content: "\f07b";
     font-family: "Symbols Nerd Font";
     text-align: center;
@@ -595,7 +599,7 @@ body {
     height: 100%;
     width: 100%;
 }
-.nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content:active:before {
+.anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content:active:before {
     content: "\f07c";
     padding-right: 4px;
 }
@@ -805,83 +809,83 @@ hr {
   --callout-icon: quote-glyph;
 }
 /*-----------------RAINBOW FOLDERS--------------------*/
-.full-rainbow-color-toggle .nav-file-title-content, .nav-folder-title-content,
-.theme-dark.full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.theme-dark.full-rainbow-color-toggle .nav-file-title,
-.theme-dark.full-rainbow-color-toggle .nav-folder-collapse-indicator,
-.theme-dark.full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator,
-.theme-light.full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.theme-light.full-rainbow-color-toggle .nav-file-title,
-.theme-light.full-rainbow-color-toggle .nav-folder-collapse-indicator,
-.theme-light.full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator {
+.anp-full-rainbow-color-toggle .nav-file-title-content, .nav-folder-title-content,
+.theme-dark.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.theme-dark.anp-full-rainbow-color-toggle .nav-file-title,
+.theme-dark.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator,
+.theme-dark.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator,
+.theme-light.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.theme-light.anp-full-rainbow-color-toggle .nav-file-title,
+.theme-light.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator,
+.theme-light.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator {
     vertical-align: bottom;
 }
-.full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.full-rainbow-color-toggle  .nav-file-title,
-.full-rainbow-color-toggle  .nav-folder-collapse-indicator svg,
-.full-rainbow-color-toggle  .is-collapsed .nav-folder-collapse-indicator svg {
+.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
+.anp-full-rainbow-color-toggle  .nav-file-title,
+.anp-full-rainbow-color-toggle  .nav-folder-collapse-indicator svg,
+.anp-full-rainbow-color-toggle  .is-collapsed .nav-folder-collapse-indicator svg {
     color: var(--background-primary) !important;
 }
-.full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
     padding: 0 5px 0 5px;
 }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
-  background-color: rgba(var(--rainbow-folder-color), var(--rainbow-folder-bg-opacity));
-  border-color: rgba(var(--rainbow-folder-color), var(--rainbow-folder-border-opacity));
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+  background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
+  border-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-border-opacity));
   margin-bottom: 2px;
   border-radius: 5px;
 }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
-body.full-rainbow-color-toggle:not(.is-grabbing)  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
-body.full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
+body.anp-full-rainbow-color-toggle:not(.is-grabbing)  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
+body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover {
     background-color: rgba(var(--ctp-text), 0.1);
 }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
   border-color: rgba(var(--ctp-crust), 0.4);
 }
-.full-rainbow-color-toggle .rainbow-folder-collapse-border-custom-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
-  border-color: var(--rainbow-folder-collapse-border-custom);
+.anp-full-rainbow-color-toggle .anp-rainbow-folder-collapse-border-custom-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+  border-color: var(--anp-rainbow-folder-collapse-border-custom);
 }
-.full-rainbow-color-toggle .nav-file { overflow-y: hidden; }
-.full-rainbow-color-toggle .nav-file::-webkit-scrollbar { display: none; }
-.full-rainbow-color-toggle .nav-file-title-content.is-being-renamed, .nav-folder-title-content.is-being-renamed {
+.anp-full-rainbow-color-toggle .nav-file { overflow-y: hidden; }
+.anp-full-rainbow-color-toggle .nav-file::-webkit-scrollbar { display: none; }
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed, .nav-folder-title-content.is-being-renamed {
   cursor: text;
   border-color: var(--interactive-accent);
   background-color: rgba(var(--ctp-crust), 0.2);
 }
-.full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
+.anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
   background-color: hsla(var(--color-accent-hsl), 0.2);
 }
-.full-rainbow-color-toggle.catppuccin-accent-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
+.anp-full-rainbow-color-toggle.catppuccin-accent-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
   background-color: rgba(var(--ctp-accent), 0.2);
 }
-body.full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
+body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
   background-color: rgba(var(--color-accent), 0.3);
 }
-.full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
   background-color: hsla(var(--color-accent-hsl), 0.43);
   border-left: 6px solid var(--color-accent);
   border-color: var(--color-accent);
 }
-.full-rainbow-color-toggle.catppuccin-accent-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+.anp-full-rainbow-color-toggle.catppuccin-accent-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
   background-color: rgba(var(--ctp-accent), 0.43);
   border-left: 6px solid rgb(var(--ctp-accent));
   border-color: rgb(var(--ctp-accent));
 }
-body.full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
     background-color: rgba(var(--ctp-text), 0.2);
     border-color: rgba(var(--ctp-text), 0.2);
 }
-.full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
 }
