@@ -115,7 +115,7 @@ settings:
         type: class-toggle
     - 
         id: anp-custom-vault-toggle
-        title: Enable custom vault title (Needs FontAwesome to work)
+        title: Enable custom vault title (Needs a NerdFont supporting font to work)
         type: class-toggle
     - 
         id: anp-toggle-scrollbars
@@ -127,6 +127,10 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: anp-toggle-preview
+        title: Enable custom preview margins
+        type: class-toggle
     - 
         id: anp-preview-width-pct
         title: Preview width
@@ -580,6 +584,8 @@ body {
   --anp-rainbow-folder-bg-opacity: 1;
   --anp-rainbow-folder-border-opacity: 1;
   --anp-rainbow-folder-collapse-border-custom: #00000044;
+  --anp-preview-width-pct: 95%;
+  --anp-preview-width-max: 800px;
 }
 /*--------FOLDER OVERHAULS------------*/
 .anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
@@ -604,7 +610,7 @@ body {
     padding-right: 4px;
 }
 /*----------FILE PREVIEW MARGINS--------------*/
-.markdown-preview-section {
+.anp-toggle-preview .markdown-preview-section {
   max-width: var(--anp-preview-width-max);
   width: var(--anp-preview-width-pct);
   margin: 0 auto;
