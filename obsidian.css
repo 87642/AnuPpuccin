@@ -193,15 +193,8 @@ settings:
     - 
         id: anp-header-font
         title: Heading Font
-        type: variable-select
+        type: variable-text
         default: Noto Serif
-        options:
-            - 
-                label: Noto Serif
-                value: Noto Serif
-            - 
-                label: Libertine Serif
-                value: Libertine Serif
     -
         id: anp-header-color-toggle
         title: Toggle to enable custom header colors
@@ -572,7 +565,6 @@ settings:
     --scrollbar-thumb-bg: rgba(var(--ctp-text), 0.1);
     --workspace-background-translucent: rgba(var(--ctp-crust), 0.6);
     --blockquote-background-color: rgba(var(--ctp-mantle), 0.4);
-    --anp-header-font: "Noto Serif";
     --width-image-gallery: 200px;
     --min-width-image: 50%;
     --max-width-image: 90%;
@@ -592,8 +584,10 @@ body {
   --anp-preview-width-pct: 95%;
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 10px;
+  --anp-header-font: "Noto Serif";
 }
 /*--------FOLDER OVERHAULS------------*/
+/*-Custom folder title-*/
 .anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
   font-size: 130%;
   font-weight: bold;
@@ -622,46 +616,62 @@ body {
   margin: 0 auto;
 }
 /*---------------UI ELEMENTS---------------*/
+/*-Recolor copy code button-*/
 .markdown-rendered button.copy-code-button {
   background-color: rgb(var(--ctp-crust));
 }
+/*-0 Padding on frontmatter container-*/
+.frontmatter-container {
+  padding: 0;
+}
+/*-Disable scrollbars-*/
 .anp-toggle-scrollbars *::-webkit-scrollbar {
   display: none;
 }
+/*-Custom hr margins-*/
 hr {
   margin-block-start: 5px;
   margin-block-end: 5px;
 }
+/*-Blockquote spacing-*/
 .markdown-rendered blockquote {
   padding-left: 10px;
 }
+/*-Smoother popover transition-*/
 .popover.hover-popover.is-loaded {
   animation: fade .2s;
 }
+/*-Recolor table borders-*/
 .markdown-rendered table,
 .markdown-rendered td, .markdown-rendered th,
 .markdown-rendered thead tr > th:last-child,
+.markdown-rendered thead tr > th,
 .markdown-rendered thead tr > th:first-child {
     text-align: center;
     border: 2px solid var(--table-border-color);
 }
+/*-Recolor tooltips-*/
 .tooltip {
   color: rgb(var(--text));
 }
+/*-Disable tooltips-*/
 .anp-tooltip-toggle .tooltip {
   display: none;
 }
+/*-----------TEXT DECORATIONS-------------*/
+/*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
   --italic-color: rgb(var(--ctp-green));
   --bold-color: rgb(var(--ctp-red));
 }
-/*-----------TEXT DECORATIONS-------------*/
+/*-Make it so that mark overwrites italic and bold colors-*/
 .markdown-rendered mark {
   --italic-color: rgb(var(--ctp-text));
   --bold-color: rgb(var(--ctp-text));
   border-radius: 4px;
   padding: 2px;
 }
+/*-No text decoration for links-*/
 .markdown-rendered .internal-link,
 .markdown-rendered .internal-link:hover,
 .markdown-rendered .internal-link:active,
@@ -669,11 +679,13 @@ hr {
 .markdown-rendered .internal-link.is-unresolved {
     text-decoration: none;
 }
+/*-Formatting recolors-*/
 .cm-s-obsidian span.cm-formatting-strong,
 .cm-s-obsidian span.cm-strong { color: var(--bold-color); }
 .cm-s-obsidian span.cm-formatting-em,
 .cm-s-obsidian span.cm-em { color: var(--italic-color); }
 /*--------------HEADERS----------------*/
+/*-Custom header font-*/
 .anp-header-toggle .markdown-reading-view {
   --h1-font: var(--anp-header-font);
   --h2-font: var(--anp-header-font);
@@ -682,6 +694,7 @@ hr {
   --h5-font: var(--anp-header-font);
   --h6-font: var(--anp-header-font);
 }
+/*-Custom header colors-*/
 .anp-header-toggle.anp-header-color-toggle {
   --h1-color: rgba(var(--ctp-red));
   --h2-color: rgba(var(--ctp-peach));
@@ -690,6 +703,7 @@ hr {
   --h5-color: rgba(var(--ctp-lavender));
   --h6-color: rgba(var(--ctp-mauve));
 }
+/*-Source editor recolor application-*/
 .cm-formatting-header-1 { color: var(--h1-color); }
 .cm-formatting-header-2 { color: var(--h2-color); }
 .cm-formatting-header-3 { color: var(--h3-color); }
@@ -705,6 +719,7 @@ hr {
     margin-block-start: var(--anp-header-margin-value);
     margin-block-end: var(--anp-header-margin-value);
 }
+/*-Do not affect calendar-*/
 #calendar-container h3 {
   font-family: var(--font-interface);
   font-weight: bold;
@@ -762,6 +777,7 @@ hr {
   margin-left: -35px;
   padding-right: 3px;
 }
+/*-Custom callout colors-*/
 .anp-callout-color-toggle .callout {
   --callout-color: var(--ctp-blue);
   --callout-icon: lucide-pencil;
@@ -853,6 +869,10 @@ hr {
   margin-bottom: 2px;
   border-radius: 5px;
 }
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
+  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+  border-radius: 5px;
+}
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
@@ -891,14 +911,12 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
   background-color: rgba(var(--color-accent), 0.3);
 }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
-  background-color: hsla(var(--color-accent-hsl), 0.43);
-  border-left: 6px solid var(--color-accent);
-  border-color: var(--color-accent);
-}
-.anp-full-rainbow-color-toggle.catppuccin-accent-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
-  background-color: rgba(var(--ctp-accent), 0.43);
-  border-left: 6px solid rgb(var(--ctp-accent));
+  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
+  border-left: none;
   border-color: rgb(var(--ctp-accent));
+}
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within {
+  box-shadow: none;
 }
 body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
     background-color: rgba(var(--ctp-text), 0.2);
@@ -906,4 +924,13 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 }
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
+}
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title,
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file > .nav-file-title {
+  margin-bottom: 0;
+}
+/*------------------DATAVIEW------------------*/
+/*-Fix dataview table header size-*/
+.table-view-table > thead > tr > th {
+  font-size: medium;
 }
