@@ -257,37 +257,37 @@ settings:
 
 /* @settings
 name: AnuPpuccin Rainbow Folder Settings
-id: rainbow-folder
+id: anp-rainbow-folder
 collapsed: false
 settings:
     - 
-        id: full-rainbow-color-toggle
+        id: anp--rainbow-color-toggle
         title: Toggle to enable full folder theme
         type: class-toggle
     - 
-        id: full-rainbow-folder-settings
+        id: anp-full-rainbow-folder-settings
         title: Full folder theme settings
         type: heading
         level: 2
         collapsed: true
     - 
-        id: rainbow-folder-bg-opacity
+        id: anp-rainbow-folder-bg-opacity
         title: Folder background color opacity
         description: Uses decimal
         type: variable-number
         default: 0.7
     - 
-        id: rainbow-folder-border-opacity
+        id: anp-rainbow-folder-border-opacity
         title: Folder border opacity
         description: Uses decimal
         type: variable-number
         default: 1
     - 
-        id: rainbow-folder-collapse-border-custom-toggle
+        id: anp-rainbow-folder-collapse-border-custom-toggle
         title: Rainbow custom collapse color toggle
         type: class-toggle
     - 
-        id: rainbow-folder-collapse-border-custom
+        id: anp-rainbow-folder-collapse-border-custom
         title: Collapsed file list border
         type: variable-themed-color
         format: hex
@@ -298,7 +298,6 @@ settings:
 
 /*------------------Defining Colorschemes-------------------*/
 .theme-light, .theme-light.ctp-latte {
-  /* Yes i know it's latte but it's the default here */
   --ctp-rosewater: 222, 149, 132;
   --ctp-flamingo: 221, 120, 120;
   --ctp-pink: 236, 131, 208;
