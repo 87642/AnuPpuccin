@@ -114,6 +114,10 @@ settings:
         title: Disable tooltips
         type: class-toggle
     - 
+        id: anp-decoration-toggle
+        title: Enable decoration recolors
+        type: class-toggle
+    - 
         id: anp-custom-vault-toggle
         title: Enable custom vault title (Needs a NerdFont supporting font to work)
         type: class-toggle
@@ -209,9 +213,12 @@ settings:
     - 
         id: anp-header-margin-value
         title: Header margin value
-        description: In px
-        type: variable-number
-        default: 10
+        description: SIze unit is px
+        type: variable-number-slider
+        min: 0
+        max: 30
+        step: 2
+        default: 20
         format: px
     - 
         id: anp-header-size-value
@@ -569,8 +576,6 @@ settings:
     --width-image-gallery: 200px;
     --min-width-image: 50%;
     --max-width-image: 90%;
-    --italic-color: rgb(var(--ctp-green));
-    --bold-color: rgb(var(--ctp-red));
 }
 .theme-dark {
       color-scheme: dark;
@@ -645,6 +650,10 @@ hr {
 }
 .anp-tooltip-toggle .tooltip {
   display: none;
+}
+.anp-decoration-toggle {
+  --italic-color: rgb(var(--ctp-green));
+  --bold-color: rgb(var(--ctp-red));
 }
 /*-----------TEXT DECORATIONS-------------*/
 .markdown-rendered mark {
