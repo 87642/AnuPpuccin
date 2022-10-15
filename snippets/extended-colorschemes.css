@@ -1,0 +1,122 @@
+/* @settings
+name: AnuPpuccin Themes Extended
+id: anuppuccin-theme-settings-extended
+settings:
+  -
+    id: anp-theme-ext-light
+    title: Toggle extended light theme
+    type: class-toggle
+  -
+    id: anp-theme-ext-dark
+    title: Toggle extended dark theme
+    type: class-toggle
+  - 
+    id: catppuccin-theme-extended
+    title: Light theme flavor
+    description: Select your preferred light mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-latte
+    options:
+        - 
+            label: Nord
+            value: ctp-nord-light
+  - 
+    id: catppuccin-theme-dark-extended
+    title: Dark theme flavor
+    description: Select your preferred dark mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-mocha
+    options:
+        -
+            label: Rosebox
+            value: ctp-rosebox
+        -
+            label: Dracula
+            value: ctp-dracula
+*/
+.theme-dark.anp-theme-ext-dark.ctp-rosebox {
+  --ctp-rosewater: 165, 117, 98 !important;
+  --ctp-flamingo: 165, 117, 98 !important;
+  --ctp-pink: 180, 142, 173 !important;
+  --ctp-mauve: 180, 142, 173 !important;
+  --ctp-red: 191, 97, 106 !important;
+  --ctp-maroon: 191, 97, 106 !important;
+  --ctp-peach: 208, 135, 112 !important;
+  --ctp-yellow: 235, 203, 139 !important;
+  --ctp-green: 163, 190, 140 !important;
+  --ctp-teal: 143, 188, 187 !important;
+  --ctp-sky: 136, 192, 208 !important;
+  --ctp-sapphire: 136, 192, 208 !important;
+  --ctp-blue: 94, 129, 172 !important;
+  --ctp-lavender: 129, 161, 193 !important;
+  --ctp-text: 163, 165, 170 !important;
+  --ctp-subtext1: 135, 137, 145 !important;
+  --ctp-subtext0: 110, 113, 119 !important;
+  --ctp-overlay2: 92, 92, 92 !important;
+  --ctp-overlay1: 82, 82, 82 !important;
+  --ctp-overlay0: 71, 71, 71 !important;
+  --ctp-surface2: 61, 61, 61 !important;
+  --ctp-surface1: 51, 51, 51 !important;
+  --ctp-surface0: 40, 40, 40 !important;
+  --ctp-base: 34, 34, 34 !important;
+  --ctp-mantle: 35, 35, 35 !important;
+  --ctp-crust: 38, 38, 38 !important;
+}
+.theme-light.anp-theme-ext-light.ctp-nord-light {
+    --ctp-rosewater: 209, 135, 112 !important;
+    --ctp-flamingo: 180, 142, 173 !important;
+    --ctp-pink: 180, 142, 173 !important;
+    --ctp-mauve: 180, 142, 173 !important;
+    --ctp-red: 191, 97, 106 !important;
+    --ctp-maroon: 191, 97, 106 !important;
+    --ctp-peach: 208, 135, 112 !important;
+    --ctp-yellow: 216, 172, 84 !important;
+    --ctp-green: 136, 167, 108 !important;
+    --ctp-teal: 121, 191, 142 !important;
+    --ctp-sky: 143, 188, 187 !important;
+    --ctp-sapphire: 136, 192, 208 !important;
+    --ctp-blue: 94, 129, 172 !important;
+    --ctp-lavender: 94, 129, 172 !important;
+    --ctp-text: 46, 52, 64 !important;
+    --ctp-subtext1: 59, 66, 82 !important;
+    --ctp-subtext0: 67, 76, 94 !important;
+    --ctp-overlay2: 76, 86, 106 !important;
+    --ctp-overlay1: 86, 97, 118 !important;
+    --ctp-overlay0: 143, 188, 187 !important;
+    --ctp-surface2: 216, 222, 233 !important;
+    --ctp-surface1: 216, 222, 233 !important;
+    --ctp-surface0: 229, 233, 240 !important;
+    --ctp-crust: 229, 233, 240 !important;
+    --ctp-mantle: 231, 235, 241 !important;
+    --ctp-base: 236, 239, 244 !important;
+}
+.theme-dark.anp-theme-ext-dark.ctp-dracula {
+  --ctp-rosewater: 246, 201, 153 !important;
+  --ctp-flamingo: 245, 189, 166 !important;
+  --ctp-pink: 228, 157, 248 !important;
+  --ctp-mauve: 189, 147, 249 !important;
+  --ctp-red: 255, 85, 85 !important;
+  --ctp-maroon: 230, 102, 102 !important;
+  --ctp-peach: 255, 184, 108 !important;
+  --ctp-yellow: 241, 250, 140 !important;
+  --ctp-green: 80, 250, 123 !important;
+  --ctp-teal: 104, 219, 211 !important;
+  --ctp-sky: 139, 233, 253 !important;
+  --ctp-sapphire: 104, 197, 240 !important;
+  --ctp-blue: 95, 126, 222 !important;
+  --ctp-lavender: 197, 146, 222 !important;
+  --ctp-text: 248, 248, 242 !important;
+  --ctp-subtext1: 211, 211, 197 !important;
+  --ctp-subtext0: 191, 191, 181 !important;
+  --ctp-overlay2: 139, 143, 167 !important;
+  --ctp-overlay1: 110, 114, 145 !important;
+  --ctp-overlay0: 88, 92, 116 !important;
+  --ctp-surface2: 68, 71, 90 !important;
+  --ctp-surface1: 56, 59, 76 !important;
+  --ctp-surface0: 48, 50, 65 !important;
+  --ctp-base: 40, 42, 54 !important;
+  --ctp-mantle: 33, 34, 44 !important;
+  --ctp-crust: 26, 27, 35 !important;
+}
