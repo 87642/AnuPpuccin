@@ -193,15 +193,8 @@ settings:
     - 
         id: anp-header-font
         title: Heading Font
-        type: variable-select
+        type: variable-text
         default: Noto Serif
-        options:
-            - 
-                label: Noto Serif
-                value: Noto Serif
-            - 
-                label: Libertine Serif
-                value: Libertine Serif
     -
         id: anp-header-color-toggle
         title: Toggle to enable custom header colors
@@ -572,7 +565,6 @@ settings:
     --scrollbar-thumb-bg: rgba(var(--ctp-text), 0.1);
     --workspace-background-translucent: rgba(var(--ctp-crust), 0.6);
     --blockquote-background-color: rgba(var(--ctp-mantle), 0.4);
-    --anp-header-font: "Noto Serif";
     --width-image-gallery: 200px;
     --min-width-image: 50%;
     --max-width-image: 90%;
@@ -592,6 +584,7 @@ body {
   --anp-preview-width-pct: 95%;
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 10px;
+  --anp-header-font: "Noto Serif";
 }
 /*--------FOLDER OVERHAULS------------*/
 .anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
@@ -641,6 +634,7 @@ hr {
 .markdown-rendered table,
 .markdown-rendered td, .markdown-rendered th,
 .markdown-rendered thead tr > th:last-child,
+.markdown-rendered thead tr > th,
 .markdown-rendered thead tr > th:first-child {
     text-align: center;
     border: 2px solid var(--table-border-color);
@@ -906,4 +900,8 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 }
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
+}
+/*------------------DATAVIEW------------------*/
+.table-view-table > thead > tr > th {
+  font-size: medium;
 }
