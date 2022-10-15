@@ -888,7 +888,7 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
   background-color: rgba(var(--color-accent), 0.3);
 }
-.anp-full-rainbow-color-toggle.catppuccin-accent-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-border-opacity));
   border-left: none;
   border-color: rgb(var(--ctp-accent));
