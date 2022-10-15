@@ -873,17 +873,17 @@ hr {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-radius: 5px;
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
+.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
 body.anp-full-rainbow-color-toggle:not(.is-grabbing)  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
 body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover {
     background-color: rgba(var(--ctp-text), 0.1);
@@ -891,7 +891,7 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
   border-color: rgba(var(--ctp-crust), 0.4);
 }
-.anp-full-rainbow-color-toggle .anp-rainbow-folder-collapse-border-custom-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
+.anp-full-rainbow-color-toggle.anp-rainbow-folder-collapse-border-custom-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
   border-color: var(--anp-rainbow-folder-collapse-border-custom);
 }
 .anp-full-rainbow-color-toggle .nav-file { overflow-y: hidden; }
@@ -925,8 +925,8 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
 }
-.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title,
-.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-file > .nav-file-title {
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children >  .nav-file.has-focus > .nav-file-title,
+.anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children >  .nav-file > .nav-file-title {
   margin-bottom: 0;
 }
 /*------------------DATAVIEW------------------*/
