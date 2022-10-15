@@ -889,7 +889,7 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
   background-color: rgba(var(--color-accent), 0.3);
 }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
-  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-border-opacity));
+  background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-left: none;
   border-color: rgb(var(--ctp-accent));
 }
