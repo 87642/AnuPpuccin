@@ -3,7 +3,7 @@ name: AnuPpuccin
 id: anuppuccin-theme-settings
 settings:
   - 
-    id: catppuccin-theme-credits-link
+    id: anuppuccin-theme-credits-link
     title: Source Code
     description: View and contribute to the theme at github.com/anubisnekhet/anuppuccin
     type: heading
@@ -16,7 +16,7 @@ settings:
     level: 1
     collapsed: true
   - 
-    id: catppuccin-theme-light
+    id: anuppuccin-theme-light
     title: Light theme flavor
     description: Select your preferred light mode flavor
     type: class-select
@@ -30,7 +30,7 @@ settings:
             label: Rosé Pine
             value: ctp-rosepine-light
   - 
-    id: catppuccin-theme-dark
+    id: anuppuccin-theme-dark
     title: Dark theme flavor
     description: Select your preferred dark mode flavor
     type: class-select
@@ -47,13 +47,13 @@ settings:
             label: Mocha
             value: ctp-mocha
   - 
-    id: catppuccin-accent-toggle
+    id: anuppuccin-accent-toggle
     title: Force catppuccin accents
     description: Forces catppuccin accents to be utilised instead of default obsidian accent
     type: class-toggle
     default: true
   - 
-    id: catppuccin-theme-accents
+    id: anuppuccin-theme-accents
     title: Theme accent
     description: Select your preferred accent
     type: class-select
@@ -308,6 +308,10 @@ settings:
       title: Toggle to enable full folder theme
       type: class-toggle
   - 
+      id: anp-simple-rainbow-color-toggle
+      title: Toggle to enable simple folder theme
+      type: class-toggle
+  - 
       id: anp-full-rainbow-folder-settings
       title: Full folder theme settings
       type: heading
@@ -342,6 +346,28 @@ settings:
       opacity: true
       default-light: "#D9E0EE44"
       default-dark: "#1E1E2E44"
+  - 
+      id: anp-simple-rainbow-folder-settings
+      title: Simple folder theme settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-simple-rainbow-title-toggle
+      title: Toggle to enable title recolor
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-indentation-toggle
+      title: Toggle to enable collpase indent recolor
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-collapse-toggle
+      title: Toggle to enable collpase indicator
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-icon-toggle
+      title: Toggle to enable file icon
+      type: class-toggle
 */
 
 /*------------------Defining Colorschemes-------------------*/
@@ -491,23 +517,23 @@ settings:
 }
 
 /*------------------Selecting Accents-------------------*/
-.catppuccin-accent-toggle.ctp-accent-rosewater { --ctp-accent: var(--ctp-rosewater); }
-.catppuccin-accent-toggle.ctp-accent-flamingo { --ctp-accent: var(--ctp-flamingo); }
-.catppuccin-accent-toggle.ctp-accent-pink { --ctp-accent: var(--ctp-pink); }
-.catppuccin-accent-toggle.ctp-accent-mauve { --ctp-accent: var(--ctp-mauve); }
-.catppuccin-accent-toggle.ctp-accent-red { --ctp-accent: var(--ctp-red); }
-.catppuccin-accent-toggle.ctp-accent-maroon { --ctp-accent: var(--ctp-maroon); }
-.catppuccin-accent-toggle.ctp-accent-peach { --ctp-accent: var(--ctp-peach); }
-.catppuccin-accent-toggle.ctp-accent-yellow { --ctp-accent: var(--ctp-yellow); }
-.catppuccin-accent-toggle.ctp-accent-green { --ctp-accent: var(--ctp-green); }
-.catppuccin-accent-toggle.ctp-accent-teal { --ctp-accent: var(--ctp-teal); }
-.catppuccin-accent-toggle.ctp-accent-sky { --ctp-accent: var(--ctp-sky); }
-.catppuccin-accent-toggle.ctp-accent-sapphire { --ctp-accent: var(--ctp-sapphire); }
-.catppuccin-accent-toggle.ctp-accent-blue { --ctp-accent: var(--ctp-blue); }
-.catppuccin-accent-toggle.ctp-accent-lavender { --ctp-accent: var(--ctp-lavender); }
+.anuppuccin-accent-toggle.ctp-accent-rosewater { --ctp-accent: var(--ctp-rosewater); }
+.anuppuccin-accent-toggle.ctp-accent-flamingo { --ctp-accent: var(--ctp-flamingo); }
+.anuppuccin-accent-toggle.ctp-accent-pink { --ctp-accent: var(--ctp-pink); }
+.anuppuccin-accent-toggle.ctp-accent-mauve { --ctp-accent: var(--ctp-mauve); }
+.anuppuccin-accent-toggle.ctp-accent-red { --ctp-accent: var(--ctp-red); }
+.anuppuccin-accent-toggle.ctp-accent-maroon { --ctp-accent: var(--ctp-maroon); }
+.anuppuccin-accent-toggle.ctp-accent-peach { --ctp-accent: var(--ctp-peach); }
+.anuppuccin-accent-toggle.ctp-accent-yellow { --ctp-accent: var(--ctp-yellow); }
+.anuppuccin-accent-toggle.ctp-accent-green { --ctp-accent: var(--ctp-green); }
+.anuppuccin-accent-toggle.ctp-accent-teal { --ctp-accent: var(--ctp-teal); }
+.anuppuccin-accent-toggle.ctp-accent-sky { --ctp-accent: var(--ctp-sky); }
+.anuppuccin-accent-toggle.ctp-accent-sapphire { --ctp-accent: var(--ctp-sapphire); }
+.anuppuccin-accent-toggle.ctp-accent-blue { --ctp-accent: var(--ctp-blue); }
+.anuppuccin-accent-toggle.ctp-accent-lavender { --ctp-accent: var(--ctp-lavender); }
 
 /*------------------Actual Configs--------------------*/
-.catppuccin-accent-toggle {
+.anuppuccin-accent-toggle {
     --color-accent: rgb(var(--ctp-accent));
     --color-accent-1: rgb(var(--ctp-accent));
     --color-accent-2: rgba(var(--ctp-accent), 0.9);
@@ -593,6 +619,7 @@ settings:
     --modal-border-color:rgb(var(--ctp-surface0));
     --text-normal: rgb(var(--ctp-text));
     --text-muted: rgb(var(--ctp-overlay2));
+    --text-muted-rgb: var(--ctp-overlay2);
     --text-faint: rgb(var(--ctp-subtext0));
     --text-error: rgb(var(--ctp-red));
     --text-error-hover: rgba(var(--ctp-red), 0.8);
@@ -657,6 +684,10 @@ body {
   margin: 0 auto;
 }
 /*---------------UI ELEMENTS---------------*/
+/*-Notices-*/
+.notice {
+  color: rgb(var(--ctp-text));
+}
 /*-Recolor copy code button-*/
 .markdown-rendered button.copy-code-button {
   background-color: rgb(var(--ctp-crust));
@@ -830,7 +861,7 @@ hr {
   --callout-color: var(--ctp-blue);
   --callout-icon: lucide-pencil;
 }
-.anp-callout-color-toggle.catppuccin-accent-toggle .callout {
+.anp-callout-color-toggle.anuppuccin-accent-toggle .callout {
   --callout-color: var(--ctp-accent);
   --callout-icon: lucide-pencil;
 }
@@ -891,28 +922,29 @@ hr {
   --callout-icon: quote-glyph;
 }
 /*-----------------RAINBOW FOLDERS--------------------*/
-.anp-full-rainbow-color-toggle .nav-file-title-content, .nav-folder-title-content,
-.theme-dark.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.theme-dark.anp-full-rainbow-color-toggle .nav-file-title,
-.theme-dark.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator,
-.theme-dark.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator,
-.theme-light.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
-.theme-light.anp-full-rainbow-color-toggle .nav-file-title,
-.theme-light.anp-full-rainbow-color-toggle .nav-folder-collapse-indicator,
-.theme-light.anp-full-rainbow-color-toggle .is-collapsed .nav-folder-collapse-indicator {
-    vertical-align: bottom;
-}
+/*-RAINBOW COLOR VARIABLE PICKER-*/
+.nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
+.nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
+.nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
+.nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
+.nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
+.nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
+.nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
+.nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
+.nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
+.nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
+.nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
+/*-FULL RAINBOW THEME-*/
 .anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title,
 .anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title,
 .anp-full-rainbow-color-toggle  .nav-folder-collapse-indicator svg,
 .anp-full-rainbow-color-toggle  .is-collapsed .nav-folder-collapse-indicator svg,
 .anp-rainbow-file-toggle.anp-full-rainbow-color-toggle  .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title {
-    color: var(--background-primary);
+  color: var(--background-primary);
 }
-.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
-    padding: 0 5px 0 5px;
-}
+.anp-full-rainbow-color-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children { padding: 0 5px 0 5px; }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder {
+  transition: background-color 0.4s;
   background-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-bg-opacity));
   border-color: rgba(var(--rainbow-folder-color), var(--anp-rainbow-folder-border-opacity));
   margin-bottom: 2px;
@@ -928,20 +960,11 @@ hr {
   border-radius: 5px;
   margin-bottom: 2px;
 }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+3) { --rainbow-folder-color: var(--ctp-maroon); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+4) { --rainbow-folder-color: var(--ctp-peach); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+5) { --rainbow-folder-color: var(--ctp-yellow); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+6) { --rainbow-folder-color: var(--ctp-green); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+7) { --rainbow-folder-color: var(--ctp-teal); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+8) { --rainbow-folder-color: var(--ctp-sky); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+9) { --rainbow-folder-color: var(--ctp-sapphire); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+10) { --rainbow-folder-color: var(--ctp-blue); }
-.nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n) { --rainbow-folder-color: var(--ctp-lavender); }
-body.anp-full-rainbow-color-toggle:not(.is-grabbing)  .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover,
-body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover {
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
     background-color: rgba(var(--ctp-text), 0.1);
+}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
+  background-color: rgba(var(--ctp-accent), 0.3);
 }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-children {
   border-color: rgba(var(--ctp-crust), 0.4);
@@ -959,33 +982,54 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 .anp-full-rainbow-color-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
   background-color: hsla(var(--color-accent-hsl), 0.2);
 }
-.anp-full-rainbow-color-toggle.catppuccin-accent-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
+.anp-full-rainbow-color-toggle.anuppuccin-accent-toggle .nav-file-title-content.is-being-renamed::selection, .nav-folder-title-content.is-being-renamed::selection {
   background-color: rgba(var(--ctp-accent), 0.2);
-}
-body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-file .nav-file-title:hover {
-  background-color: rgba(var(--color-accent), 0.3);
 }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file.has-focus {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-left: none;
   border-color: rgb(var(--ctp-accent));
 }
-.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within {
-  box-shadow: none;
-}
-body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
-    background-color: rgba(var(--ctp-text), 0.2);
-    border-color: rgba(var(--ctp-text), 0.2);
-}
+.anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title:focus-within, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title:focus-within,
 .anp-full-rainbow-color-toggle .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title, .workspace-leaf.mod-active .nav-file.has-focus > .nav-file-title {
   box-shadow: none;
+}
+.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-file-title.is-active {
+    background-color: rgba(var(--ctp-text), 0.2);
+    border-color: rgba(var(--ctp-text), 0.2);
 }
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children >  .nav-file.has-focus > .nav-file-title,
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children >  .nav-file > .nav-file-title {
   margin-bottom: 0;
 }
+/*-SIMPLE RAINBOW THEME-*/
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-title-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  transition: color 0.4s;
+  color: rgb(var(--rainbow-folder-color));
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-toggle .nav-folder.mod-root > .nav-folder-children > .nav-folder .nav-folder-title:after {
+  transition: color 0.4s;
+  color: rgb(var(--rainbow-folder-color));
+  content: "⬤";
+  position: relative;
+  margin-left: 4px;
+  top: 1px;
+  opacity: 0.5;
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-indentation-toggle .nav-folder.mod-root .nav-folder > .nav-folder-children {
+  transition: color 0.4s;
+  border-color: rgba(var(--rainbow-folder-color), 0.5);
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-collapse-toggle .nav-folder-collapse-indicator.collapse-icon svg.svg-icon {
+  transition: color 0.4s;
+  color: rgb(var(--rainbow-folder-color));
+}
 /*---------------------PLUGINS-------------------------------*/
 /*----------------STYLE SETTINGS------------*/
+.style-settings-heading[data-level="0"] { margin-bottom: 15px;}
+.style-settings-heading[data-level="0"].is-collapsed { margin-bottom: 0px; }
+/*-Header recolors-*/
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name { color: rgb(var(--ctp-red)); }
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"].style-settings-heading { border-bottom: 1px solid rgba(var(--ctp-red), 0.5); }
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="2"] .setting-item-name { color: rgb(var(--ctp-green)); }
@@ -994,8 +1038,47 @@ body.anp-full-rainbow-color-toggle:not(.is-grabbing) .nav-folder.mod-root > .nav
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="3"].style-settings-heading { border-bottom: 1px solid rgba(var(--ctp-blue), 0.5); }
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="4"] .setting-item-name { color: rgb(var(--ctp-mauve)); }
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="4"].style-settings-heading { border-bottom: 1px solid rgba(var(--ctp-mauve), 0.5); }
+/*-Hide empty settings containers-*/
+.style-settings-container:empty { display: none; }
+/*-Theme credits styling-*/
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] {
+  margin-bottom: 0px;
+  cursor: default;
+}
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] { padding-bottom: 0px; }
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] .style-settings-collapse-indicator,
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] .setting-editor-extra-setting-button {
+  display: none;
+}
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] .setting-item-name {
+  color: var(--background-primary) !important;
+  background: linear-gradient(to right, rgb(var(--ctp-pink)), rgb(var(--ctp-mauve)));
+  width: fit-content;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+.style-settings-heading[data-id="anuppuccin-theme-credits-link"] {
+  border-bottom: 1px solid rgb(var(--ctp-surface0)) !important;
+}
 /*------------------DATAVIEW------------------*/
 /*-Fix dataview table header size-*/
 .table-view-table > thead > tr > th {
   font-size: medium;
+}
+/*------------------KANBAN--------------------*/
+/*-Thinner Border-*/
+.kanban-plugin__lane-items>.kanban-plugin__placeholder:only-child {
+  border: 2px dashed rgba(var(--text-muted-rgb),.1);
+}
+/*-Disable button shadow-*/
+.kanban-plugin__new-item-button,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover,
+.kanban-plugin__lane-settings-button:hover {
+  box-shadow: none;
+  background-color: rgb(var(--ctp-crust));
+}
+.kanban-plugin__lane-grip {
+  background-color: rgb(var(--ctp-crust));
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
