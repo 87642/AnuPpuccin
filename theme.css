@@ -872,6 +872,7 @@ hr {
 .anp-full-rainbow-color-toggle .nav-folder.mod-root > .nav-folder-children > .nav-file {
   background-color: rgba(var(--ctp-text), var(--anp-rainbow-folder-bg-opacity));
   border-radius: 5px;
+  margin-bottom: 2px;
 }
 .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+1) { --rainbow-folder-color: var(--ctp-mauve); }
 .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(11n+2) { --rainbow-folder-color: var(--ctp-red); }
