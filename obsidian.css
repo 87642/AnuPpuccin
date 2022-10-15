@@ -586,6 +586,7 @@ body {
   --anp-rainbow-folder-collapse-border-custom: #00000044;
   --anp-preview-width-pct: 95%;
   --anp-preview-width-max: 800px;
+  --anp-header-margin-value: 10px;
 }
 /*--------FOLDER OVERHAULS------------*/
 .anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title > .nav-folder-title-content {
@@ -654,7 +655,9 @@ hr {
 }
 .markdown-rendered .internal-link,
 .markdown-rendered .internal-link:hover,
-.markdown-rendered .internal-link:active {
+.markdown-rendered .internal-link:active,
+.markdown-rendered .internal-link.is-unresolved:hover,
+.markdown-rendered .internal-link.is-unresolved {
     text-decoration: none;
 }
 .cm-s-obsidian span.cm-formatting-strong,
