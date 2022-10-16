@@ -133,7 +133,7 @@ settings:
       type: class-toggle
   - 
       id: anp-custom-vault-toggle
-      title: Enable custom vault title (Needs a NerdFont supporting font to work)
+      title: Enable custom vault title
       type: class-toggle
   - 
       id: anp-toggle-scrollbars
