@@ -878,20 +878,28 @@ hr {
   padding: 10px;
   cursor: pointer;
 }
-.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) .callout-title,
-.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title {
+.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
   padding: 10px 0px 10px 10px;
   border-bottom: 1px dashed;
+  border-color: rgba(var(--callout-color), 0.4);
+}
+.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title {
+  background-color: rgba(var(--callout-color), 0.1);
+  padding: 10px 0px 10px 10px;
   border-color: rgba(var(--callout-color), 0.4);
 }
 .anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) .callout-title,
 .anp-callout-toggle .callout.is-collapsible.is-collapsed .callout-title {
   cursor: pointer;
 }
-.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) .callout-content,
-.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-content {
+.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) .callout-content
+{
   padding: 10px 10px 0 15px;
+}
+.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-content {
+  padding: 10px 10px 10px 15px;
+  border-top: 1px dashed rgba(var(--callout-color), 0.4);
 }
 /*.theme-light.anp-callout-toggle .callout-icon .svg-icon,
 .theme-light.anp-callout-toggle .callout-title,*/
