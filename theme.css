@@ -163,11 +163,11 @@ settings:
       default: 80
       format: "%"
   - 
-      id: anp-preview-width-max
+      id: file-line-width
       title: Maximum preview width
       description: In px
       type: variable-number
-      default: 500
+      default: 700
       format: px
   - 
       id: anp-callout-header
@@ -632,10 +632,12 @@ settings:
     --scrollbar-bg: rgba(var(--ctp-text), 0.05);
     --scrollbar-thumb-bg: rgba(var(--ctp-text), 0.1);
     --workspace-background-translucent: rgba(var(--ctp-crust), 0.6);
-    --blockquote-background-color: rgba(var(--ctp-mantle), 0.4);
+    --blockquote-background-color: rgba(var(--ctp-crust), 0.5);
     --width-image-gallery: 200px;
     --min-width-image: 50%;
     --max-width-image: 90%;
+    --drag-ghost-background: rgb(var(--ctp-text));
+    --drag-ghost-text-color: rgb(var(--ctp-crust));
 }
 .theme-dark {
       color-scheme: dark;
@@ -679,7 +681,6 @@ body {
 }
 /*----------FILE PREVIEW MARGINS--------------*/
 .anp-toggle-preview .markdown-preview-section {
-  max-width: var(--anp-preview-width-max);
   width: var(--anp-preview-width-pct);
   margin: 0 auto;
 }
@@ -765,7 +766,7 @@ hr {
 }
 /*--------------HEADERS----------------*/
 /*-Custom header font-*/
-.anp-header-toggle .markdown-reading-view {
+.anp-header-toggle .markdown-reading-view, .anp-header-toggle .is-live-preview {
   --h1-font: var(--anp-header-font);
   --h2-font: var(--anp-header-font);
   --h3-font: var(--anp-header-font);
