@@ -16,25 +16,46 @@ settings:
     description: Select your preferred light mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-latte
+    default: ctp-nord-light
     options:
         - 
             label: Nord
             value: ctp-nord-light
+        - 
+            label: Solarized
+            value: ctp-solarized-light
   - 
     id: catppuccin-theme-dark-extended
     title: Dark theme flavor
     description: Select your preferred dark mode flavor
     type: class-select
     allowEmpty: false
-    default: ctp-mocha
+    default: ctp-nord-dark
     options:
+        -
+            label: Rosé Pine
+            value: ctp-rosepine-dark
         -
             label: Rosebox
             value: ctp-rosebox
         -
             label: Dracula
             value: ctp-dracula
+        -
+            label: Nord
+            value: ctp-nord-dark
+        -
+            label: Nord Dark (Custom palette)
+            value: ctp-nord-darker
+        -
+            label: Solarized
+            value: ctp-solarized-dark
+  - 
+      id: anp-theme-ext-custom
+      title: Custom theme settings (WIP)
+      type: heading
+      level: 2
+      collapsed: true
 */
 .theme-dark.anp-theme-ext-dark.ctp-rosebox {
   --ctp-rosewater: 165, 117, 98 !important;
@@ -119,4 +140,174 @@ settings:
   --ctp-base: 40, 42, 54 !important;
   --ctp-mantle: 33, 34, 44 !important;
   --ctp-crust: 26, 27, 35 !important;
+}
+.theme-dark.anp-theme-ext-dark.ctp-nord-dark {
+  --ctp-rosewater: 226, 191, 169 !important;
+  --ctp-flamingo: 239, 171, 150 !important;
+  --ctp-pink: 214, 163, 222 !important;
+  --ctp-mauve: 180, 142, 173 !important;
+  --ctp-red: 191, 97, 106 !important;
+  --ctp-maroon: 191, 108, 97 !important;
+  --ctp-peach: 208, 135, 112 !important;
+  --ctp-yellow: 235, 203, 139 !important;
+  --ctp-green: 163, 190, 140 !important;
+  --ctp-teal: 143, 188, 187 !important;
+  --ctp-sky: 136, 192, 208 !important;
+  --ctp-sapphire: 129, 161, 193 !important;
+  --ctp-blue: 94, 129, 172 !important;
+  --ctp-lavender: 192, 167, 187 !important;
+  --ctp-text: 236, 239, 244 !important;
+  --ctp-subtext1: 229, 233, 240 !important;
+  --ctp-subtext0: 217, 222, 232 !important;
+  --ctp-overlay2: 196, 201, 212 !important;
+  --ctp-overlay1: 172, 180, 195 !important;
+  --ctp-overlay0: 149, 158, 178 !important;
+  --ctp-surface2: 125, 137, 161 !important;
+  --ctp-surface1: 103, 116, 142 !important;
+  --ctp-surface0: 77, 87, 106 !important;
+  --ctp-base: 67, 76, 94 !important;
+  --ctp-mantle: 59, 66, 82 !important;
+  --ctp-crust: 46, 52, 64 !important;
+  --ctp-accent: 143, 188, 187 !important;
+}
+.theme-dark.anp-theme-ext-dark.ctp-nord-darker {
+  --ctp-rosewater: 226, 191, 169 !important;
+  --ctp-flamingo: 239, 171, 150 !important;
+  --ctp-pink: 214, 163, 222 !important;
+  --ctp-mauve: 180, 142, 173 !important;
+  --ctp-red: 191, 97, 106 !important;
+  --ctp-maroon: 191, 108, 97 !important;
+  --ctp-peach: 208, 135, 112 !important;
+  --ctp-yellow: 235, 203, 139 !important;
+  --ctp-green: 163, 190, 140 !important;
+  --ctp-teal: 143, 188, 187 !important;
+  --ctp-sky: 136, 192, 208 !important;
+  --ctp-sapphire: 129, 161, 193 !important;
+  --ctp-blue: 94, 129, 172 !important;
+  --ctp-lavender: 192, 167, 187 !important;
+  --ctp-text: 236, 239, 244 !important;
+  --ctp-subtext1: 229, 233, 240 !important;
+  --ctp-subtext0: 217, 222, 232 !important;
+  --ctp-overlay2: 196, 201, 212 !important;
+  --ctp-overlay1: 172, 180, 195 !important;
+  --ctp-overlay0: 149, 158, 178 !important;
+  --ctp-surface2: 125, 137, 161 !important;
+  --ctp-surface1: 67, 76, 94 !important;
+  --ctp-surface0: 59, 66, 82 !important;
+  --ctp-base: 46, 52, 64 !important;
+  --ctp-mantle: 39, 43, 53 !important;
+  --ctp-crust: 30, 34, 41 !important;
+  --ctp-accent: 143, 188, 187 !important;
+}
+.theme-dark.ctp-custom, .theme-light.ctp-custom {
+  --ctp-rosewater: var(--anpe-rosewater) !important;
+  --ctp-flamingo: var(--anpe-flamingo) !important;
+  --ctp-pink: var(--anpe-pink) !important;
+  --ctp-mauve: var(--anpe-mauve) !important;
+  --ctp-red: var(--anpe-red) !important;
+  --ctp-maroon: var(--anpe-maroon) !important;
+  --ctp-peach: var(--anpe-peach) !important;
+  --ctp-yellow: var(--anpe-yellow) !important;
+  --ctp-green: var(--anpe-green) !important;
+  --ctp-teal: var(--anpe-teal) !important;
+  --ctp-sky: var(--anpe-sky) !important;
+  --ctp-sapphire: var(--anpe-sapphire) !important;
+  --ctp-blue: var(--anpe-blue) !important;
+  --ctp-lavender: var(--anpe-lavender) !important;
+  --ctp-text: var(--anpe-text) !important;
+  --ctp-subtext1: var(--anpe-subtext1) !important;
+  --ctp-subtext0: var(--anpe-subtext0) !important;
+  --ctp-overlay2: var(--anpe-overlay2) !important;
+  --ctp-overlay1: var(--anpe-overlay1) !important;
+  --ctp-overlay0: var(--anpe-overlay0) !important;
+  --ctp-surface2: var(--anpe-surface2) !important;
+  --ctp-surface1: var(--anpe-surface1) !important;
+  --ctp-surface0: var(--anpe-surface0) !important;
+  --ctp-base: var(--anpe-base) !important;
+  --ctp-mantle: var(--anpe-mantle) !important;
+  --ctp-crust: var(--anpe-crust) !important;
+}
+.theme-dark.anp-theme-ext-dark.ctp-rosepine-dark {
+  --ctp-rosewater: 243, 215, 204 !important;
+  --ctp-flamingo: 235, 188, 186 !important;
+  --ctp-pink: 223, 167, 231 !important;
+  --ctp-mauve: 196, 167, 231 !important;
+  --ctp-red: 235, 111, 146 !important;
+  --ctp-maroon: 235, 122, 111 !important;
+  --ctp-peach: 235, 159, 111 !important;
+  --ctp-yellow: 246, 193, 119 !important;
+  --ctp-green: 114, 182, 156 !important;
+  --ctp-teal: 156, 207, 216 !important;
+  --ctp-sky: 49, 116, 143 !important;
+  --ctp-sapphire: 68, 132, 171 !important;
+  --ctp-blue: 76, 127, 169 !important;
+  --ctp-lavender: 210, 193, 231 !important;
+  --ctp-text: 224, 222, 244 !important;
+  --ctp-subtext1: 144, 140, 170 !important;
+  --ctp-subtext0: 110, 106, 134 !important;
+  --ctp-overlay2: 82, 79, 103 !important;
+  --ctp-overlay1: 64, 61, 82 !important;
+  --ctp-overlay0: 54, 50, 83 !important;
+  --ctp-surface2: 46, 42, 70 !important;
+  --ctp-surface1: 33, 32, 46 !important;
+  --ctp-surface0: 31, 29, 46 !important;
+  --ctp-base: 25, 23, 36 !important;
+  --ctp-mantle: 17, 16, 25 !important;
+  --ctp-crust: 11, 10, 16 !important;
+}
+.theme-dark.anp-theme-ext-dark.ctp-solarized-dark {
+  --ctp-rosewater: 227, 131, 89 !important;
+  --ctp-flamingo: 241, 142, 168 !important;
+  --ctp-pink: 211, 54, 130 !important;
+  --ctp-mauve: 108, 113, 196 !important;
+  --ctp-red: 220, 50, 47 !important;
+  --ctp-maroon: 220, 60, 46 !important;
+  --ctp-peach: 203, 75, 22 !important;
+  --ctp-yellow: 181, 137, 0 !important;
+  --ctp-green: 133, 153, 0 !important;
+  --ctp-teal: 42, 161, 152 !important;
+  --ctp-sky: 42, 145, 161 !important;
+  --ctp-sapphire: 39, 168, 211 !important;
+  --ctp-blue: 38, 139, 210 !important;
+  --ctp-lavender: 139, 143, 222 !important;
+  --ctp-text: 253, 246, 227 !important;
+  --ctp-subtext1: 237, 232, 214 !important;
+  --ctp-subtext0: 225, 215, 183 !important;
+  --ctp-overlay2: 147, 161, 161 !important;
+  --ctp-overlay1: 117, 159, 163 !important;
+  --ctp-overlay0: 106, 168, 175 !important;
+  --ctp-surface2: 51, 129, 153 !important;
+  --ctp-surface1: 38, 97, 115 !important;
+  --ctp-surface0: 10, 76, 92 !important;
+  --ctp-base: 7, 54, 66 !important;
+  --ctp-mantle: 0, 43, 54 !important;
+  --ctp-crust: 0, 33, 41 !important;
+}
+.theme-light.anp-theme-ext-light.ctp-solarized-light {
+  --ctp-rosewater: 227, 131, 89 !important;
+  --ctp-flamingo: 241, 142, 168 !important;
+  --ctp-pink: 211, 54, 130 !important;
+  --ctp-mauve: 108, 113, 196 !important;
+  --ctp-red: 220, 50, 47 !important;
+  --ctp-maroon: 220, 60, 46 !important;
+  --ctp-peach: 203, 75, 22 !important;
+  --ctp-yellow: 181, 137, 0 !important;
+  --ctp-green: 133, 153, 0 !important;
+  --ctp-teal: 42, 161, 152 !important;
+  --ctp-sky: 42, 145, 161 !important;
+  --ctp-sapphire: 39, 168, 211 !important;
+  --ctp-blue: 38, 139, 210 !important;
+  --ctp-lavender: 139, 143, 222 !important;
+  --ctp-text: 0, 43, 54 !important;
+  --ctp-subtext1: 7, 54, 66 !important;
+  --ctp-subtext0: 10, 76, 92 !important;
+  --ctp-overlay2: 77, 96, 102 !important;
+  --ctp-overlay1: 88, 110, 117 !important;
+  --ctp-overlay0: 101, 123, 131 !important;
+  --ctp-surface2: 131, 148, 150 !important;
+  --ctp-surface1: 145, 160, 161 !important;
+  --ctp-surface0: 173, 184, 184 !important;
+  --ctp-base: 253, 246, 227 !important;
+  --ctp-mantle: 237, 232, 214 !important;
+  --ctp-crust: 224, 215, 184 !important;
 }

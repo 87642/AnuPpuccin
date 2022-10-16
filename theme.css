@@ -201,6 +201,13 @@ settings:
       default: 2
       format: em
   - 
+      id: list-spacing
+      title: List spacing
+      description: Size unit is em
+      type: variable-number
+      default: 0.075
+      format: em
+  - 
       id: anp-header-header
       title: Header settings
       type: heading
@@ -1077,6 +1084,9 @@ hr {
 .kanban-plugin__lane-settings-button:hover {
   box-shadow: none;
   background-color: rgb(var(--ctp-crust));
+}
+.kanban-plugin button {
+  box-shadow: none;
 }
 .kanban-plugin__lane-grip {
   background-color: rgb(var(--ctp-crust));
