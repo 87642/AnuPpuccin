@@ -6,6 +6,7 @@ Personal theme for [Obsidian](https://obsidian.md) :3
 - [Catppuccin](https://github.com/catppuccin/catppuccin) Latte, Frappe, Macchiato, Mocha
 <br>
 Note: Themes are toggled via style settings, the default themes are Latte for light mode and Mocha for dark mode.
+#### If you like my theme:
 <a href="https://ko-fi.com/AnubisNekhet">
     <img height="40px" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" />
 </a>
