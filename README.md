@@ -30,6 +30,9 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 <br>
 Note: Themes are toggled via style settings, the default themes are Latte for light mode and Mocha for dark mode.
 
+### Special thanks to:
+- [Chuck Harmston](https://gist.github.com/chuckharmston) for his amazing alternate tabs snippet
+
 ### If you like my theme:
 I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a ko-fi link.
 <br>
