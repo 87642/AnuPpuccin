@@ -867,9 +867,11 @@ hr {
 .anp-callout-toggle .callout.is-collapsible.is-collapsed {
   padding: 0;
 }
-.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed),
-.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) {
+.anp-callout-toggle .callout.is-collapsible:not(.is-collapsed) {
   padding: 0px 0px 10px 0px;
+}
+.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) {
+  padding: 0px;
 }
 .anp-callout-toggle .callout.is-collapsible.is-collapsed .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
