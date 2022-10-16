@@ -115,8 +115,9 @@ settings:
       level: 2
       collapsed: true
   - 
-      id: anp-alternate-tab-toggle
-      title: Alternate tabs toggle
+      id: anp-color-transition-toggle
+      title: Color transition toggle
+      description: "Adds a transition when switching palettes, looks really neat :)"
       type: class-toggle
   - 
       id: anp-tooltip-toggle
@@ -143,6 +144,28 @@ settings:
       title: Editor font
       type: variable-text
       default: Iosevka Comfy Duo
+  - 
+      id: anp-alt-tab-header
+      title: Alternate Tab settings
+      type: heading
+      level: 2
+      collapsed: true
+  -
+      id: anp-alternate-tab-toggle
+      title: Alternate tabs toggle
+      description: Adapted from github.com/chuckharmston's snippets
+      type: class-toggle
+  -
+      id: anp-alt-tab-anim-toggle
+      title: Alternate tabs animation toggle
+      description: Might be buggy, use at your own risk
+      type: class-toggle
+  - 
+      id: anp-alt-tab-custom-height
+      title: Custom tab height
+      type: variable-number
+      default: 40
+      format: px
   - 
       id: anp-preview-header
       title: File preview settings
@@ -1042,14 +1065,13 @@ hr {
   color: rgb(var(--rainbow-folder-color));
 }
 /*-------------------ALTERNATE TAB STYLING-------------------*/
-.anp-alternate-tab-toggle .workspace-ribbon.mod-left:before {
-  padding-bottom: 13px;
+.anp-alternate-tab-toggle {
+  --header-height: 40px;
 }
-.anp-alternate-tab-toggle .workspace-ribbon.mod-left {
-  margin-top: calc(var(--header-height) + 13px);
+.anp-alternate-tab-toggle {
+  --header-height: var(--anp-alt-tab-custom-height);
 }
 .anp-alternate-tab-toggle .workspace-tabs.mod-top {
-  --header-height: 53px;
   --tab-background: var(--background-secondary);
   --tab-background-active: var(--background-primary);
   --tab-font-size: 12px;
@@ -1057,18 +1079,24 @@ hr {
   --tab-max-width: 200px;
   --tab-max-width-active: 300px
 }
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left {
+  margin-top: var(--header-height);
+}
+.anp-alternate-tab-toggle .workspace-ribbon.mod-left:before {
+  padding-bottom: 0px;
+}
 .anp-alternate-tab-toggle .workspace-tab-header::before,
 .anp-alternate-tab-toggle .workspace-tab-header::after,
 .anp-alternate-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
   display: none;
 }
-.anp-alternate-tab-toggle .workspace-tab-header-container-inner {
+.anp-alternate-tab-toggle .mod-vertical .workspace-tab-header-container-inner {
   align-items: center;
   justify-content: center;
   margin: 0;
   width: 100%;
 }
-.anp-alternate-tab-toggle .workspace-tab-header {
+.anp-alternate-tab-toggle .mod-vertical .workspace-tab-header {
   background: var(--tab-background);
   border-radius: 6px;
   box-shadow: none !important;
@@ -1079,10 +1107,15 @@ hr {
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header {
   max-width: var(--tab-max-width) !important;
-  transition: flex-grow 0.5s, max-width 0.5s;
+}
+.anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tab-header {
+  transition: 400ms;
 }
 .anp-alternate-tab-toggle .workspace-tab-header:first-child {
   margin-left: 0;
+}
+.anp-alternate-tab-toggle .workspace-tab-header-inner {
+  padding: 7px 8px;
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
@@ -1106,6 +1139,13 @@ hr {
 .anp-alternate-tab-toggle .sidebar-toggle-button.mod-left .clickable-icon,
 .anp-alternate-tab-toggle.sidebar-toggle-button.mod-right .clickable-icon {
   height: var(--tab-height);
+}
+/*----------------TRANSITIONS----------------*/
+.anp-color-transition-toggle .horizontal-tab-content, .anp-color-transition-toggle .vertical-tab-content,
+.anp-color-transition-toggle .vertical-tab-header, .anp-color-transition-toggle .workspace-tab-header-container,
+.anp-color-transition-toggle .workspace-fake-target-overlay:not(.is-in-sidebar) .workspace-tabs .workspace-leaf,
+.anp-color-transition-toggle .mod-root .workspace-tabs .workspace-leaf, .anp-color-transition-toggle .setting-item-name {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out !important;
 }
 /*---------------------PLUGINS-------------------------------*/
 /*----------------STYLE SETTINGS------------*/
@@ -1182,7 +1222,6 @@ hr {
 .anuppuccin-accent-toggle .style-settings-heading[data-id="anuppuccin-theme-settings-extended"] {
   border-color: rgba(var(--ctp-accent), 0.5);
 }
-
 /*------------------DATAVIEW------------------*/
 /*-Fix dataview table header size-*/
 .table-view-table > thead > tr > th {
