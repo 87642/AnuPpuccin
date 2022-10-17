@@ -1,7 +1,7 @@
 <h1 align="center">AnuPpuccin</h1>
 <h3 align="center">Personal theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
 
-![](preview.png)
+<p align="center"> <img src="assets/preview-hq.png"> </p>
 
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
