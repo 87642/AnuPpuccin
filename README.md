@@ -45,6 +45,11 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 
 Note: Themes are toggled via style settings, the default themes are **Latte** for light mode and **Mocha** for dark mode.
 
+### Integrations
+- Excalidraw
+- Kanban
+- Style Settings
+
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 
