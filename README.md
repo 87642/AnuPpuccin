@@ -31,7 +31,7 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 <p align="center"> <img src="assets/callout.png" style="width: 60%;"> </p>
 
 ## Colorschemes used
-**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin) snippet. <br>
+**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) snippet. <br>
 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
