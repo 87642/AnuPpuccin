@@ -680,6 +680,7 @@ settings:
     --max-width-image: 90%;
     --drag-ghost-background: rgb(var(--ctp-text));
     --drag-ghost-text-color: rgb(var(--ctp-crust));
+    --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
 }
 .theme-dark {
       color-scheme: dark;
