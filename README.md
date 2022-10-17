@@ -35,12 +35,13 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
-| Catppuccin | Yes| Yes | There are 3 variants of the dark theme, namely: Frappe, Mocha, Macchiato<br>The light theme is called Latte. |
-| Rosé Pine | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
-| Dracula | No | Yes | - |
-| Nord | Yes | Yes | A custom darker variant of the dark theme is included as well. |
-| Rosebox | No | Yes | - |
-| Solarized | Yes | Yes | - |
+| [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes| Yes | There are 3 variants of the dark theme, namely: Frappe, Mocha, Macchiato<br>The light theme is called Latte. |
+| [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
+| [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
+| [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. |
+| [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
+| [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | - |
+| [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
 
 
 Note: Themes are toggled via style settings, the default themes are **Latte** for light mode and **Mocha** for dark mode.
