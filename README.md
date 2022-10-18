@@ -43,6 +43,54 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 | [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | - |
 | [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
 
+<details>
+<summary><h3>Previews</h3></summary>
+<details>
+<summary><h4>Previews</h4></summary>
+<h4 align="center">Latte</h4>
+<img src="assets/colorschemes/catppuccin-latte.webp"/>
+<h4 align="center">Frappe</h4>
+<img src="assets/colorschemes/catppuccin-frappe.webp"/>
+<h4 align="center">Macciato</h4>
+<img src="assets/colorschemes/catppuccin-macchiato.webp"/>
+<h4 align="center">Mocha</h4>
+<img src="assets/colorschemes/catppuccin-mocha.webp"/>
+</details>
+<details>
+<summary><h4>Dracula</h4></summary>
+<img src="assets/colorschemes/dracula-dark.webp"/>
+</details>
+<details>
+<summary><h4>Gruvbox</h4></summary>
+<img src="assets/colorschemes/gruvbox-light.webp"/>
+<img src="assets/colorschemes/gruvbox-dark.webp"/>
+</details>
+<details>
+<summary><h4>Nord</h4></summary>
+<h4 align="center">Nord Light</h4>
+<img src="assets/colorschemes/nord-light.webp"/>
+<h4 align="center">Nord Dark</h4>
+<img src="assets/colorschemes/nord-dark.webp"/>
+<h4 align="center">Nord Darker (Custom Palette)</h4>
+<img src="assets/colorschemes/nord-darker.webp"/>
+</details>
+<details>
+<summary><h4>Rosebox</h4></summary>
+<img src="assets/colorschemes/rosebox-dark.webp"/>
+</details>
+<details>
+<summary><h4>Rosé Pine</h4></summary>
+<h4 align="center">Rosé Pine Dawn</h4>
+<img src="assets/colorschemes/rosepine-light.webp"/>
+<h4 align="center">Rosé Pine</h4>
+<img src="assets/colorschemes/rosepine-dark.webp"/>
+</details>
+<details>
+<summary><h4>Solarized</h4></summary>
+<img src="assets/colorschemes/solarized-light.webp"/>
+<img src="assets/colorschemes/solarized-dark.webp"/>
+</details>
+</details>
 
 Note: Themes are toggled via style settings, the default themes are **Latte** for light mode and **Mocha** for dark mode.
 
