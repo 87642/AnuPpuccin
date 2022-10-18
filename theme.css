@@ -598,6 +598,7 @@ settings:
     --tag-border-color-hover: rgba(var(--ctp-accent), 0.15);
     --nav-item-background-selected: rgba(var(--ctp-accent), 0.2);
     --heading-formatting: rgb(var(--ctp-accent));
+    --icon-color-focused: rgb(var(--ctp-accent));
 }
 .theme-dark, .theme-light {
     --mono-rgb-0: var(--ctp-crust);
@@ -681,6 +682,7 @@ settings:
     --drag-ghost-background: rgb(var(--ctp-text));
     --drag-ghost-text-color: rgb(var(--ctp-crust));
     --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
+    --titlebar-text-color-focused: var(--color-accent);
 }
 .theme-dark {
       color-scheme: dark;
@@ -825,13 +827,21 @@ hr {
   padding: 2px;
 }
 /*-No text decoration for links-*/
-.markdown-rendered .internal-link,
-.markdown-rendered .internal-link:hover,
-.markdown-rendered .internal-link:active,
-.markdown-rendered .internal-link.is-unresolved:hover,
-.markdown-rendered .internal-link.is-unresolved {
+.internal-link,
+.internal-link:hover,
+.internal-link:active,
+.internal-link.is-unresolved:hover,
+.internal-link.is-unresolved {
     text-decoration: none;
 }
+/*-Underline-only mode for external links-*/
+.external-link,
+.external-link:hover {
+    background-image: none;
+    padding-right: 0px;
+
+}
+
 /*-Formatting recolors-*/
 .cm-s-obsidian span.cm-formatting-strong,
 .cm-s-obsidian span.cm-strong { color: var(--bold-color); }
@@ -1181,14 +1191,19 @@ hr {
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
   color: var(--text-muted);
+  transition: 400ms;
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active {
   flex-grow: 1.67 !important;
   max-width: var(--tab-max-width-active) !important;
   background-color: var(--background-primary);
+  
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent);
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
-  color: var(--text-normal);
+  color: var(--color-accent);
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active:hover {
   background-color: var(--background-modifier-border);

@@ -46,7 +46,7 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 <details>
 <summary><h3>Previews</h3></summary>
 <details>
-<summary><h4>Previews</h4></summary>
+<summary><h4>Catppuccin</h4></summary>
 <h4 align="center">Latte</h4>
 <img src="assets/colorschemes/catppuccin-latte.webp"/>
 <h4 align="center">Frappe</h4>
