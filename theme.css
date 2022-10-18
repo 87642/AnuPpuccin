@@ -201,6 +201,13 @@ settings:
       default: 700
       format: px
   - 
+      id: anp-tab-stacked-pane-width
+      title: Stacked tabs pane width
+      description: In percentage
+      type: variable-number
+      default: 100
+      format: "%"
+  - 
       id: anp-callout-header
       title: Callout Settings
       type: heading
@@ -399,6 +406,10 @@ settings:
       title: Toggle to enable title recolor
       type: class-toggle
   - 
+      id: anp-simple-rainbow-icon-folder-toggle
+      title: Toggle to enable icon recolor (For icon folder users)
+      type: class-toggle
+  - 
       id: anp-simple-rainbow-indentation-toggle
       title: Toggle to enable collpase indent recolor
       type: class-toggle
@@ -408,7 +419,7 @@ settings:
       type: class-toggle
   - 
       id: anp-simple-rainbow-icon-toggle
-      title: Toggle to enable file icon
+      title: Toggle to enable circular file indicator
       type: class-toggle
 */
 
@@ -700,6 +711,7 @@ body {
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 10px;
   --anp-header-font: "Noto Serif";
+  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width) - calc(var(--tab-stacked-header-width)*2));
 }
 /*--------FOLDER OVERHAULS------------*/
 /*-Custom folder title-*/
@@ -743,8 +755,12 @@ body {
   color: transparent !important;
   position: absolute;
   background-color: rgba(var(--ctp-accent), 0.8);
-  left: calc(100% - 20px);
+  left: calc(100% - 32px);
   border-radius: 6px;
+}
+/*-Slider checkboxes-*/
+.checkbox-container.is-enabled:after {
+  background-color: var(--background-primary);
 }
 .anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header:after {
   position: absolute;
@@ -774,6 +790,9 @@ body {
 }
 /*-Banners are always sharp-*/
 .banner-image { border-radius: 0px !important;}
+.obsidian-banner-wrapper .frontmatter-container {
+  margin-top: 20px;
+}
 /*-0 Padding on frontmatter container-*/
 .frontmatter-container {
   padding: 0;
@@ -1139,14 +1158,14 @@ hr {
   color: rgb(var(--rainbow-folder-color));
 }
 /*-------------------ALTERNATE TAB STYLING-------------------*/
-.anp-alternate-tab-toggle {
+.anp-alternate-tab-toggle .workspace-tab-header-container {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
 }
-.anp-alternate-tab-toggle .workspace-tabs.mod-top {
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) {
   --tab-background: var(--background-secondary);
   --tab-background-active: var(--background-primary);
   --tab-font-size: 12px;
-  --tab-height: 28px;
+  --tab-height: calc(var(--header-height)*0.7);
   --tab-max-width: 200px;
   --tab-max-width-active: 300px
 }
@@ -1156,18 +1175,21 @@ hr {
 .anp-alternate-tab-toggle .workspace-ribbon.mod-left:before {
   padding-bottom: 0px;
 }
-.anp-alternate-tab-toggle .workspace-tab-header::before,
-.anp-alternate-tab-toggle .workspace-tab-header::after,
-.anp-alternate-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before,
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after,
+.anp-alternate-tab-toggle .workspace .mod-root  .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after {
   display: none;
 }
-.anp-alternate-tab-toggle .mod-vertical .workspace-tab-header-container-inner {
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   align-items: center;
   justify-content: center;
   margin: 0;
   width: 100%;
 }
-.anp-alternate-tab-toggle .mod-vertical .workspace-tab-header {
+.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header,
+.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   background: var(--tab-background);
   border-radius: 6px;
   box-shadow: none !important;
@@ -1176,36 +1198,38 @@ hr {
   padding: 0 !important;
   transition: background-color 150ms ease-in-out;
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   max-width: var(--tab-max-width) !important;
 }
-.anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tab-header {
+.anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   transition: 400ms;
 }
-.anp-alternate-tab-toggle .workspace-tab-header:first-child {
+.anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header:first-child {
   margin-left: 0;
 }
-.anp-alternate-tab-toggle .workspace-tab-header-inner {
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 7px 8px;
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header-inner {
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
   color: var(--text-muted);
   transition: 400ms;
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active {
+.anp-alternate-tab-toggle .workspace .mod-root .workspace-tab-header-inner::after {
+  display: none;
+}
+.anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
   flex-grow: 1.67 !important;
   max-width: var(--tab-max-width-active) !important;
   background-color: var(--background-primary);
-  
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--color-accent);
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
   color: var(--color-accent);
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tab-header.is-active:hover {
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
   background-color: var(--background-modifier-border);
 }
 .anp-alternate-tab-toggle .sidebar-toggle-button.mod-left,
@@ -1213,7 +1237,7 @@ hr {
   align-items: center;
 }
 .anp-alternate-tab-toggle .sidebar-toggle-button.mod-left .clickable-icon,
-.anp-alternate-tab-toggle.sidebar-toggle-button.mod-right .clickable-icon {
+.anp-alternate-tab-toggle .sidebar-toggle-button.mod-right .clickable-icon {
   height: var(--tab-height);
 }
 /*----------------TRANSITIONS----------------*/
@@ -1366,4 +1390,19 @@ hr {
 }
 [data-type="excalidraw"] .view-header {
   margin: 0;
+}
+/*---------------FOLDER ICONS------------*/
+.obsidian-icon-folder-icon {
+  margin-top: -5px;
+}
+.anp-simple-rainbow-color-toggle.anp-simple-rainbow-icon-folder-toggle .obsidian-icon-folder-icon {
+  color: rgb(var(--rainbow-folder-color));
+}
+/*--------------ADVANCED TABLES-----------*/
+.workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-buttons-container {
+  border-style: solid;
+  border-color: var(--background-modifier-border);
+  border-width: 0px 0px 1px 0px;
+  margin-top: 10px;
+  gap: 10px;
 }
