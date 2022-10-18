@@ -24,6 +24,10 @@ You can choose if it applies to root files as well and customise the indentation
 This snippet makes the rainbow theme apply to every folder in your filesystem, and the order is determined by the children's place in the parent folder.<br>
 You can toggle if the recolor applies to the title, the collapse border, the collapse icon and you can append a small icon to the folder title as well.<br>
 
+### Alternate tabs
+Safari-style tabs are inbuilt into the theme, and can be toggled.
+<p align="center"> <img src="assets/alternate-tabs.gif"> </p>
+
 ### Callouts
 The theme comes with a custom callout style (which can be toggled so it doesn't interfere with your own callout snippet).<br>
 The snippet also includes support for using the colors of your selected palette which means that the callouts don't ever look out of place :)<br>
@@ -51,7 +55,7 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 <img src="assets/colorschemes/catppuccin-latte.webp"/>
 <h4 align="center">Frappe</h4>
 <img src="assets/colorschemes/catppuccin-frappe.webp"/>
-<h4 align="center">Macciato</h4>
+<h4 align="center">Macchiato</h4>
 <img src="assets/colorschemes/catppuccin-macchiato.webp"/>
 <h4 align="center">Mocha</h4>
 <img src="assets/colorschemes/catppuccin-mocha.webp"/>
