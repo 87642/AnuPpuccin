@@ -68,7 +68,7 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 <details>
 <summary><h4>Nord</h4></summary>
 <h4 align="center">Nord Light</h4>
-<img src="assets/colorschemes/nord-light.webp"/>
+<img src="assets/colorschemes/nord-light-original.webp"/>
 <h4 align="center">Nord Dark</h4>
 <img src="assets/colorschemes/nord-dark.webp"/>
 <h4 align="center">Nord Darker (Custom Palette)</h4>
