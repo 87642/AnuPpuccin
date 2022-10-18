@@ -870,6 +870,20 @@ hr {
 .anp-editor-font-toggle .markdown-source-view.mod-cm6 .cm-scroller {
   font-family: var(--anp-editor-font);
 }
+
+/*--------------DISABLING IN-FRONTMATTER---------------*/
+.header-normal-toggle {
+  --h1-color: var(--text-normal) !important;
+  --h2-color: var(--text-normal) !important;
+  --h3-color: var(--text-normal) !important;
+  --h4-color: var(--text-normal) !important;
+  --h5-color: var(--text-normal) !important;
+  --h6-color: var(--text-normal) !important;
+}
+.decorations-normal-toggle {
+  --bold-color: var(--text-normal) !important;
+  --italic-color: var(--text-normal) !important;
+}
 /*--------------HEADERS----------------*/
 /*-Custom header font-*/
 .anp-header-toggle .markdown-reading-view, .anp-header-toggle .is-live-preview {
