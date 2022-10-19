@@ -43,7 +43,7 @@ The snippet also includes support for using the colors of your selected palette 
 If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use AnuPpuccin's palette to support dynamic per-palette theming.<br>
 <p align="center"> <img src="assets/callout.png" style="width: 60%;"> </p>
 
-## Simplified markdown embeds
+### Simplified markdown embeds
 Markdown embeds have an alternate styling with an animated variant which can be toggled globally using style settings or individually using alt names for embeds, for example: `![[embed|alt-name]]`
 
 | Embed style | Alt name |
