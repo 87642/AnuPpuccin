@@ -6,6 +6,15 @@
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
 
+<details>
+<summary><h2>Installation</h2></summary>
+- Grab the latest release from the [releases](https://github.com/AnubisNekhet/AnuPpuccin/releases/tag/Release) page. <br>
+- For latest commits, clone the repo to your `obsidian/themes` folder. <br>
+```
+git clone https://github.com/AnubisNekhet/AnuPpuccin.git
+```
+</details>
+
 ## Features
 
 ### Custom palette

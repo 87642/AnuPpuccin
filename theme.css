@@ -998,6 +998,9 @@ hr {
   padding: 2px;
 }
 
+.markdown-rendered .internal-link {
+  text-decoration-line: none;
+}
 .markdown-rendered .internal-link:hover, .markdown-rendered .internal-link:active, .markdown-rendered .internal-link.is-unresolved:hover, .markdown-rendered .internal-link.is-unresolved {
   text-decoration-line: none;
 }

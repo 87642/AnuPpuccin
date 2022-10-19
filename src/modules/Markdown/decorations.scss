@@ -14,6 +14,7 @@
   &:hover, &:active, &.is-unresolved:hover, &.is-unresolved {
     text-decoration-line: none;
   }
+  text-decoration-line: none;
 }
 .cm-formatting-link-string {
   color: var(--text-normal);
