@@ -8,11 +8,11 @@ Please do note that I've made this theme for myself, and it may not fit your use
 
 <details>
 <summary><h2>Installation</h2></summary>
-- Grab the latest release from the [releases](https://github.com/AnubisNekhet/AnuPpuccin/releases/tag/Release) page. <br>
-- For latest commits, clone the repo to your `obsidian/themes` folder. <br>
-```
+- Grab the latest release from the <a href="https://github.com/AnubisNekhet/AnuPpuccin/releases/tag/Release">releases</a> page. <br>
+- For latest commits, clone the repo to your obsidian/themes folder. <br>
+<code>
 git clone https://github.com/AnubisNekhet/AnuPpuccin.git
-```
+</code>
 </details>
 
 ## Features
