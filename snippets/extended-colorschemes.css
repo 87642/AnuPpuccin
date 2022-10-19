@@ -112,6 +112,7 @@ settings:
     --ctp-crust: 229, 233, 240;
     --ctp-mantle: 231, 235, 241;
     --ctp-base: 236, 239, 244;
+    --ctp-accent: 136, 192, 208;
 }
 .theme-dark.anp-theme-ext-dark.ctp-dracula {
   --ctp-rosewater: 246, 201, 153;
@@ -168,7 +169,7 @@ settings:
   --ctp-base: 67, 76, 94;
   --ctp-mantle: 59, 66, 82;
   --ctp-crust: 46, 52, 64;
-  --ctp-accent: 143, 188, 187;
+  --ctp-accent: 136, 192, 208;
 }
 .theme-dark.anp-theme-ext-dark.ctp-nord-darker {
   --ctp-rosewater: 226, 191, 169;
@@ -197,7 +198,7 @@ settings:
   --ctp-base: 46, 52, 64;
   --ctp-mantle: 39, 43, 53;
   --ctp-crust: 30, 34, 41;
-  --ctp-accent: 143, 188, 187;
+  --ctp-accent: 136, 192, 208;
 }
 .theme-dark.anp-theme-ext-dark.ctp-rosepine-dark {
   --ctp-rosewater: 243, 215, 204;

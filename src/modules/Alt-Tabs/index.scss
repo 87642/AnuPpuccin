@@ -66,8 +66,13 @@
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--color-accent);
 }
-.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner {
-  color: var(--color-accent);
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  .workspace-tab-header-inner, .workspace-tab-header-inner-title  {
+    color: var(--color-accent);
+  }
+  .workspace-tab-header-inner:hover {
+    background-color: rgba(var(--ctp-surface1), 0.4);
+  }
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
   background-color: var(--background-modifier-border);
