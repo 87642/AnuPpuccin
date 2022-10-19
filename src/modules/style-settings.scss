@@ -1,0 +1,424 @@
+/* @settings
+name: AnuPpuccin
+id: anuppuccin-theme-settings
+settings:
+  - 
+    id: anuppuccin-theme-credits-link
+    title: Source Code
+    description: View and contribute to the theme at github.com/anubisnekhet/anuppuccin
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: anp-colors-section-header
+    title: Theme settings
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: anuppuccin-theme-light
+    title: Light theme flavor
+    description: Select your preferred light mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-latte
+    options:
+        - 
+            label: Latte
+            value: ctp-latte
+        - 
+            label: Rosé Pine
+            value: ctp-rosepine-light
+  - 
+    id: anuppuccin-theme-dark
+    title: Dark theme flavor
+    description: Select your preferred dark mode flavor
+    type: class-select
+    allowEmpty: false
+    default: ctp-mocha
+    options:
+        - 
+            label: Frappe
+            value: ctp-frappe
+        - 
+            label: Macchiato
+            value: ctp-macchiato
+        - 
+            label: Mocha
+            value: ctp-mocha
+  - 
+    id: anuppuccin-accent-toggle
+    title: Force catppuccin accents
+    description: Forces catppuccin accents to be utilised instead of default obsidian accent
+    type: class-toggle
+    default: true
+  - 
+    id: anuppuccin-theme-accents
+    title: Theme accent
+    description: Select your preferred accent
+    type: class-select
+    allowEmpty: false
+    default: ctp-accent-rosewater
+    options:
+        - 
+            label: Rosewater
+            value: ctp-accent-rosewater
+        - 
+            label: Flamingo
+            value: ctp-accent-flamingo
+        - 
+            label: Pink
+            value: ctp-accent-pink
+        - 
+            label: Mauve
+            value: ctp-accent-mauve
+        - 
+            label: Red
+            value: ctp-accent-red
+        - 
+            label: Maroon
+            value: ctp-accent-maroon
+        - 
+            label: Peach
+            value: ctp-accent-peach
+        - 
+            label: Yellow
+            value: ctp-accent-yellow
+        - 
+            label: Green
+            value: ctp-accent-green
+        - 
+            label: Teal
+            value: ctp-accent-teal
+        - 
+            label: Sky
+            value: ctp-accent-sky
+        - 
+            label: Sapphire
+            value: ctp-accent-sapphire
+        - 
+            label: Blue
+            value: ctp-accent-blue
+        - 
+            label: Lavender
+            value: ctp-accent-lavender
+  - 
+    id: anp-layout-section-header
+    title: Layout settings
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+      id: anp-ui-header
+      title: UI elements settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-button-metadata-toggle
+      title: Enable custom metadata button
+      type: class-toggle
+  - 
+      id: anp-color-transition-toggle
+      title: Color transition toggle (WIP)
+      description: "Adds a transition when switching palettes, looks really neat :)"
+      type: class-toggle
+  - 
+      id: anp-tooltip-toggle
+      title: Disable tooltips
+      type: class-toggle
+  - 
+      id: anp-decoration-toggle
+      title: Enable decoration recolors
+      type: class-toggle
+  - 
+      id: anp-custom-vault-toggle
+      title: Enable custom vault title
+      type: class-toggle
+  - 
+      id: anp-toggle-scrollbars
+      title: Disable scrollbars
+      type: class-toggle
+  - 
+      id: anp-editor-font-toggle
+      title: Enable custom source editor font
+      type: class-toggle
+  - 
+      id: anp-editor-font
+      title: Editor font
+      type: variable-text
+      default: Iosevka Comfy Duo
+  - 
+      id: anp-alt-tab-header
+      title: Alternate Tab settings
+      type: heading
+      level: 2
+      collapsed: true
+  -
+      id: anp-alternate-tab-toggle
+      title: Alternate tabs toggle
+      description: Adapted from github.com/chuckharmston's snippets
+      type: class-toggle
+  -
+      id: anp-alt-tab-anim-toggle
+      title: Alternate tabs animation toggle
+      description: Might be buggy, use at your own risk
+      type: class-toggle
+  - 
+      id: anp-alt-tab-custom-height
+      title: Custom tab height
+      type: variable-number
+      default: 40
+      format: px
+  - 
+      id: anp-preview-header
+      title: File preview settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-toggle-preview
+      title: Enable custom preview margins
+      type: class-toggle
+  - 
+      id: file-margins
+      title: File margins
+      type: variable-number
+      default: 32
+      format: px
+  - 
+      id: anp-preview-width-pct
+      title: Preview width
+      description: In percentage
+      type: variable-number
+      default: 80
+      format: "%"
+  - 
+      id: file-line-width
+      title: Maximum preview width
+      description: In px
+      type: variable-number
+      default: 700
+      format: px
+  - 
+      id: anp-tab-stacked-pane-width
+      title: Stacked tabs pane width
+      description: In percentage
+      type: variable-number
+      default: 100
+      format: "%"
+  - 
+      id: anp-callout-header
+      title: Callout Settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-callout-toggle
+      title: Toggle callout styling
+      type: class-toggle
+  - 
+      id: anp-callout-normal-toggle
+      title: Toggle callout styling to non-collapsible callouts
+      type: class-toggle
+  - 
+      id: anp-callout-color-toggle
+      title: Toggle custom callout colors
+      type: class-toggle
+  - 
+      id: anp-list-header
+      title: List settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-list-toggle
+      title: Toggle list styling
+      type: class-toggle
+  - 
+      id: list-indent
+      title: List indent
+      description: Size unit is em
+      type: variable-number
+      default: 2
+      format: em
+  - 
+      id: list-spacing
+      title: List spacing
+      description: Size unit is em
+      type: variable-number
+      default: 0.075
+      format: em
+  - 
+      id: anp-header-header
+      title: Header settings
+      type: heading
+      level: 2
+      collapsed: true
+  -
+      id: anp-header-toggle
+      title: Toggle to enable custom header
+      type: class-toggle
+  - 
+      id: anp-header-font
+      title: Heading Font
+      type: variable-text
+      default: Noto Serif
+  -
+      id: anp-header-color-toggle
+      title: Toggle to enable custom header colors
+      type: class-toggle
+  -
+      id: anp-header-margin-toggle
+      title: Toggle to enable custom header margin
+      type: class-toggle
+  - 
+      id: anp-header-margin-value
+      title: Header margin value
+      description: Size unit is px
+      type: variable-number-slider
+      min: 0
+      max: 30
+      step: 2
+      default: 20
+      format: px
+  - 
+      id: anp-header-size-value
+      title: Header font sizes
+      type: heading
+      level: 3
+      collapsed: false
+  - 
+      id: h1-size
+      title: H1 Size
+      description: Size unit is em
+      type: variable-number
+      default: 2
+      format: em
+  - 
+      id: h2-size
+      title: H2 Size
+      description: Size unit is em
+      type: variable-number
+      default: 1.6
+      format: em
+  - 
+      id: h3-size
+      title: H3 Size
+      description: Size unit is em
+      type: variable-number
+      default: 1.37
+      format: em
+  - 
+      id: h4-size
+      title: H4 Size
+      description: Size unit is em
+      type: variable-number
+      default: 1.25
+      format: em
+  - 
+      id: h5-size
+      title: H5 Size
+      description: Size unit is em
+      type: variable-number
+      default: 1.12
+      format: em
+  - 
+      id: h6-size
+      title: H6 Size
+      description: Size unit is em
+      type: variable-number
+      default: 1.12
+      format: em
+  - 
+      id: anp-plugin-header
+      title: Plugin integrations
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-plugin-style-settings
+      title: Style settings
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-plugin-style-settings-header-color
+      title: Toggle to enable colored headers in style settings menu
+      type: class-toggle
+  - 
+    id: anp-rainbow-section-header
+    title: Rainbow folder settings
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+      id: anp-full-rainbow-color-toggle
+      title: Toggle to enable full folder theme
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-color-toggle
+      title: Toggle to enable simple folder theme
+      type: class-toggle
+  - 
+      id: anp-full-rainbow-folder-settings
+      title: Full folder theme settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-rainbow-file-toggle
+      title: File recolor toggle
+      desc: Recolors files to match the folders
+      type: class-toggle
+  - 
+      id: anp-rainbow-folder-bg-opacity
+      title: Folder background color opacity
+      description: Uses decimal
+      type: variable-number
+      default: 0.7
+  - 
+      id: anp-rainbow-folder-border-opacity
+      title: Folder border opacity
+      description: Uses decimal
+      type: variable-number
+      default: 1
+  - 
+      id: anp-rainbow-folder-collapse-border-custom-toggle
+      title: Rainbow custom collapse color toggle
+      type: class-toggle
+  - 
+      id: anp-rainbow-folder-collapse-border-custom
+      title: Collapsed file list border
+      type: variable-themed-color
+      format: hex
+      opacity: true
+      default-light: "#D9E0EE44"
+      default-dark: "#1E1E2E44"
+  - 
+      id: anp-simple-rainbow-folder-settings
+      title: Simple folder theme settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-simple-rainbow-title-toggle
+      title: Toggle to enable title recolor
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-icon-folder-toggle
+      title: Toggle to enable icon recolor (For icon folder users)
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-indentation-toggle
+      title: Toggle to enable collpase indent recolor
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-collapse-toggle
+      title: Toggle to enable collpase indicator
+      type: class-toggle
+  - 
+      id: anp-simple-rainbow-icon-toggle
+      title: Toggle to enable circular file
+      type: class-toggle
+*/
