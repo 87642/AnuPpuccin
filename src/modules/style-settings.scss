@@ -115,10 +115,6 @@ settings:
       level: 2
       collapsed: true
   - 
-      id: anp-button-metadata-toggle
-      title: Enable custom metadata button
-      type: class-toggle
-  - 
       id: anp-color-transition-toggle
       title: Color transition toggle (WIP)
       description: "Adds a transition when switching palettes, looks really neat :)"
@@ -128,10 +124,6 @@ settings:
       title: Disable tooltips
       type: class-toggle
   - 
-      id: anp-decoration-toggle
-      title: Enable decoration recolors
-      type: class-toggle
-  - 
       id: anp-custom-vault-toggle
       title: Enable custom vault title
       type: class-toggle
@@ -139,15 +131,6 @@ settings:
       id: anp-toggle-scrollbars
       title: Disable scrollbars
       type: class-toggle
-  - 
-      id: anp-editor-font-toggle
-      title: Enable custom source editor font
-      type: class-toggle
-  - 
-      id: anp-editor-font
-      title: Editor font
-      type: variable-text
-      default: Iosevka Comfy Duo
   - 
       id: anp-alt-tab-header
       title: Alternate Tab settings
@@ -208,10 +191,64 @@ settings:
       default: 100
       format: "%"
   - 
+      id: anp-markdown-element-header
+      title: Markdown element settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-font-header
+      title: Font settings
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-editor-font-toggle
+      title: Enable custom source editor font
+      type: class-toggle
+  - 
+      id: anp-editor-font
+      title: Editor font
+      type: variable-text
+      default: Iosevka Comfy Duo
+  - 
+      id: anp-markdown-embed-header
+      title: Markdown embed settings
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-embed-toggle
+      title: Enable custom internal embeds
+      type: class-toggle
+  - 
+      id: anp-embed-animated-toggle
+      title: Enable custom animated internal embeds
+      type: class-toggle
+  - 
+      id: anp-misc-element-header
+      title: Misc. element settings
+      description: Values in this category may be shifted to their own category in the future
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-decoration-toggle
+      title: Enable decoration recolors
+      type: class-toggle
+  -
+      id: anp-table-toggle
+      title: Enable table redesign
+      type: class-toggle
+  - 
+      id: anp-button-metadata-toggle
+      title: Enable custom metadata button
+      type: class-toggle
+  - 
       id: anp-callout-header
       title: Callout Settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   - 
       id: anp-callout-toggle
@@ -229,7 +266,7 @@ settings:
       id: anp-list-header
       title: List settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   - 
       id: anp-list-toggle
@@ -253,7 +290,7 @@ settings:
       id: anp-header-header
       title: Header settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   -
       id: anp-header-toggle
@@ -286,7 +323,7 @@ settings:
       id: anp-header-size-value
       title: Header font sizes
       type: heading
-      level: 3
+      level: 4
       collapsed: false
   - 
       id: h1-size
@@ -383,18 +420,6 @@ settings:
       description: Uses decimal
       type: variable-number
       default: 1
-  - 
-      id: anp-rainbow-folder-collapse-border-custom-toggle
-      title: Rainbow custom collapse color toggle
-      type: class-toggle
-  - 
-      id: anp-rainbow-folder-collapse-border-custom
-      title: Collapsed file list border
-      type: variable-themed-color
-      format: hex
-      opacity: true
-      default-light: "#D9E0EE44"
-      default-dark: "#1E1E2E44"
   - 
       id: anp-simple-rainbow-folder-settings
       title: Simple folder theme settings

@@ -116,10 +116,6 @@ settings:
       level: 2
       collapsed: true
   - 
-      id: anp-button-metadata-toggle
-      title: Enable custom metadata button
-      type: class-toggle
-  - 
       id: anp-color-transition-toggle
       title: Color transition toggle (WIP)
       description: "Adds a transition when switching palettes, looks really neat :)"
@@ -129,10 +125,6 @@ settings:
       title: Disable tooltips
       type: class-toggle
   - 
-      id: anp-decoration-toggle
-      title: Enable decoration recolors
-      type: class-toggle
-  - 
       id: anp-custom-vault-toggle
       title: Enable custom vault title
       type: class-toggle
@@ -140,15 +132,6 @@ settings:
       id: anp-toggle-scrollbars
       title: Disable scrollbars
       type: class-toggle
-  - 
-      id: anp-editor-font-toggle
-      title: Enable custom source editor font
-      type: class-toggle
-  - 
-      id: anp-editor-font
-      title: Editor font
-      type: variable-text
-      default: Iosevka Comfy Duo
   - 
       id: anp-alt-tab-header
       title: Alternate Tab settings
@@ -209,10 +192,64 @@ settings:
       default: 100
       format: "%"
   - 
+      id: anp-markdown-element-header
+      title: Markdown element settings
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: anp-font-header
+      title: Font settings
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-editor-font-toggle
+      title: Enable custom source editor font
+      type: class-toggle
+  - 
+      id: anp-editor-font
+      title: Editor font
+      type: variable-text
+      default: Iosevka Comfy Duo
+  - 
+      id: anp-markdown-embed-header
+      title: Markdown embed settings
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-embed-toggle
+      title: Enable custom internal embeds
+      type: class-toggle
+  - 
+      id: anp-embed-animated-toggle
+      title: Enable custom animated internal embeds
+      type: class-toggle
+  - 
+      id: anp-misc-element-header
+      title: Misc. element settings
+      description: Values in this category may be shifted to their own category in the future
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: anp-decoration-toggle
+      title: Enable decoration recolors
+      type: class-toggle
+  -
+      id: anp-table-toggle
+      title: Enable table redesign
+      type: class-toggle
+  - 
+      id: anp-button-metadata-toggle
+      title: Enable custom metadata button
+      type: class-toggle
+  - 
       id: anp-callout-header
       title: Callout Settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   - 
       id: anp-callout-toggle
@@ -230,7 +267,7 @@ settings:
       id: anp-list-header
       title: List settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   - 
       id: anp-list-toggle
@@ -254,7 +291,7 @@ settings:
       id: anp-header-header
       title: Header settings
       type: heading
-      level: 2
+      level: 3
       collapsed: true
   -
       id: anp-header-toggle
@@ -287,7 +324,7 @@ settings:
       id: anp-header-size-value
       title: Header font sizes
       type: heading
-      level: 3
+      level: 4
       collapsed: false
   - 
       id: h1-size
@@ -384,18 +421,6 @@ settings:
       description: Uses decimal
       type: variable-number
       default: 1
-  - 
-      id: anp-rainbow-folder-collapse-border-custom-toggle
-      title: Rainbow custom collapse color toggle
-      type: class-toggle
-  - 
-      id: anp-rainbow-folder-collapse-border-custom
-      title: Collapsed file list border
-      type: variable-themed-color
-      format: hex
-      opacity: true
-      default-light: "#D9E0EE44"
-      default-dark: "#1E1E2E44"
   - 
       id: anp-simple-rainbow-folder-settings
       title: Simple folder theme settings
@@ -740,12 +765,10 @@ settings:
 
 .theme-dark {
   color-scheme: dark;
-  --highlight-mix-blend-mode: lighten;
 }
 
 .theme-light {
   color-scheme: light;
-  --highlight-mix-blend-mode: darken;
 }
 
 body {
@@ -897,18 +920,13 @@ hr {
 }
 
 /*-Recolor table borders-*/
-.markdown-rendered table,
-.markdown-rendered td, .markdown-rendered th,
-.markdown-rendered thead tr > th:last-child,
-.markdown-rendered thead tr > th,
-.markdown-rendered thead tr > th:first-child {
-  text-align: center;
-  border: 2px solid var(--table-border-color);
-}
-
-.markdown-rendered table {
+.anp-table-toggle .markdown-rendered table {
   margin: 0 auto;
   background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
+  text-align: center;
+  border: 2px solid var(--table-border-color);
 }
 
 /*-Formatting recolors-*/
@@ -1382,6 +1400,45 @@ hr {
 .anp-color-transition-toggle .mod-root .workspace-tabs .workspace-leaf,
 .anp-color-transition-toggle .setting-item-name {
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out !important;
+}
+
+span[alt=anp-embed-animated] .markdown-embed, .anp-embed-animated-toggle .markdown-embed {
+  border-width: 0px;
+  border-color: var(--color-accent);
+  border-style: solid;
+  transition: border-width 0.2s, background-color 0.2s;
+}
+span[alt=anp-embed-animated] .markdown-embed .markdown-embed-title, .anp-embed-animated-toggle .markdown-embed .markdown-embed-title {
+  width: fit-content;
+  position: absolute;
+  left: unset;
+  right: 33px;
+  top: 5px;
+}
+span[alt=anp-embed-animated] .markdown-embed .markdown-embed-link, span[alt=anp-embed-animated] .markdown-embed .file-embed-link, span[alt=anp-embed-animated] .markdown-embed .markdown-embed-title, .anp-embed-animated-toggle .markdown-embed .markdown-embed-link, .anp-embed-animated-toggle .markdown-embed .file-embed-link, .anp-embed-animated-toggle .markdown-embed .markdown-embed-title {
+  opacity: 0;
+  transition: opacity 0.2s, display 0.2s;
+}
+span[alt=anp-embed-animated] .markdown-embed:hover, .anp-embed-animated-toggle .markdown-embed:hover {
+  transition: border-width 0.2s, background-color 0.2s;
+  border-left-width: 4px;
+  background-color: var(--background-secondary);
+}
+span[alt=anp-embed-animated] .markdown-embed:hover .markdown-embed-link, span[alt=anp-embed-animated] .markdown-embed:hover .file-embed-link, span[alt=anp-embed-animated] .markdown-embed:hover .markdown-embed-title, .anp-embed-animated-toggle .markdown-embed:hover .markdown-embed-link, .anp-embed-animated-toggle .markdown-embed:hover .file-embed-link, .anp-embed-animated-toggle .markdown-embed:hover .markdown-embed-title {
+  opacity: 1;
+  transition: opacity 0.2s, display 0.2s;
+}
+
+span[alt=anp-embed] .markdown-embed, .anp-embed-toggle .markdown-embed {
+  border-width: 0px;
+  border-style: solid;
+}
+span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .markdown-embed .markdown-embed-title {
+  width: fit-content;
+  position: absolute;
+  left: unset;
+  right: 33px;
+  top: 5px;
 }
 
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {

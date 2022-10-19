@@ -8,15 +8,16 @@ hr {
   padding: 5px 5px 5px 10px;
 }
 /*-Recolor table borders-*/
-.markdown-rendered table,
-.markdown-rendered td, .markdown-rendered th,
-.markdown-rendered thead tr > th:last-child,
-.markdown-rendered thead tr > th,
-.markdown-rendered thead tr > th:first-child {
+.anp-table-toggle .markdown-rendered {
+  table {
+    margin: 0 auto;
+    background-color: rgba(var(--ctp-mantle), 0.5);
+  }
+  table, td, th , thead tr > th:first-child, thead tr > th, thead tr > th:last-child {
     text-align: center;
     border: 2px solid var(--table-border-color);
+  }
 }
-.markdown-rendered table { margin: 0 auto; background-color: rgba(var(--ctp-mantle), 0.5); }
 
 /*-Formatting recolors-*/
 .cm-s-obsidian span.cm-formatting-strong,
