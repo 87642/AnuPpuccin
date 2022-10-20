@@ -34,8 +34,12 @@ This snippet makes the rainbow theme apply to every folder in your filesystem, a
 You can toggle if the recolor applies to the title, the collapse border, the collapse icon and you can append a small icon to the folder title as well.<br>
 
 ### Alternate tabs
-Safari-style tabs are inbuilt into the theme, and can be toggled.
+#### Safari-style tabs
+
 <p align="center"> <img src="assets/alternate-tabs.gif"> </p>
+
+#### Minimalistic tabs
+<p align="center"> <img src="assets/mini-tabs.png"> </p>
 
 ### Callouts
 The theme comes with a custom callout style (which can be toggled so it doesn't interfere with your own callout snippet).<br>
