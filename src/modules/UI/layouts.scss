@@ -85,6 +85,30 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     border: 1px solid var(--tab-outline-color);
     margin-bottom: 10px;
 }
+.anp-card-layout .workspace-split .mod-stacked .workspace-leaf-content {
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0px;
+    border-left: none;
+}
 .anp-card-layout .workspace-split.mod-horizontal > * {
     width: unset;
+}
+.anp-card-layout .mod-stacked .workspace-tab-header {
+    border-style: solid;
+    border-radius: var(--radius-xl) 0px 0px var(--radius-xl) !important;
+    border-width: var(--tab-outline-width);
+    border-color: var(--tab-outline-color);
+    border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
+}
+.anp-card-layout .mod-stacked .workspace-leaf {
+    border-left-width: 0px;
+    border-top-width: var(--tab-outline-width);
+    border-bottom-width: var(--tab-outline-width);
+    border-style: solid;
+    border-color: var(--tab-outline-color);
+    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+.anp-card-layout .mod-stacked .workspace-tab-container {
+    padding-bottom: 10px;
 }
