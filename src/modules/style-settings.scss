@@ -46,6 +46,9 @@ settings:
             - 
                 label: Mocha
                 value: ctp-mocha
+            - 
+                label: Mocha Old
+                value: ctp-mocha-old
     - 
         id: anuppuccin-accent-toggle
         title: Force catppuccin accents
@@ -140,7 +143,6 @@ settings:
     -
         id: anp-alt-tab-style
         title: Tab style
-        description: Tab styles
         type: class-select
         allowEmpty: false
         default: anp-default-tab
@@ -410,13 +412,21 @@ settings:
         level: 1
         collapsed: true
     -
-        id: anp-full-rainbow-color-toggle
-        title: Toggle to enable full folder theme
-        type: class-toggle
-    - 
-        id: anp-simple-rainbow-color-toggle
-        title: Toggle to enable simple folder theme
-        type: class-toggle
+        id: anp-alt-rainbow-style
+        title: Rainbow style
+        type: class-select
+        allowEmpty: false
+        default: anp-default-rainbow
+        options:
+            - 
+                label: None
+                value: anp-default-rainbow
+            - 
+                label: Full
+                value: anp-full-rainbow-color-toggle
+            - 
+                label: Simple
+                value: anp-simple-rainbow-color-toggle
     - 
         id: anp-full-rainbow-folder-settings
         title: Full folder theme settings
