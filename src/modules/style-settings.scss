@@ -118,6 +118,19 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: anp-layout-select
+        title: Layout variant
+        type: class-select
+        allowEmpty: false
+        default: anp-default-layout
+        options:
+            -
+                label: Default
+                value: anp-default-layout
+            -
+                label: Cards
+                value: anp-card-layout
+    - 
         id: anp-color-transition-toggle
         title: Color transition toggle (WIP)
         description: "Adds a transition when switching palettes, looks really neat :)"
