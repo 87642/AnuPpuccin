@@ -1,7 +1,7 @@
 <h1 align="center">AnuPpuccin</h1>
 <h3 align="center">Personal theme for <a href="https://obsidian.md">Obsidian</a> :3</h3><br>
 
-<p align="center"> <img src="assets/preview-hq.webp"> </p>
+<p align="center"> <img src="assets/gh-preview.png"> </p>
 
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
@@ -23,7 +23,7 @@ The theme supports various palettes (5 in the base theme and even more if you us
 ### Rainbow folders
 The theme comes with a toggleable rainbow folder snippet which color-codes your folders as per their order in the filesystem.<br>
 It's great if you need to easily distinguish between folders or if you want to make your vault look a bit prettier (Both in my case :P)<br>
-<p align="center"> <img src="assets/rainbowfolders.png"> </p>
+<p align="center"> <img src="assets/gh-rainbow-preview.png"> </p>
 
 #### Full rainbow theme
 This snippet makes the rainbow theme apply to the first layer of the root directory, aka only direct children.<br>
@@ -34,12 +34,8 @@ This snippet makes the rainbow theme apply to every folder in your filesystem, a
 You can toggle if the recolor applies to the title, the collapse border, the collapse icon and you can append a small icon to the folder title as well.<br>
 
 ### Alternate tabs
-#### Safari-style tabs
 
-<p align="center"> <img src="assets/alternate-tabs.gif"> </p>
-
-#### Minimalistic tabs
-<p align="center"> <img src="assets/mini-tabs.png"> </p>
+<p align="center"> <img src="assets/gh-preview-tabs.png"> </p>
 
 ### Callouts
 The theme comes with a custom callout style (which can be toggled so it doesn't interfere with your own callout snippet).<br>
