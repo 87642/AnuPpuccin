@@ -107,6 +107,13 @@ settings:
                 label: Lavender
                 value: ctp-accent-lavender
     - 
+        id: anuppuccin-extended-colorschemes-link
+        title: Extended colorschemes
+        description: "Download and use the extended colorschemes snippet if you haven't already! (https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)"
+        type: heading
+        level: 2
+        collapsed: true
+    - 
         id: anp-layout-section-header
         title: Layout settings
         type: heading
@@ -1727,7 +1734,7 @@ span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .ma
 }
 .style-settings-heading[data-id=anuppuccin-theme-credits-link] {
   margin-bottom: 0px;
-  border-bottom: 1px solid rgb(var(--ctp-surface0)) !important;
+  border-bottom: none;
   cursor: default;
   padding-bottom: 0px;
 }
@@ -1746,6 +1753,15 @@ span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .ma
 }
 .style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
   color: var(--color-accent);
+}
+.style-settings-heading[data-id=anuppuccin-extended-colorschemes-link] {
+  margin-bottom: 0px;
+  border-bottom: none;
+  cursor: default;
+  padding-bottom: 0px;
+}
+.style-settings-heading[data-id=anuppuccin-extended-colorschemes-link] .style-settings-collapse-indicator, .style-settings-heading[data-id=anuppuccin-extended-colorschemes-link] .setting-editor-extra-setting-button {
+  display: none;
 }
 
 .anuppuccin-accent-toggle .style-settings-heading[data-id=anuppuccin-theme-settings], .anuppuccin-accent-toggle .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {

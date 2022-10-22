@@ -45,12 +45,12 @@
   }
   &[data-id="anuppuccin-theme-credits-link"] {
     margin-bottom: 0px;
-    border-bottom: 1px solid rgb(var(--ctp-surface0)) !important;
+    border-bottom: none;
     cursor: default;
     padding-bottom: 0px;
     .style-settings-collapse-indicator, .setting-editor-extra-setting-button {
       display: none;
-    }
+  }
     .setting-item-name {
       color: var(--background-primary) !important;
       background: linear-gradient(to right, rgb(var(--ctp-pink)), rgb(var(--ctp-mauve)));
@@ -65,6 +65,15 @@
       color: var(--color-accent);
     }
     border-color: hsla(var(--color-accent-hsl), 0.5);
+  }
+  &[data-id="anuppuccin-extended-colorschemes-link"] {
+    margin-bottom: 0px;
+    border-bottom: none;
+    cursor: default;
+    padding-bottom: 0px;
+    .style-settings-collapse-indicator, .setting-editor-extra-setting-button {
+      display: none;
+    }
   }
 }
 .anuppuccin-accent-toggle .style-settings-heading {
