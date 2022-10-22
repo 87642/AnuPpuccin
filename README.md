@@ -75,13 +75,6 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <details>
 <summary><h3>Previews</h3></summary>
 <details>
-<summary><h4>Generic</h4></summary>
-<h4 align="center">Dark</h4>
-<img src="assets/colorschemes/generic-dark.webp"/>
-</details>
-<h4 align="center">AMOLED Dark</h4>
-<img src="assets/colorschemes/amoled-dark.webp"/>
-</details>
 <summary><h4>Catppuccin</h4></summary>
 <h4 align="center">Latte</h4>
 <img src="assets/colorschemes/catppuccin-latte.webp"/>
@@ -93,6 +86,13 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/catppuccin-mocha.webp"/>
 <h4 align="center">Mocha Old</h4>
 <img src="assets/colorschemes/catppuccin-mocha-old.webp"/>
+</details>
+<details>
+<summary><h4>Generic</h4></summary>
+<h4 align="center">Dark</h4>
+<img src="assets/colorschemes/generic-dark.webp"/>
+<h4 align="center">AMOLED Dark</h4>
+<img src="assets/colorschemes/amoled-dark.webp"/>
 </details>
 <details>
 <summary><h4>Coffee</h4></summary>
