@@ -64,3 +64,9 @@ hr {
   font-family: var(--font-interface);
   font-weight: bold;
 }
+/*-Highlight current line-*/
+.anp-current-line .markdown-source-view {
+  .cm-active.cm-line {
+    background-color: rgba(var(--ctp-surface1), 0.4);
+  }
+}

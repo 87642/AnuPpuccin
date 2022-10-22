@@ -255,6 +255,10 @@ settings:
         type: variable-text
         default: Iosevka Comfy Duo
     - 
+        id: anp-current-line
+        title: Highlight active line in editing mode
+        type: class-toggle
+    - 
         id: anp-markdown-embed-header
         title: Markdown embed settings
         type: heading
@@ -968,7 +972,7 @@ body {
 }
 
 /*-Custom editor font-*/
-.anp-editor-font-toggle .markdown-source-view.mod-cm6 .cm-scroller {
+.anp-editor-font-toggle .markdown-source-view.mod-cm6:not(.is-live-preview) .cm-scroller {
   font-family: var(--anp-editor-font);
 }
 
@@ -1223,6 +1227,11 @@ hr {
 #calendar-container h3 {
   font-family: var(--font-interface);
   font-weight: bold;
+}
+
+/*-Highlight current line-*/
+.anp-current-line .markdown-source-view .cm-active.cm-line {
+  background-color: rgba(var(--ctp-surface1), 0.4);
 }
 
 /*-Decorations for bold and italics-*/
@@ -1673,6 +1682,11 @@ span[alt=anp-embed-animated] .markdown-embed:hover, .anp-embed-animated-toggle .
 span[alt=anp-embed-animated] .markdown-embed:hover .markdown-embed-link, span[alt=anp-embed-animated] .markdown-embed:hover .file-embed-link, span[alt=anp-embed-animated] .markdown-embed:hover .markdown-embed-title, .anp-embed-animated-toggle .markdown-embed:hover .markdown-embed-link, .anp-embed-animated-toggle .markdown-embed:hover .file-embed-link, .anp-embed-animated-toggle .markdown-embed:hover .markdown-embed-title {
   opacity: 1;
   transition: opacity 0.2s, display 0.2s;
+}
+
+span[alt=anp-embed] .markdown-embed .markdown-preview-section, .anp-embed-toggle .markdown-embed .markdown-preview-section,
+.anp-embed-animated-toggle .markdown-embed .markdown-preview-section, span[alt=anp-embed-animated] .markdown-embed .markdown-preview-section {
+  padding-left: 10px;
 }
 
 span[alt=anp-embed] .markdown-embed, .anp-embed-toggle .markdown-embed {

@@ -254,6 +254,10 @@ settings:
         type: variable-text
         default: Iosevka Comfy Duo
     - 
+        id: anp-current-line
+        title: Highlight active line in editing mode
+        type: class-toggle
+    - 
         id: anp-markdown-embed-header
         title: Markdown embed settings
         type: heading

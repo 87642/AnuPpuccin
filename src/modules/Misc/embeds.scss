@@ -26,6 +26,14 @@ span[alt="anp-embed-animated"], .anp-embed-animated-toggle {
     }
   }
 }
+span[alt="anp-embed"], .anp-embed-toggle,
+.anp-embed-animated-toggle, span[alt="anp-embed-animated"] {
+  .markdown-embed {
+    .markdown-preview-section {
+      padding-left: 10px;
+    }
+  }
+}
 span[alt="anp-embed"], .anp-embed-toggle {
   .markdown-embed {
     border-width: 0px;
