@@ -1019,6 +1019,10 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   background-color: var(--tab-container-background);
 }
 
+.anp-card-layout .workspace-ribbon.mod-left:before {
+  background-color: var(--tab-container-background) !important;
+}
+
 .anp-card-layout .workspace-ribbon.mod-left {
   padding: 0;
   background-color: var(--tab-container-background);
@@ -1044,7 +1048,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout .workspace-ribbon.mod-left {
-  margin-top: calc(var(--header-height) - 1px);
+  margin-top: calc(var(--header-height) - 1px) !important;
 }
 
 .anp-card-layout .workspace-tab-header-container {
