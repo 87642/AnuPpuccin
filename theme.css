@@ -867,10 +867,12 @@ settings:
 
 .theme-dark {
   color-scheme: dark;
+  --highlight-mix-blend-mode: none;
 }
 
 .theme-light {
   color-scheme: light;
+  --highlight-mix-blend-mode: none;
 }
 
 body {
@@ -1392,7 +1394,7 @@ hr {
   border-left-width: 4px;
 }
 .anp-callout-toggle.anp-callout-willemstad .callout .callout-content {
-  background-color: rgba(var(--ctp-crust));
+  background-color: rgba(var(--ctp-mantle));
 }
 .anp-callout-toggle.anp-callout-willemstad .callout .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
