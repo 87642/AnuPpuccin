@@ -76,6 +76,6 @@
   display: none;
 }
 /*-Custom editor font-*/
-.anp-editor-font-toggle .markdown-source-view.mod-cm6 .cm-scroller {
+.anp-editor-font-toggle .markdown-source-view.mod-cm6:not(.is-live-preview) .cm-scroller {
   font-family: var(--anp-editor-font);
 }

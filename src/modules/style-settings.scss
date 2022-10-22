@@ -301,6 +301,25 @@ settings:
         title: Toggle callout styling
         type: class-toggle
     - 
+        id: anp-callout-select
+        title: Select callout style
+        type: class-select
+        default: anp-callout-default
+        allowEmpty: false
+        options:
+            - 
+                label: Default
+                value: anp-callout-default
+            - 
+                label: Sleek
+                value: anp-callout-sleek
+            - 
+                label: Block
+                value: anp-callout-block
+            - 
+                label: Willemstad
+                value: anp-callout-willemstad
+    - 
         id: anp-callout-normal-toggle
         title: Toggle callout styling to non-collapsible callouts
         type: class-toggle

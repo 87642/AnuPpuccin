@@ -21,7 +21,7 @@ git clone https://github.com/AnubisNekhet/AnuPpuccin.git
 <p align="center"> <img src="assets/gh-colorscheme-preview.webp"> </p>
 The theme supports various palettes (5 in the base theme and even more if you use the <a href="https://github.com/AnubisNekhet/AnuPpuccin">extended colorschemes</a> snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
 
-### Callouts
+### Layouts
 Anuppuccin currently supports 2 layout variants.
 <p align="center"> <img src="assets/gh-layout-preview.webp"> </p>
 
@@ -43,10 +43,10 @@ You can toggle if the recolor applies to the title, the collapse border, the col
 <p align="center"> <img src="assets/gh-preview-tabs.webp"> </p>
 
 ### Callouts
-The theme comes with a custom callout style (which can be toggled so it doesn't interfere with your own callout snippet).<br>
+<p align="center"> <img src="assets/gh-callout-preview.webp"> </p>
+The theme comes with many custom callout styles (which can be toggled so they won't interfere with your own callout snippet).<br>
 The snippet also includes support for using the colors of your selected palette which means that the callouts don't ever look out of place :)<br>
 If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use AnuPpuccin's palette to support dynamic per-palette theming.<br>
-<p align="center"> <img src="assets/callout.png" style="width: 60%;"> </p>
 
 ### Simplified markdown embeds
 Markdown embeds have an alternate styling with an animated variant which can be toggled globally using style settings or individually using alt names for embeds, for example: `![[embed|alt-name]]`

@@ -1,5 +1,5 @@
 /*----------------CALLOUTS-------------------*/
-.anp-callout-toggle {
+.anp-callout-toggle.anp-callout-sleek {
   &:not(.anp-callout-normal-toggle) {
     .callout:not(.is-collapsible) {
       padding: 0px;
@@ -65,7 +65,7 @@
       }
     }
     //elements in the callout
-    p, ul, ol {
+    ul, ol {
       margin-block-start: 0px;
       margin-block-end: 0px;
     }
@@ -75,7 +75,42 @@
     }
   }
 }
+.anp-callout-toggle.anp-callout-block {
+  .callout {
+    border-left: 4px solid rgb(var(--callout-color));
+    --callout-radius: 0px;
+  }
+}
+.anp-callout-toggle.anp-callout-willemstad {
+  .callout {
+    border-left: 0px solid rgb(var(--callout-color));
+    transition: border-left-width 0.1s;
+    --callout-padding: 0px;
+    --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
+    --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
+    background-color: transparent;
+    &:hover {
+      border-left-width: 4px;
+    }
+    .callout-content {
+      background-color: rgba(var(--ctp-crust));
+    }
+    .callout-title {
+      background-color: rgba(var(--callout-color), 0.1);
+    }
+  }
+}
 .theme-light.anp-callout-toggle .callout-title-inner,
 .theme-light.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title-inner {
   color: var(--text-normal);
+}
+.anp-callout-toggle .callout-content > {
+  p, ul, ol {
+    &:first-child {
+      margin-top: 0px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
 }
