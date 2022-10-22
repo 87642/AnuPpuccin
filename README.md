@@ -19,7 +19,7 @@ git clone https://github.com/AnubisNekhet/AnuPpuccin.git
 
 ### Custom palette
 <p align="center"> <img src="assets/gh-colorscheme-preview.webp"> </p>
-The theme supports various palettes (5 in the base theme and even more if you use the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin) snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
+The theme supports various palettes (5 in the base theme and even more if you use the <a href="https://github.com/AnubisNekhet/AnuPpuccin">extended colorschemes</a> snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
 
 ### Callouts
 Anuppuccin currently supports 2 layout variants.
