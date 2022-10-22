@@ -10,6 +10,10 @@ settings:
     id: anp-theme-ext-dark
     title: Toggle extended dark theme
     type: class-toggle
+  -
+    id: anp-theme-ext-amoled
+    title: Toggle amoled black on all themes
+    type: class-toggle
   - 
     id: catppuccin-theme-extended
     title: Light theme flavor
@@ -432,4 +436,12 @@ settings:
   --ctp-base: 10, 10, 10;
   --ctp-mantle: 5, 5, 5;
   --ctp-crust: 0, 0, 0;
+}
+.theme-dark.anp-theme-ext-amoled {
+  --ctp-surface2: 80, 80, 80 !important;
+  --ctp-surface1: 50, 50, 50 !important;
+  --ctp-surface0: 30, 30, 30 !important;
+  --ctp-base: 10, 10, 10 !important;
+  --ctp-mantle: 5, 5, 5 !important;
+  --ctp-crust: 0, 0, 0 !important;
 }
