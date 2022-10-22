@@ -63,6 +63,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
 | [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes| Yes | There are 3 variants of the dark theme, namely: Frappe, Mocha, Macchiato<br>The light theme is called Latte. |
+| Coffee | No | Yes | Custom colorscheme |
 | [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
 | [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
 | [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. |
@@ -82,6 +83,10 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/catppuccin-macchiato.webp"/>
 <h4 align="center">Mocha</h4>
 <img src="assets/colorschemes/catppuccin-mocha.webp"/>
+</details>
+<details>
+<summary><h4>Coffee</h4></summary>
+<img src="assets/colorschemes/coffee-dark.webp"/>
 </details>
 <details>
 <summary><h4>Dracula</h4></summary>
