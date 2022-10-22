@@ -78,7 +78,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <summary><h4>Generic</h4></summary>
 <h4 align="center">Dark</h4>
 <img src="assets/colorschemes/generic-dark.webp"/>
-<h4 align="center">AMOLED</h4>
+<h4 align="center">AMOLED Dark</h4>
 <img src="assets/colorschemes/amoled-dark.webp"/>
 </details>
 <summary><h4>Catppuccin</h4></summary>
