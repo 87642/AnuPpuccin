@@ -238,6 +238,33 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: anp-table-header
+        title: Table settings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: anp-table-toggle
+        title: Enable table redesign
+        type: class-toggle
+    -
+        id: anp-table-auto
+        title: Center tables
+        description: Use anp-table-auto for yaml syntax
+        type: class-toggle
+    -
+        id: anp-table-width
+        title: Enable custom table width
+        description: Use anp-table-width for yaml syntax
+        type: class-toggle
+    - 
+        id: anp-table-width-pct
+        title: Custom table width
+        description: Size unit is in percentage
+        type: variable-number
+        default: 100
+        format: "%"
     - 
         id: anp-font-header
         title: Font settings
@@ -281,10 +308,6 @@ settings:
     - 
         id: anp-decoration-toggle
         title: Enable decoration recolors
-        type: class-toggle
-    -
-        id: anp-table-toggle
-        title: Enable table redesign
         type: class-toggle
     - 
         id: anp-button-metadata-toggle

@@ -239,6 +239,33 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: anp-table-header
+        title: Table settings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: anp-table-toggle
+        title: Enable table redesign
+        type: class-toggle
+    -
+        id: anp-table-auto
+        title: Center tables
+        description: Use anp-table-auto for yaml syntax
+        type: class-toggle
+    -
+        id: anp-table-width
+        title: Enable custom table width
+        description: Use anp-table-width for yaml syntax
+        type: class-toggle
+    - 
+        id: anp-table-width-pct
+        title: Custom table width
+        description: Size unit is in percentage
+        type: variable-number
+        default: 100
+        format: "%"
     - 
         id: anp-font-header
         title: Font settings
@@ -282,10 +309,6 @@ settings:
     - 
         id: anp-decoration-toggle
         title: Enable decoration recolors
-        type: class-toggle
-    -
-        id: anp-table-toggle
-        title: Enable table redesign
         type: class-toggle
     - 
         id: anp-button-metadata-toggle
@@ -1167,16 +1190,6 @@ hr {
   padding: 5px 5px 5px 10px;
 }
 
-/*-Recolor table borders-*/
-.anp-table-toggle .markdown-rendered table {
-  margin: 0 auto;
-  background-color: rgba(var(--ctp-mantle), 0.5);
-}
-.anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
-  text-align: center;
-  border: 2px solid var(--table-border-color);
-}
-
 /*-Formatting recolors-*/
 .cm-s-obsidian span.cm-formatting-strong,
 .cm-s-obsidian span.cm-strong {
@@ -1308,6 +1321,23 @@ hr {
   --italic-color: var(--text-normal) !important;
 }
 
+/*-Recolor table borders-*/
+.anp-table-toggle .markdown-rendered table {
+  background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
+  text-align: center;
+  border: 2px solid var(--table-border-color);
+}
+
+.anp-table-auto.markdown-rendered table {
+  margin: 0 auto;
+}
+
+.anp-table-width.markdown-rendered table {
+  width: var(--anp-table-width-pct);
+}
+
 /*----------------CALLOUTS-------------------*/
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) {
   padding: 0px;
@@ -1367,10 +1397,6 @@ hr {
   background-color: rgba(var(--callout-color), 0.1);
   padding: 10px 0px 10px 10px;
   border-color: rgba(var(--callout-color), 0.4);
-}
-.anp-callout-toggle.anp-callout-sleek .callout ul, .anp-callout-toggle.anp-callout-sleek .callout ol {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
 }
 .anp-callout-toggle.anp-callout-sleek .callout .list-collapse-indicator {
   margin-left: -35px;
@@ -1684,7 +1710,7 @@ hr {
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--color-accent);
-  margin-bottom: 2px;
+  margin-bottom: 0px;
   padding-bottom: 0px;
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active .workspace-tab-header-inner {
