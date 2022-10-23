@@ -145,9 +145,5 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 
 ### If you like my theme:
-I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a ko-fi link.
-<br>
-<br>
-<a href="https://ko-fi.com/AnubisNekhet">
-    <img height="40px" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=2" />
-</a>
+I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="anubisnekhet" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
