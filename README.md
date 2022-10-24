@@ -59,7 +59,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <p align="center"> <img src="assets/markdown-embed.png" style="width: 60%;"> </p>
 
 ## Colorschemes used
-**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) snippet. <br>
+**Note**: Colorschemes that aren't in the base theme can be used through the [extended colorschemes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) snippet. <br> **Important**: Some colorschemes have been been modified to fit the Catppuccin color value style, which means there will be some changes made to make the theme feel more natural.
 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
@@ -71,6 +71,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) | Yes | Yes | Accent value is hardcoded into the theme. |
 | [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
 | [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | - |
+| [Royal Velvet](https://github.com/caro401/royal-velvet) | No | Yes | - |
 | [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
 
 <details>
@@ -134,6 +135,10 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/rosepine-dark.webp"/>
 </details>
 <details>
+<summary><h4>Royal Velvet</h4></summary>
+<img src="assets/colorschemes/royal-velvet.webp"/>
+</details>
+<details>
 <summary><h4>Solarized</h4></summary>
 <img src="assets/colorschemes/solarized-light.webp"/>
 <img src="assets/colorschemes/solarized-dark.webp"/>
@@ -149,6 +154,7 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
+- [EdualcLaiv](https://github.com/EdualcLaiv)
 
 ### If you like my theme:
 I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
