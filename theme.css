@@ -268,7 +268,7 @@ settings:
         format: "%"
     - 
         id: anp-font-header
-        title: Font settings
+        title: Editor settings
         type: heading
         level: 3
         collapsed: true
@@ -282,9 +282,21 @@ settings:
         type: variable-text
         default: Iosevka Comfy Duo
     - 
-        id: anp-current-line
-        title: Highlight active line in editing mode
-        type: class-toggle
+        id: anp-active-line
+        title: Active line highlight
+        type: class-select
+        allowEmpty: false
+        default: anp-no-highlight
+        options:
+            -
+                label: None
+                value: anp-no-highlight
+            -
+                label: Highlight
+                value: anp-current-line
+            -
+                label: Highlight + Border
+                value: anp-current-line-border
     - 
         id: anp-markdown-embed-header
         title: Markdown embed settings
@@ -1036,6 +1048,11 @@ body {
   font-family: var(--anp-editor-font);
 }
 
+/*-Highlighted gutter number-*/
+.cm-lineNumbers .cm-gutterElement.cm-active {
+  color: var(--interactive-accent) !important;
+}
+
 .mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
   margin-top: -24px !important;
   margin-left: 24px !important;
@@ -1266,6 +1283,12 @@ hr {
 
 /*-Highlight current line-*/
 .anp-current-line .markdown-source-view .cm-active.cm-line {
+  background-color: rgba(var(--ctp-surface1), 0.4);
+}
+
+.anp-current-line-border .markdown-source-view .cm-active.cm-line {
+  border-left: 2px solid var(--interactive-accent);
+  margin-left: -2px !important;
   background-color: rgba(var(--ctp-surface1), 0.4);
 }
 

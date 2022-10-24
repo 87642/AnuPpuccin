@@ -267,7 +267,7 @@ settings:
         format: "%"
     - 
         id: anp-font-header
-        title: Font settings
+        title: Editor settings
         type: heading
         level: 3
         collapsed: true
@@ -281,9 +281,21 @@ settings:
         type: variable-text
         default: Iosevka Comfy Duo
     - 
-        id: anp-current-line
-        title: Highlight active line in editing mode
-        type: class-toggle
+        id: anp-active-line
+        title: Active line highlight
+        type: class-select
+        allowEmpty: false
+        default: anp-no-highlight
+        options:
+            -
+                label: None
+                value: anp-no-highlight
+            -
+                label: Highlight
+                value: anp-current-line
+            -
+                label: Highlight + Border
+                value: anp-current-line-border
     - 
         id: anp-markdown-embed-header
         title: Markdown embed settings

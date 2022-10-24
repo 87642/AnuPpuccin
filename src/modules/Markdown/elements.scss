@@ -59,3 +59,10 @@ hr {
     background-color: rgba(var(--ctp-surface1), 0.4);
   }
 }
+.anp-current-line-border .markdown-source-view {
+  .cm-active.cm-line {
+    border-left: 2px solid var(--interactive-accent);
+    margin-left: -2px !important;
+    background-color: rgba(var(--ctp-surface1), 0.4);
+  }
+}
