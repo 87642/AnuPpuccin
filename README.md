@@ -67,7 +67,8 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | Coffee | No | Yes | Custom colorscheme |
 | [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
 | [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
-| [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. |
+| [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.|
+| [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) | Yes | Yes | Accent value is hardcoded into the theme. |
 | [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
 | [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | - |
 | [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
@@ -115,6 +116,11 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 <img src="assets/colorschemes/nord-dark.webp"/>
 <h4 align="center">Nord Darker (Custom Palette)</h4>
 <img src="assets/colorschemes/nord-darker.webp"/>
+</details>
+<details>
+<summary><h4>Primary</h4></summary>
+<img src="assets/colorschemes/primary-light.webp"/>
+<img src="assets/colorschemes/primary-dark.webp"/>
 </details>
 <details>
 <summary><h4>Rosebox</h4></summary>

@@ -1,18 +1,3 @@
-/*-Custom hr margins-*/
-hr {
-  margin-block-start: 5px;
-  margin-block-end: 5px;
-}
-/*-Blockquote spacing-*/
-.markdown-rendered blockquote {
-  padding: 5px 5px 5px 10px;
-}
-
-/*-Formatting recolors-*/
-.cm-s-obsidian span.cm-formatting-strong,
-.cm-s-obsidian span.cm-strong { color: var(--bold-color); }
-.cm-s-obsidian span.cm-formatting-em,
-.cm-s-obsidian span.cm-em { color: var(--italic-color); }
 /*--------------HEADERS----------------*/
 /*-Custom header font-*/
 .anp-header-toggle .markdown-reading-view, .anp-header-toggle .is-live-preview {
@@ -47,22 +32,4 @@ hr {
 .anp-header-toggle.anp-header-margin-toggle h6 {
     margin-block-start: var(--anp-header-margin-value);
     margin-block-end: var(--anp-header-margin-value);
-}
-/*-Do not affect calendar-*/
-#calendar-container h3 {
-  font-family: var(--font-interface);
-  font-weight: bold;
-}
-/*-Highlight current line-*/
-.anp-current-line .markdown-source-view {
-  .cm-active.cm-line {
-    background-color: rgba(var(--ctp-surface1), 0.4);
-  }
-}
-.anp-current-line-border .markdown-source-view {
-  .cm-active.cm-line {
-    border-left: 2px solid var(--interactive-accent);
-    margin-left: -2px !important;
-    background-color: rgba(var(--ctp-surface1), 0.4);
-  }
 }
