@@ -14,4 +14,9 @@
 .anp-table-width.markdown-rendered table {
     width: var(--anp-table-width-pct);
 }
-
+.anp-table-auto .markdown-rendered table {
+  margin: 0 auto;
+}
+.anp-table-width .markdown-rendered table {
+    width: var(--anp-table-width-pct);
+}
