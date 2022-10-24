@@ -907,6 +907,7 @@ body {
   --anp-header-margin-value: 10px;
   --anp-header-font: "Noto Serif";
   --tab-stacked-pane-width: var(--file-line-width);
+  --anp-table-width-pct: 100%;
 }
 
 /*----------FILE PREVIEW MARGINS--------------*/
