@@ -94,9 +94,9 @@ settings:
   --ctp-surface2: 61, 61, 61;
   --ctp-surface1: 51, 51, 51;
   --ctp-surface0: 40, 40, 40;
-  --ctp-base: 34, 34, 34;
-  --ctp-mantle: 35, 35, 35;
-  --ctp-crust: 38, 38, 38;
+  --ctp-base: 35, 35, 35;
+  --ctp-mantle: 30, 30, 30;
+  --ctp-crust: 25, 25, 25;
 }
 .theme-light.anp-theme-ext-light.ctp-nord-light {
     --ctp-rosewater: 209, 135, 112;
