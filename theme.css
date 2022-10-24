@@ -12,7 +12,7 @@ settings:
         collapsed: true
     - 
         id: anp-colors-section-header
-        title: Theme settings
+        title: Colors
         type: heading
         level: 1
         collapsed: true
@@ -114,91 +114,82 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: anp-layout-section-header
-        title: Layout settings
+        id: anp-components-section-header
+        title: Components
         type: heading
         level: 1
         collapsed: true
     - 
-        id: anp-ui-header
-        title: UI elements settings
+        id: anp-callout-header
+        title: Callouts
         type: heading
         level: 2
         collapsed: true
     - 
-        id: anp-layout-select
-        title: Layout variant
+        id: anp-callout-toggle
+        title: Toggle callout styling
+        type: class-toggle
+    - 
+        id: anp-callout-select
+        title: Select callout style
         type: class-select
+        default: anp-callout-default
         allowEmpty: false
-        default: anp-default-layout
-        options:
-            -
-                label: Default
-                value: anp-default-layout
-            -
-                label: Cards
-                value: anp-card-layout
-    - 
-        id: anp-color-transition-toggle
-        title: Color transition toggle (WIP)
-        description: "Adds a transition when switching palettes, looks really neat :)"
-        type: class-toggle
-    - 
-        id: anp-tooltip-toggle
-        title: Disable tooltips
-        type: class-toggle
-    - 
-        id: anp-custom-vault-toggle
-        title: Enable custom vault title
-        type: class-toggle
-    - 
-        id: anp-toggle-scrollbars
-        title: Disable scrollbars
-        type: class-toggle
-    - 
-        id: anp-alt-tab-header
-        title: Tab settings
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: anp-alt-tab-style
-        title: Tab style
-        type: class-select
-        allowEmpty: false
-        default: anp-default-tab
         options:
             - 
                 label: Default
-                value: anp-default-tab
+                value: anp-callout-default
             - 
-                label: Minimalistic
-                value: anp-mini-tab-toggle
+                label: Sleek
+                value: anp-callout-sleek
             - 
-                label: Safari-style
-                value: anp-alternate-tab-toggle
+                label: Block
+                value: anp-callout-block
+            - 
+                label: Willemstad
+                value: anp-callout-willemstad
     - 
-        id: anp-mini-tab-header
-        title: Minimalistic Tab settings
+        id: anp-callout-normal-toggle
+        title: Toggle callout styling to non-collapsible callouts
+        type: class-toggle
+    - 
+        id: anp-callout-color-toggle
+        title: Toggle custom callout colors
+        type: class-toggle
+    - 
+        id: anp-editor-header
+        title: Editor
         type: heading
         level: 3
         collapsed: true
     - 
-        id: anp-safari-tab-header
-        title: Safari-style Tab settings
-        description: Adapted from github.com/chuckharmston's snippets
-        type: heading
-        level: 3
-        collapsed: true
+        id: anp-editor-font-toggle
+        title: Enable custom source editor font
+        type: class-toggle
     - 
-        id: anp-alt-tab-custom-height
-        title: Custom tab height
-        type: variable-number
-        default: 40
-        format: px
+        id: anp-editor-font
+        title: Editor font
+        type: variable-text
+        default: Iosevka Comfy Duo
+    - 
+        id: anp-active-line
+        title: Active line highlight
+        type: class-select
+        allowEmpty: false
+        default: anp-no-highlight
+        options:
+            -
+                label: None
+                value: anp-no-highlight
+            -
+                label: Highlight
+                value: anp-current-line
+            -
+                label: Highlight + Border
+                value: anp-current-line-border
     - 
         id: anp-preview-header
-        title: File preview settings
+        title: File preview
         type: heading
         level: 2
         collapsed: true
@@ -234,164 +225,24 @@ settings:
         default: 100
         format: "%"
     - 
-        id: anp-markdown-element-header
-        title: Markdown element settings
+        id: anp-ui-header
+        title: General UI
         type: heading
         level: 2
         collapsed: true
-    -
-        id: anp-table-header
-        title: Table settings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: anp-table-toggle
-        title: Enable table redesign
-        type: class-toggle
-    -
-        id: anp-table-auto
-        title: Center tables
-        description: Use anp-table-auto for yaml syntax
-        type: class-toggle
-    -
-        id: anp-table-width
-        title: Enable custom table width
-        description: Use anp-table-width for yaml syntax
+    - 
+        id: anp-tooltip-toggle
+        title: Disable tooltips
         type: class-toggle
     - 
-        id: anp-table-width-pct
-        title: Custom table width
-        description: Size unit is in percentage
-        type: variable-number
-        default: 100
-        format: "%"
-    - 
-        id: anp-font-header
-        title: Editor settings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: anp-editor-font-toggle
-        title: Enable custom source editor font
+        id: anp-toggle-scrollbars
+        title: Disable scrollbars
         type: class-toggle
-    - 
-        id: anp-editor-font
-        title: Editor font
-        type: variable-text
-        default: Iosevka Comfy Duo
-    - 
-        id: anp-active-line
-        title: Active line highlight
-        type: class-select
-        allowEmpty: false
-        default: anp-no-highlight
-        options:
-            -
-                label: None
-                value: anp-no-highlight
-            -
-                label: Highlight
-                value: anp-current-line
-            -
-                label: Highlight + Border
-                value: anp-current-line-border
-    - 
-        id: anp-markdown-embed-header
-        title: Markdown embed settings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: anp-embed-toggle
-        title: Enable custom internal embeds
-        type: class-toggle
-    - 
-        id: anp-embed-animated-toggle
-        title: Enable custom animated internal embeds
-        type: class-toggle
-    - 
-        id: anp-misc-element-header
-        title: Misc. element settings
-        description: Values in this category may be shifted to their own category in the future
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: anp-decoration-toggle
-        title: Enable decoration recolors
-        type: class-toggle
-    - 
-        id: anp-button-metadata-toggle
-        title: Enable custom metadata button
-        type: class-toggle
-    - 
-        id: anp-callout-header
-        title: Callout Settings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: anp-callout-toggle
-        title: Toggle callout styling
-        type: class-toggle
-    - 
-        id: anp-callout-select
-        title: Select callout style
-        type: class-select
-        default: anp-callout-default
-        allowEmpty: false
-        options:
-            - 
-                label: Default
-                value: anp-callout-default
-            - 
-                label: Sleek
-                value: anp-callout-sleek
-            - 
-                label: Block
-                value: anp-callout-block
-            - 
-                label: Willemstad
-                value: anp-callout-willemstad
-    - 
-        id: anp-callout-normal-toggle
-        title: Toggle callout styling to non-collapsible callouts
-        type: class-toggle
-    - 
-        id: anp-callout-color-toggle
-        title: Toggle custom callout colors
-        type: class-toggle
-    - 
-        id: anp-list-header
-        title: List settings
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: anp-list-toggle
-        title: Toggle list styling
-        type: class-toggle
-    - 
-        id: list-indent
-        title: List indent
-        description: Size unit is em
-        type: variable-number
-        default: 2
-        format: em
-    - 
-        id: list-spacing
-        title: List spacing
-        description: Size unit is em
-        type: variable-number
-        default: 0.075
-        format: em
     - 
         id: anp-header-header
-        title: Header settings
+        title: Headers
         type: heading
-        level: 3
+        level: 2
         collapsed: true
     -
         id: anp-header-toggle
@@ -469,6 +320,87 @@ settings:
         default: 1.12
         format: em
     - 
+        id: anp-layout-header
+        title: Layout
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-layout-select
+        title: Layout variant
+        type: class-select
+        allowEmpty: false
+        default: anp-default-layout
+        options:
+            -
+                label: Default
+                value: anp-default-layout
+            -
+                label: Cards
+                value: anp-card-layout
+    - 
+        id: anp-list-header
+        title: Lists
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-list-toggle
+        title: Toggle list styling
+        type: class-toggle
+    - 
+        id: list-indent
+        title: List indent
+        description: Size unit is em
+        type: variable-number
+        default: 2
+        format: em
+    - 
+        id: list-spacing
+        title: List spacing
+        description: Size unit is em
+        type: variable-number
+        default: 0.075
+        format: em
+    - 
+        id: anp-markdown-embed-header
+        title: Markdown embeds
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-embed-toggle
+        title: Enable custom internal embeds
+        type: class-toggle
+    - 
+        id: anp-embed-animated-toggle
+        title: Enable custom animated internal embeds
+        type: class-toggle
+    - 
+        id: anp-misc-element-header
+        title: Misc. element settings
+        description: Values in this category may be shifted to their own category in the future
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-decoration-toggle
+        title: Enable decoration recolors
+        type: class-toggle
+    - 
+        id: anp-button-metadata-toggle
+        title: Enable custom metadata button
+        type: class-toggle
+    - 
+        id: anp-custom-vault-toggle
+        title: Enable custom vault title
+        type: class-toggle
+    - 
+        id: anp-color-transition-toggle
+        title: Color transition toggle (WIP)
+        description: "Adds a transition when switching palettes, looks really neat :)"
+        type: class-toggle
+    - 
         id: anp-plugin-header
         title: Plugin integrations
         type: heading
@@ -486,9 +418,9 @@ settings:
         type: class-toggle
     - 
         id: anp-rainbow-section-header
-        title: Rainbow folder settings
+        title: Rainbow folder
         type: heading
-        level: 1
+        level: 2
         collapsed: true
     -
         id: anp-alt-rainbow-style
@@ -510,7 +442,7 @@ settings:
         id: anp-full-rainbow-folder-settings
         title: Full folder theme settings
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     - 
         id: anp-rainbow-file-toggle
@@ -533,7 +465,7 @@ settings:
         id: anp-simple-rainbow-folder-settings
         title: Simple folder theme settings
         type: heading
-        level: 2
+        level: 3
         collapsed: true
     - 
         id: anp-simple-rainbow-title-toggle
@@ -555,6 +487,74 @@ settings:
         id: anp-simple-rainbow-icon-toggle
         title: Toggle to enable circular file
         type: class-toggle
+    -
+        id: anp-table-header
+        title: Tables
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-table-toggle
+        title: Enable table redesign
+        type: class-toggle
+    -
+        id: anp-table-auto
+        title: Center tables
+        description: Use anp-table-auto for yaml syntax
+        type: class-toggle
+    -
+        id: anp-table-width
+        title: Enable custom table width
+        description: Use anp-table-width for yaml syntax
+        type: class-toggle
+    - 
+        id: anp-table-width-pct
+        title: Custom table width
+        description: Size unit is in percentage
+        type: variable-number
+        default: 100
+        format: "%"
+    - 
+        id: anp-alt-tab-header
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-alt-tab-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: anp-default-tab
+        options:
+            - 
+                label: Default
+                value: anp-default-tab
+            - 
+                label: Minimalistic
+                value: anp-mini-tab-toggle
+            - 
+                label: Safari-style
+                value: anp-alternate-tab-toggle
+    - 
+        id: anp-mini-tab-header
+        title: Minimalistic Tab settings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-safari-tab-header
+        title: Safari-style Tab settings
+        description: Adapted from github.com/chuckharmston's snippets
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-alt-tab-custom-height
+        title: Custom tab height
+        type: variable-number
+        default: 40
+        format: px
 */
 /*------------------Defining Colorschemes-------------------*/
 .theme-light, .theme-light.ctp-latte {
