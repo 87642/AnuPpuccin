@@ -490,6 +490,18 @@ settings:
         id: anp-simple-rainbow-icon-toggle
         title: Toggle to enable circular file
         type: class-toggle
+    - 
+        id: anp-stacked-tabs-header
+        title: Stacked Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-stacked-header-width
+        title: Stacked tabs header width
+        type: variable-number
+        default: 40
+        format: px
     -
         id: anp-table-header
         title: Tables

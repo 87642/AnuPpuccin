@@ -160,7 +160,7 @@ settings:
         id: anp-editor-header
         title: Editor
         type: heading
-        level: 3
+        level: 2
         collapsed: true
     - 
         id: anp-editor-font-toggle
@@ -1374,7 +1374,7 @@ hr {
   width: var(--anp-table-width-pct);
 }
 
-.anp-alternate-tab-toggle .workspace-tab-header-container {
+.anp-alternate-tab-toggle, .anp-default-tab {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
 }
 
@@ -1477,6 +1477,9 @@ hr {
   height: var(--tab-height);
 }
 
+.anp-mini-tab-toggle {
+  --header-height: var(--anp-alt-tab-custom-height, 40px);
+}
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
   background-color: transparent;
   box-shadow: none;
