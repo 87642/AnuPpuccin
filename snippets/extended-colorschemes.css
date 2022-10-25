@@ -26,6 +26,9 @@ settings:
             label: Gruvbox
             value: ctp-gruvbox-light
         - 
+            label: Everforest
+            value: ctp-everforest-light
+        - 
             label: Nord
             value: ctp-nord-light
         - 
@@ -54,6 +57,9 @@ settings:
         -
             label: Dracula
             value: ctp-dracula
+        -
+            label: Everforest
+            value: ctp-everforest-dark
         -
             label: Gruvbox
             value: ctp-gruvbox-dark
@@ -539,4 +545,60 @@ settings:
   --ctp-base: 30, 30, 36;
   --ctp-mantle: 25, 25, 30;
   --ctp-crust: 20, 20, 25;
+}
+.theme-light.anp-theme-ext-light.ctp-everforest-light {
+  --ctp-rosewater: 222, 177, 145;
+  --ctp-flamingo: 221, 181, 194;
+  --ctp-pink: 233, 130, 190;
+  --ctp-mauve: 184, 122, 156;
+  --ctp-red: 248, 85, 82;
+  --ctp-maroon: 248, 104, 82;
+  --ctp-peach: 245, 125, 38;
+  --ctp-yellow: 191, 152, 61;
+  --ctp-green: 137, 156, 64;
+  --ctp-teal: 86, 157, 121;
+  --ctp-sky: 86, 157, 139;
+  --ctp-sapphire: 86, 157, 138;
+  --ctp-blue: 90, 147, 162;
+  --ctp-lavender: 208, 161, 187;
+  --ctp-text: 92, 106, 114;
+  --ctp-subtext1: 114, 125, 132;
+  --ctp-subtext0: 135, 150, 134;
+  --ctp-overlay2: 147, 159, 145;
+  --ctp-overlay1: 164, 173, 158;
+  --ctp-overlay0: 223, 219, 200;
+  --ctp-surface2: 227, 224, 204;
+  --ctp-surface1: 237, 234, 213;
+  --ctp-surface0: 243, 239, 218;
+  --ctp-base: 253, 246, 227;
+  --ctp-mantle: 246, 241, 221;
+  --ctp-crust: 240, 237, 216;
+}
+.theme-dark.anp-theme-ext-dark.ctp-everforest-dark {
+  --ctp-rosewater: 231, 198, 155;
+  --ctp-flamingo: 224, 186, 207;
+  --ctp-pink: 227, 150, 174;
+  --ctp-mauve: 184, 123, 157;
+  --ctp-red: 218, 99, 98;
+  --ctp-maroon: 218, 116, 98;
+  --ctp-peach: 215, 127, 72;
+  --ctp-yellow: 191, 152, 61;
+  --ctp-green: 137, 156, 64;
+  --ctp-teal: 86, 157, 121;
+  --ctp-sky: 86, 157, 144;
+  --ctp-sapphire: 86, 156, 157;
+  --ctp-blue: 90, 147, 162;
+  --ctp-lavender: 180, 144, 202;
+  --ctp-text: 211, 198, 170;
+  --ctp-subtext1: 182, 192, 180;
+  --ctp-subtext0: 154, 167, 157;
+  --ctp-overlay2: 133, 146, 137;
+  --ctp-overlay1: 127, 137, 125;
+  --ctp-overlay0: 81, 91, 97;
+  --ctp-surface2: 74, 85, 91;
+  --ctp-surface1: 64, 76, 81;
+  --ctp-surface0: 55, 66, 71;
+  --ctp-base: 47, 56, 62;
+  --ctp-mantle: 39, 47, 52;
+  --ctp-crust: 34, 40, 44;
 }

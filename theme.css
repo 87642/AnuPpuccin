@@ -491,6 +491,18 @@ settings:
         id: anp-simple-rainbow-icon-toggle
         title: Toggle to enable circular file
         type: class-toggle
+    - 
+        id: anp-stacked-tabs-header
+        title: Stacked Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-stacked-header-width
+        title: Stacked tabs header width
+        type: variable-number
+        default: 40
+        format: px
     -
         id: anp-table-header
         title: Tables
@@ -1158,6 +1170,10 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   margin-left: 24px !important;
 }
 
+body {
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
+}
+
 body.is-translucent {
   background-color: transparent;
   --workspace-background-translucent: rgba(var(--ctp-crust), var(--anp-translucency-opacity));
@@ -1376,6 +1392,7 @@ hr {
 
 .anp-alternate-tab-toggle, .anp-default-tab {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
 }
 
 .anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) {
@@ -1479,6 +1496,7 @@ hr {
 
 .anp-mini-tab-toggle {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
+  --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
 }
 .anp-mini-tab-toggle .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header {
   background-color: transparent;
