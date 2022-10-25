@@ -159,7 +159,7 @@ settings:
         id: anp-editor-header
         title: Editor
         type: heading
-        level: 3
+        level: 2
         collapsed: true
     - 
         id: anp-editor-font-toggle
@@ -229,6 +229,10 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    - 
+        id: anp-toggle-metadata
+        title: Hide metadata
+        type: class-toggle
     - 
         id: anp-tooltip-toggle
         title: Disable tooltips
@@ -554,4 +558,20 @@ settings:
         type: variable-number
         default: 40
         format: px
+    - 
+        id: anp-translucency-header
+        title: Translucency
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: anp-translucent-left
+        title: Enable translucency styling
+        type: class-toggle
+    - 
+        id: anp-translucency-opacity
+        title: Window opacity
+        description: In decimal
+        type: variable-number
+        default: 0.15
 */
