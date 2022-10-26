@@ -6,6 +6,10 @@
 ## Preface
 Please do note that I've made this theme for myself, and it may not fit your use cases. However, I've made most of the configuration completely optional so that the experience remains as close to vanilla if you choose to do so. Most of the in-application variables are recolored so that your custom snippets can be used easily with the theme.
 
+### If you like my theme:
+I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
+<a href="https://www.buymeacoffee.com/anubisnekhet" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 <details>
 <summary><h2>Installation</h2></summary>
 - Grab the latest release from the <a href="https://github.com/AnubisNekhet/AnuPpuccin/releases/tag/Release">releases</a> page. <br>
@@ -63,6 +67,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
+| [Atom](https://github.com/kognise/obsidian-atom) | Yes | Yes | - |
 | [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes| Yes | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
 | Coffee | No | Yes | Custom colorscheme |
 | [Everforest](https://github.com/sainnhe/everforest) | Yes | Yes | - |
@@ -77,6 +82,11 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 <details>
 <summary><h3>Previews</h3></summary>
+<details>
+<summary><h4>Atom</h4></summary>
+<img src="assets/colorschemes/atom-light.webp"/>
+<img src="assets/colorschemes/atom-dark.webp"/>
+</details>
 <details>
 <summary><h4>Catppuccin</h4></summary>
 <h4 align="center">Latte</h4>
@@ -161,7 +171,3 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 - [EdualcLaiv](https://github.com/EdualcLaiv)
-
-### If you like my theme:
-I've made this theme primarily for my own purposes and it's completely free, but if you do like it enough to consider throwing a few coins in my hat, here's a link.<br>
-<a href="https://www.buymeacoffee.com/anubisnekhet" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

@@ -1111,9 +1111,6 @@ settings:
   --background-secondary: rgb(var(--ctp-mantle));
   --background-secondary-alt: rgb(var(--ctp-crust));
   --background-modifier-hover: rgba(var(--ctp-text), 0.075);
-  --background-modifier-border: rgb(var(--ctp-surface0));
-  --background-modifier-border-hover: rgb(var(--ctp-surface1));
-  --background-modifier-border-focus: rgb(var(--ctp-surface2));
   --background-modifier-form-field: rgba(var(--ctp-crust), 0.3);
   --background-modifier-success: rgba(var(--ctp-green), 1);
   --background-modifier-success-hover: rgba(var(--ctp-green), 0.9);
@@ -1135,9 +1132,9 @@ settings:
   --interactive-normal: rgb(var(--ctp-surface0));
   --interactive-hover: rgb(var(--ctp-surface1));
   --interactive-success: rgb(var(--ctp-green));
-  --scrollbar-active-thumb-bg: rgba(var(--ctp-text), 0.2);
-  --scrollbar-bg: rgba(var(--ctp-text), 0.05);
-  --scrollbar-thumb-bg: rgba(var(--ctp-text), 0.1);
+  --scrollbar-active-thumb-bg: rgba(var(--ctp-base), 0.2);
+  --scrollbar-bg: rgba(var(--ctp-crust), 0.05);
+  --scrollbar-thumb-bg: rgba(var(--ctp-mantle), 0.1);
   --workspace-background-translucent: rgba(var(--ctp-crust), 0.6);
   --blockquote-background-color: rgba(var(--ctp-crust), 0.5);
   --width-image-gallery: 200px;
@@ -1152,11 +1149,17 @@ settings:
 .theme-dark {
   color-scheme: dark;
   --highlight-mix-blend-mode: none;
+  --background-modifier-border: rgb(var(--ctp-surface0));
+  --background-modifier-border-hover: rgb(var(--ctp-surface1));
+  --background-modifier-border-focus: rgb(var(--ctp-surface2));
 }
 
 .theme-light {
   color-scheme: light;
   --highlight-mix-blend-mode: none;
+  --background-modifier-border: rgb(var(--ctp-surface1));
+  --background-modifier-border-hover: rgb(var(--ctp-overlay1));
+  --background-modifier-border-focus: rgb(var(--ctp-overlay2));
 }
 
 body {
