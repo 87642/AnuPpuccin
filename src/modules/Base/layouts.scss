@@ -59,8 +59,8 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     z-index: 1;
 }
 .anp-card-layout .mod-vertical .workspace-tabs {
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .anp-card-layout .mod-left-split .workspace-tab-container,
 .anp-card-layout .mod-right-split .workspace-tab-container {
@@ -114,4 +114,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 .anp-card-layout .mod-stacked .workspace-tab-container {
     padding-bottom: 10px;
+}
+.anp-card-layout .mod-top .workspace-leaf-resize-handle {
+    border-color: transparent;
 }

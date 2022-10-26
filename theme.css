@@ -157,6 +157,13 @@ settings:
         title: Toggle custom callout colors
         type: class-toggle
     - 
+        id: callout-radius
+        title: Callout Radius
+        description: Format is px
+        type: variable-number
+        default: 4
+        format: px
+    - 
         id: anp-editor-header
         title: Editor
         type: heading
@@ -1144,6 +1151,7 @@ settings:
   --drag-ghost-text-color: rgb(var(--ctp-crust));
   --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
   --titlebar-text-color-focused: var(--color-accent);
+  --callout-title-padding: var(--size-4-2);
 }
 
 .theme-dark {
@@ -1158,8 +1166,8 @@ settings:
   color-scheme: light;
   --highlight-mix-blend-mode: none;
   --background-modifier-border: rgb(var(--ctp-surface1));
-  --background-modifier-border-hover: rgb(var(--ctp-overlay1));
-  --background-modifier-border-focus: rgb(var(--ctp-overlay2));
+  --background-modifier-border-hover: rgb(var(--ctp-surface2));
+  --background-modifier-border-focus: rgb(var(--ctp-overlay0));
 }
 
 body {
@@ -1327,8 +1335,8 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout .mod-vertical .workspace-tabs {
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .anp-card-layout .mod-left-split .workspace-tab-container,
@@ -1391,6 +1399,10 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 
 .anp-card-layout .mod-stacked .workspace-tab-container {
   padding-bottom: 10px;
+}
+
+.anp-card-layout .mod-top .workspace-leaf-resize-handle {
+  border-color: transparent;
 }
 
 .mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
@@ -1758,11 +1770,11 @@ hr {
   padding: 0px;
 }
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-content {
-  padding: 0 10px 10px 10px;
+  padding: 0 var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding);
 }
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-title {
   background-color: rgba(var(--callout-color), 0 0.5);
-  padding: 10px;
+  padding: var(--callout-title-padding);
   cursor: pointer;
 }
 .anp-callout-toggle.anp-callout-sleek:not(.anp-callout-normal-toggle) .callout:not(.is-collapsible) .callout-title .callout-title-inner {
@@ -1771,41 +1783,54 @@ hr {
 .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout:not(.is-collapsible) {
   border-color: rgba(var(--callout-color), 0.4);
   border-width: 1px;
-  border-radius: 10px;
+  border-radius: var(--callout-radius);
   background-color: rgba(var(--ctp-mantle), 0.4);
 }
 .anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout-content {
-  padding: 10px 10px 10px 15px;
+  padding: var(--callout-title-padding) var(--callout-title-padding) var(--callout-title-padding) calc(var(--callout-title-padding) * 1.5);
   border-top: 1px dashed rgba(var(--callout-color), 0.4);
+}
+.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout-fold {
+  padding-right: 0px;
+}
+.anp-callout-toggle.anp-callout-sleek.anp-callout-normal-toggle .callout-title-inner {
+  flex-grow: 1;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible {
   border-color: rgba(var(--callout-color), 0.4);
   border-width: 1px;
-  border-radius: 10px;
+  border-radius: var(--callout-radius);
   background-color: rgba(var(--ctp-mantle), 0.4);
+  --bold-weight: bolder;
+}
+.anp-callout-toggle.anp-callout-sleek .callout.is-collapsible .callout-fold {
+  padding-right: 0px;
+}
+.anp-callout-toggle.anp-callout-sleek .callout.is-collapsible .callout-title-inner {
+  flex-grow: 1;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible.is-collapsed {
   padding: 0;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible.is-collapsed .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
-  padding: 10px;
+  padding: var(--callout-title-padding);
   cursor: pointer;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible.is-collapsed .callout-content {
   display: none;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible:not(.is-collapsed) {
-  padding: 0px 0px 10px 0px;
+  padding: 0px 0px var(--callout-title-padding) 0px;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible:not(.is-collapsed) .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
-  padding: 10px 0px 10px 10px;
+  padding: var(--callout-title-padding);
   border-color: rgba(var(--callout-color), 0.4);
   cursor: pointer;
 }
 .anp-callout-toggle.anp-callout-sleek .callout.is-collapsible:not(.is-collapsed) .callout-content {
-  padding: 10px 10px 0 15px;
+  padding: var(--callout-title-padding) var(--callout-title-padding) 0 calc(var(--callout-title-padding) * 1.5);
   border-top: 1px dashed rgba(var(--callout-color), 0.4);
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not(.is-collapsible) {
@@ -1813,7 +1838,7 @@ hr {
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not(.is-collapsible) .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
-  padding: 10px 0px 10px 10px;
+  padding: var(--callout-title-padding) 0px var(--callout-title-padding) var(--callout-title-padding);
   border-color: rgba(var(--callout-color), 0.4);
 }
 .anp-callout-toggle.anp-callout-sleek .callout .list-collapse-indicator {
@@ -1844,9 +1869,16 @@ hr {
   background-color: rgba(var(--callout-color), 0.1);
 }
 
+.callout {
+  --bold-color: currentColor;
+  --italic-color: currentColor;
+}
+
 .theme-light.anp-callout-toggle .callout-title-inner,
 .theme-light.anp-callout-toggle.anp-callout-normal-toggle .callout:not(.is-collapsible) .callout-title-inner {
   color: var(--text-normal);
+  --bold-color: var(--text-normal);
+  --italic-color: var(--text-normal);
 }
 
 .anp-callout-toggle .callout-content > p:first-child, .anp-callout-toggle .callout-content > ul:first-child, .anp-callout-toggle .callout-content > ol:first-child {
@@ -1936,6 +1968,7 @@ hr {
 }
 .anp-button-metadata-toggle .frontmatter-container .frontmatter-container-header {
   width: 32px !important;
+  z-index: 1;
   height: 32px !important;
   text-overflow: clip;
   overflow: hidden;

@@ -23,7 +23,7 @@ git clone https://github.com/AnubisNekhet/AnuPpuccin.git
 
 ### Custom palette
 <p align="center"> <img src="assets/gh-colorscheme-preview.webp"> </p>
-The theme supports various palettes (5 in the base theme and even more if you use the <a href="https://github.com/AnubisNekhet/AnuPpuccin">extended colorschemes</a> snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
+The theme supports various palettes (5 in the base theme and even more if you use the <a href="https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css">extended colorschemes</a> snippet) which include many popular colorschemes such as Catppuccin and Dracula. These are heavily integrated into the theme as they are directly used to stylize various UI elements.
 
 ### Layouts
 Anuppuccin currently supports 2 layout variants.
@@ -67,7 +67,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 
 | Theme | Light Mode | Dark Mode | Extra Notes |
 | ----- | ---------- | --------- | ----------- |
-| [Atom](https://github.com/kognise/obsidian-atom) | Yes | Yes | - |
+| [Atom](https://github.com/kognise/obsidian-atom) | Yes | Yes | Accent value is hardcoded into the theme. |
 | [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes| Yes | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
 | Coffee | No | Yes | Custom colorscheme |
 | [Everforest](https://github.com/sainnhe/everforest) | Yes | Yes | - |

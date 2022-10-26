@@ -23,11 +23,14 @@ settings:
     default: ctp-nord-light
     options:
         - 
-            label: Gruvbox
-            value: ctp-gruvbox-light
+            label: Atom
+            value: ctp-atom-light
         - 
             label: Everforest
             value: ctp-everforest-light
+        - 
+            label: Gruvbox
+            value: ctp-gruvbox-light
         - 
             label: Nord
             value: ctp-nord-light
@@ -48,6 +51,9 @@ settings:
         -
             label: AMOLED Dark
             value: ctp-amoled-dark
+        -
+            label: Atom
+            value: ctp-atom-dark
         -
             label: Coffee
             value: ctp-coffee-dark
@@ -601,4 +607,62 @@ settings:
   --ctp-base: 47, 56, 62;
   --ctp-mantle: 39, 47, 52;
   --ctp-crust: 34, 40, 44;
+}
+.theme-light.anp-theme-ext-light.ctp-atom-light {
+  --ctp-rosewater: 229, 148, 121;
+  --ctp-flamingo: 197, 103, 131;
+  --ctp-pink: 166, 37, 104;
+  --ctp-mauve: 166, 37, 164;
+  --ctp-red: 231, 85, 69;
+  --ctp-maroon: 231, 101, 69;
+  --ctp-peach: 227, 86, 73;
+  --ctp-yellow: 152, 104, 0;
+  --ctp-green: 78, 162, 76;
+  --ctp-teal: 0, 188, 182;
+  --ctp-sky: 0, 132, 188;
+  --ctp-sapphire: 0, 119, 188;
+  --ctp-blue: 61, 116, 246;
+  --ctp-lavender: 152, 84, 151;
+  --ctp-text: 56, 58, 66;
+  --ctp-subtext1: 77, 80, 91;
+  --ctp-subtext0: 99, 102, 116;
+  --ctp-overlay2: 123, 124, 138;
+  --ctp-overlay1: 148, 148, 158;
+  --ctp-overlay0: 174, 173, 179;
+  --ctp-surface2: 201, 197, 197;
+  --ctp-surface1: 218, 216, 216;
+  --ctp-surface0: 237, 237, 237;
+  --ctp-base: 250, 250, 250;
+  --ctp-mantle: 234, 234, 235;
+  --ctp-crust: 219, 219, 220;
+  --ctp-accent: var(--ctp-blue);
+}
+.theme-dark.anp-theme-ext-dark.ctp-atom-dark {
+  --ctp-rosewater: 226, 196, 168;
+  --ctp-flamingo: 238, 187, 216;
+  --ctp-pink: 221, 120, 211;
+  --ctp-mauve: 198, 120, 221;
+  --ctp-red: 224, 108, 117;
+  --ctp-maroon: 224, 121, 108;
+  --ctp-peach: 209, 154, 102;
+  --ctp-yellow: 229, 192, 123;
+  --ctp-green: 152, 195, 121;
+  --ctp-teal: 86, 182, 194;
+  --ctp-sky: 83, 185, 174;
+  --ctp-sapphire: 93, 185, 187;
+  --ctp-blue: 97, 175, 239;
+  --ctp-lavender: 170, 127, 183;
+  --ctp-text: 221, 222, 223;
+  --ctp-subtext1: 171, 171, 171;
+  --ctp-subtext0: 135, 135, 135;
+  --ctp-overlay2: 108, 115, 132;
+  --ctp-overlay1: 96, 102, 118;
+  --ctp-overlay0: 80, 85, 98;
+  --ctp-surface2: 66, 73, 88;
+  --ctp-surface1: 57, 63, 76;
+  --ctp-surface0: 48, 53, 64;
+  --ctp-base: 39, 43, 52;
+  --ctp-mantle: 33, 37, 43;
+  --ctp-crust: 26, 30, 36;
+  --ctp-accent: var(--ctp-blue);
 }

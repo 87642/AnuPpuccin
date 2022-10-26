@@ -156,6 +156,13 @@ settings:
         title: Toggle custom callout colors
         type: class-toggle
     - 
+        id: callout-radius
+        title: Callout Radius
+        description: Format is px
+        type: variable-number
+        default: 4
+        format: px
+    - 
         id: anp-editor-header
         title: Editor
         type: heading
