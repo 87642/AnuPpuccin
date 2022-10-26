@@ -21,7 +21,7 @@
       border-color: rgba(var(--callout-color), 0.4);
       border-width: 1px;
       border-radius: 10px;
-      background-color: rgb(var(--ctp-mantle));
+      background-color: rgba(var(--ctp-mantle), 0.4);
     }
     .callout-content {
       padding: 10px 10px 10px 15px;
@@ -33,13 +33,16 @@
       border-color: rgba(var(--callout-color), 0.4);
       border-width: 1px;
       border-radius: 10px;
-      background-color: rgb(var(--ctp-mantle));
+      background-color: rgba(var(--ctp-mantle), 0.4);
       &.is-collapsed {
         padding: 0;
         .callout-title {
           background-color: rgba(var(--callout-color), 0.1);
           padding: 10px;
           cursor: pointer;
+        }
+        .callout-content {
+          display: none;
         }
       }
       &:not(.is-collapsed) {
@@ -88,7 +91,7 @@
       border-left-width: 4px;
     }
     .callout-content {
-      background-color: rgba(var(--ctp-mantle));
+      background-color: rgba(var(--ctp-mantle), 0.4);
     }
     .callout-title {
       background-color: rgba(var(--callout-color), 0.1);

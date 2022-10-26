@@ -387,10 +387,6 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: anp-decoration-toggle
-        title: Enable decoration recolors
-        type: class-toggle
-    - 
         id: anp-button-metadata-toggle
         title: Enable custom metadata button
         type: class-toggle
@@ -570,6 +566,114 @@ settings:
         type: variable-number
         default: 40
         format: px
+    - 
+        id: anp-decor-header
+        title: Text decorations
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-decoration-toggle
+        title: Enable decoration recolors
+        type: class-toggle
+    - 
+        id: anp-italic-custom
+        title: Italic color
+        type: class-select
+        allowEmpty: true
+        default: anp-italic-green
+        options:
+            - 
+                label: Rosewater
+                value: anp-italic-rosewater
+            - 
+                label: Flamingo
+                value: anp-italic-flamingo
+            - 
+                label: Pink
+                value: anp-italic-pink
+            - 
+                label: Mauve
+                value: anp-italic-mauve
+            - 
+                label: Red
+                value: anp-italic-red
+            - 
+                label: Maroon
+                value: anp-italic-maroon
+            - 
+                label: Peach
+                value: anp-italic-peach
+            - 
+                label: Yellow
+                value: anp-italic-yellow
+            - 
+                label: Green
+                value: anp-italic-green
+            - 
+                label: Teal
+                value: anp-italic-teal
+            - 
+                label: Sky
+                value: anp-italic-sky
+            - 
+                label: Sapphire
+                value: anp-italic-sapphire
+            - 
+                label: Blue
+                value: anp-italic-blue
+            - 
+                label: Lavender
+                value: anp-italic-lavender
+    - 
+        id: anp-bold-custom
+        title: Bold color
+        type: class-select
+        allowEmpty: true
+        default: anp-bold-red
+        options:
+            - 
+                label: Rosewater
+                value: anp-bold-rosewater
+            - 
+                label: Flamingo
+                value: anp-bold-flamingo
+            - 
+                label: Pink
+                value: anp-bold-pink
+            - 
+                label: Mauve
+                value: anp-bold-mauve
+            - 
+                label: Red
+                value: anp-bold-red
+            - 
+                label: Maroon
+                value: anp-bold-maroon
+            - 
+                label: Peach
+                value: anp-bold-peach
+            - 
+                label: Yellow
+                value: anp-bold-yellow
+            - 
+                label: Green
+                value: anp-bold-green
+            - 
+                label: Teal
+                value: anp-bold-teal
+            - 
+                label: Sky
+                value: anp-bold-sky
+            - 
+                label: Sapphire
+                value: anp-bold-sapphire
+            - 
+                label: Blue
+                value: anp-bold-blue
+            - 
+                label: Lavender
+                value: anp-bold-lavender
     - 
         id: anp-translucency-header
         title: Translucency

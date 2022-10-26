@@ -65,7 +65,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | ----- | ---------- | --------- | ----------- |
 | [Catppuccin](https://github.com/catppuccin/catppuccin) | Yes| Yes | There are 4 variants of the dark theme, namely: Frappe, Macchiato, Mocha and Mocha Old.<br>The light theme is called Latte. |
 | Coffee | No | Yes | Custom colorscheme |
-| Everforest | Yes | Yes | - |
+| [Everforest](https://github.com/sainnhe/everforest) | Yes | Yes | - |
 | [Dracula](https://github.com/dracula/dracula-theme) | No | Yes | - |
 | [Gruvbox](https://github.com/morhetz/gruvbox) | Yes | Yes | - |
 | [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.|

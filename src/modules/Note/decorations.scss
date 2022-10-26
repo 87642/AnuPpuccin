@@ -1,7 +1,7 @@
 /*-Decorations for bold and italics-*/
 .anp-decoration-toggle {
-  --italic-color: rgb(var(--ctp-green));
-  --bold-color: rgb(var(--ctp-red));
+  --italic-color: rgb(var(--anp-italic-color, var(--ctp-green)));
+  --bold-color: rgb(var(--anp-bold-color, var(--ctp-red)));
 }
 /*-Make it so that mark overwrites italic and bold colors-*/
 .markdown-rendered mark {

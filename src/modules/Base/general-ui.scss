@@ -34,3 +34,10 @@
 .anp-tooltip-toggle .tooltip {
   display: none;
 }
+/*-Tab icons-*/
+.mod-left-split .workspace-tab-header.has-active-menu,
+.mod-right-split .workspace-tab-header.has-active-menu,
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  background-color: var(--background-modifier-active-hover);
+}

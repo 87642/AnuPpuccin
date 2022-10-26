@@ -14,6 +14,37 @@
 .anuppuccin-accent-toggle.ctp-accent-blue { --ctp-accent: var(--ctp-blue); }
 .anuppuccin-accent-toggle.ctp-accent-lavender { --ctp-accent: var(--ctp-lavender); }
 
+/*------------------------Bold/Italic Colors------------------------*/
+.anp-bold-rosewater { --anp-bold-color: var(--ctp-rosewater); }
+.anp-bold-flamingo { --anp-bold-color: var(--ctp-flamingo); }
+.anp-bold-pink { --anp-bold-color: var(--ctp-pink); }
+.anp-bold-mauve { --anp-bold-color: var(--ctp-mauve); }
+.anp-bold-red { --anp-bold-color: var(--ctp-red); }
+.anp-bold-maroon { --anp-bold-color: var(--ctp-maroon); }
+.anp-bold-peach { --anp-bold-color: var(--ctp-peach); }
+.anp-bold-yellow { --anp-bold-color: var(--ctp-yellow); }
+.anp-bold-green { --anp-bold-color: var(--ctp-green); }
+.anp-bold-teal { --anp-bold-color: var(--ctp-teal); }
+.anp-bold-sky { --anp-bold-color: var(--ctp-sky); }
+.anp-bold-sapphire { --anp-bold-color: var(--ctp-sapphire); }
+.anp-bold-blue { --anp-bold-color: var(--ctp-blue); }
+.anp-bold-lavender { --anp-bold-color: var(--ctp-lavender); }
+
+.anp-italic-rosewater { --anp-italic-color: var(--ctp-rosewater); }
+.anp-italic-flamingo { --anp-italic-color: var(--ctp-flamingo); }
+.anp-italic-pink { --anp-italic-color: var(--ctp-pink); }
+.anp-italic-mauve { --anp-italic-color: var(--ctp-mauve); }
+.anp-italic-red { --anp-italic-color: var(--ctp-red); }
+.anp-italic-maroon { --anp-italic-color: var(--ctp-maroon); }
+.anp-italic-peach { --anp-italic-color: var(--ctp-peach); }
+.anp-italic-yellow { --anp-italic-color: var(--ctp-yellow); }
+.anp-italic-green { --anp-italic-color: var(--ctp-green); }
+.anp-italic-teal { --anp-italic-color: var(--ctp-teal); }
+.anp-italic-sky { --anp-italic-color: var(--ctp-sky); }
+.anp-italic-sapphire { --anp-italic-color: var(--ctp-sapphire); }
+.anp-italic-blue { --anp-italic-color: var(--ctp-blue); }
+.anp-italic-lavender { --anp-italic-color: var(--ctp-lavender); }
+
 /*------------------Actual Configs--------------------*/
 .anuppuccin-accent-toggle {
     --color-accent: rgb(var(--ctp-accent));
