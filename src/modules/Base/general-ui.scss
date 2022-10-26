@@ -41,3 +41,6 @@
 .mod-right-split .workspace-tab-header.is-active {
   background-color: var(--background-modifier-active-hover);
 }
+.mod-left-split .workspace-tab-header.has-active-menu:hover, .mod-right-split .workspace-tab-header.has-active-menu:hover, .mod-left-split .workspace-tab-header.is-active:hover, .mod-right-split .workspace-tab-header.is-active:hover {
+  background-color: var(--background-modifier-active-hover);
+}

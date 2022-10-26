@@ -349,6 +349,28 @@ settings:
                 label: Cards
                 value: anp-card-layout
     - 
+        id: anp-disable-borders
+        title: Disable borders
+        type: class-toggle
+    - 
+        id: anp-layout-card
+        title: Card layout settings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-card-shadows
+        title: Enable shadows
+        type: class-toggle
+    - 
+        id: anp-card-layout-actions
+        title: Enable card format for actions
+        type: class-toggle
+    - 
+        id: anp-card-layout-filebrowser
+        title: Enable card format for file browser
+        type: class-toggle
+    - 
         id: anp-list-header
         title: Lists
         type: heading
