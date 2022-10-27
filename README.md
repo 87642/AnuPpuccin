@@ -54,7 +54,7 @@ If you use the admonition plugin/have custom callout colors, they won't be affec
 
 ### Colorful Frames
 <p align="center"> <img src="assets/gh-colorful-frames-preview.webp"> </p>
-Adapted from Kepano's [Minimal](https://github.com/kepano/obsidian-minimal) theme, colorful frames add some pop to your vault by displaying your accent color on the top-most bar.
+Adapted from Kepano's <a href="https://github.com/kepano/obsidian-minimal">Minimal</a> theme, colorful frames add some pop to your vault by displaying your accent color on the top-most bar.
 
 ### Simplified markdown embeds
 Markdown embeds have an alternate styling with an animated variant which can be toggled globally using style settings or individually using alt names for embeds, for example: `![[embed|alt-name]]`
