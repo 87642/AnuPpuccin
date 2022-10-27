@@ -9,7 +9,9 @@
   --h6-font: var(--anp-header-font);
 }
 /*-Custom header colors-*/
-.anp-header-toggle.anp-header-color-toggle {
+.anp-header-toggle.anp-header-color-toggle,
+.markdown-rendered.anp-header-color-toggle,
+.markdown-source-view.anp-header-color-toggle {
   --h1-color: rgba(var(--ctp-red));
   --h2-color: rgba(var(--ctp-peach));
   --h3-color: rgba(var(--ctp-green));

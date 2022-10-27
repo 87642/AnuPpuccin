@@ -1,4 +1,7 @@
 /*----------------CALLOUTS-------------------*/
+.anp-callout-fold-position {
+  --anp-callout-fold-position: 1;
+}
 .anp-callout-toggle.anp-callout-sleek {
   &:not(.anp-callout-normal-toggle) {
     .callout:not(.is-collapsible) {
@@ -31,7 +34,7 @@
       padding-right: 0px;
     }
     .callout-title-inner {
-      flex-grow: 1;
+      flex-grow: var(--anp-callout-fold-position, unset);
     }
   }
   .callout {
@@ -40,7 +43,7 @@
         padding-right: 0px;
       }
       .callout-title-inner {
-        flex-grow: 1;
+        flex-grow: var(--anp-callout-fold-position, unset);
       }
       border-color: rgba(var(--callout-color), 0.4);
       border-width: 1px;
@@ -85,6 +88,9 @@
       padding-right: 3px;
     }
   }
+}
+.callout-title-inner {
+  flex-grow: 1;
 }
 .anp-callout-toggle.anp-callout-block {
   .callout {

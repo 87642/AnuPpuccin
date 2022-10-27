@@ -119,6 +119,17 @@ settings:
         level: 1
         collapsed: true
     - 
+        id: colorful-frame
+        title: Colorful Frame
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-colorful-frame
+        title: Toggle colorful frame (WIP)
+        description: Only works with default layout. Inspired by kepano's Minimal theme.
+        type: class-toggle
+    - 
         id: anp-callout-header
         title: Callouts
         type: heading
@@ -162,6 +173,10 @@ settings:
         type: variable-number
         default: 4
         format: px
+    - 
+        id: anp-callout-fold-position
+        title: Callout fold position
+        type: class-toggle
     - 
         id: anp-editor-header
         title: Editor
