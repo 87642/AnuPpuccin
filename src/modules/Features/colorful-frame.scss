@@ -32,9 +32,9 @@
   background-color: rgba(var(--ctp-crust), 0.3)
 }
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .anp-colorful-frame:not(.anp-card-layout) .mod-left-split .workspace-tab-header:active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout) .mod-right-split .workspace-tab-header:active .workspace-tab-header-inner-icon {
     color: var(--background-secondary-alt);
