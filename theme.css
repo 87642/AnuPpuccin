@@ -593,6 +593,13 @@ settings:
                 label: Safari-style
                 value: anp-alternate-tab-toggle
     - 
+        id: anp-alt-tab-custom-height
+        title: Custom tab height
+        type: variable-number
+        allowEmpty: false
+        default: 40
+        format: px
+    - 
         id: anp-mini-tab-header
         title: Minimalistic Tab settings
         type: heading
@@ -605,12 +612,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    - 
-        id: anp-alt-tab-custom-height
-        title: Custom tab height
-        type: variable-number
-        default: 40
-        format: px
     - 
         id: anp-decor-header
         title: Text decorations
