@@ -2112,7 +2112,9 @@ hr {
 }
 
 .anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
-.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+.anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout) .mod-top .clickable-icon.has-active-menu,
+.anp-colorful-frame:not(.anp-card-layout) .mod-top .clickable-icon:active {
   --icon-color-focused: var(--background-secondary-alt);
 }
 

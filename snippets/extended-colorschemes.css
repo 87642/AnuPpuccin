@@ -118,6 +118,7 @@ settings:
   --ctp-base: 35, 35, 35;
   --ctp-mantle: 30, 30, 30;
   --ctp-crust: 25, 25, 25;
+  --ctp-accent: 165, 117, 98;
 }
 .theme-light.anp-theme-ext-light.ctp-nord-light {
   --ctp-rosewater: 209, 135, 112;
