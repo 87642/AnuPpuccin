@@ -127,9 +127,29 @@ settings:
         collapsed: true
     - 
         id: anp-colorful-frame
-        title: Toggle colorful frame (WIP)
-        description: Only works with default layout. Inspired by kepano's Minimal theme.
+        title: "Toggle colorful frame (WIP)"
+        description: "Only works with default layout. Inspired by kepano's Minimal theme."
         type: class-toggle
+    - 
+        id: anp-colorful-frame-opacity
+        title: Colorful frame opacity
+        type: variable-number-slider
+        default: 0.9
+        min: 0
+        max: 1
+        step: 0.05
+    -
+        id: anp-colorful-frame-color
+        title: Custom colorful frame color
+        type: variable-themed-color
+        format: "rgb-values"
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+        alt-format:
+            -
+                id: anp-colorful-frame-color-hsl
+                format: "hsl-values"
     - 
         id: anp-callout-header
         title: Callouts
@@ -2084,14 +2104,14 @@ hr {
 
 .anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
 .anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
-  --tab-container-background: rgba(var(--ctp-accent), 0.9);
-  --titlebar-background: rgba(var(--ctp-accent), 0.9);
+  --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 0.9));
+  --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 0.9));
 }
 
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
 .anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
-  --tab-container-background: hsla(var(--color-accent-hsl), 0.9);
-  --titlebar-background: hsla(var(--color-accent-hsl), 0.9);
+  --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 0.9));
+  --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 0.9));
 }
 
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header,

@@ -1,12 +1,12 @@
 .anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
 .anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
-  --tab-container-background: rgba(var(--ctp-accent), 0.9);
-  --titlebar-background: rgba(var(--ctp-accent), 0.9);
+  --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 0.9));
+  --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 0.9));
 }
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
 .anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
-  --tab-container-background: hsla(var(--color-accent-hsl), 0.9);
-  --titlebar-background: hsla(var(--color-accent-hsl), 0.9);
+  --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 0.9));
+  --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 0.9));;
 }
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
