@@ -1630,12 +1630,12 @@ span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .ma
 .anp-header-toggle.anp-header-color-toggle,
 .markdown-rendered.anp-header-color-toggle,
 .markdown-source-view.anp-header-color-toggle {
-  --h1-color: rgba(var(--ctp-red));
-  --h2-color: rgba(var(--ctp-peach));
-  --h3-color: rgba(var(--ctp-green));
-  --h4-color: rgba(var(--ctp-teal));
-  --h5-color: rgba(var(--ctp-lavender));
-  --h6-color: rgba(var(--ctp-mauve));
+  --h1-color: var(--anp-h1-color, rgba(var(--ctp-red)));
+  --h2-color: var(--anp-h2-color, rgba(var(--ctp-peach)));
+  --h3-color: var(--anp-h3-color, rgba(var(--ctp-green)));
+  --h4-color: var(--anp-h4-color, rgba(var(--ctp-teal)));
+  --h5-color: var(--anp-h5-color, rgba(var(--ctp-lavender)));
+  --h6-color: var(--anp-h6-color, rgba(var(--ctp-mauve)));
 }
 
 /*-Source editor recolor application-*/
@@ -1952,7 +1952,7 @@ hr {
   background-color: rgba(var(--callout-color), 0.1);
 }
 
-.callout {
+.callout-title {
   --bold-color: currentColor;
   --italic-color: currentColor;
 }
@@ -2136,7 +2136,7 @@ hr {
 
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
-.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.anp-colorful-frame:not(.anp-card-layout).is-focused .mod-active:not(.mod-stacked).mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .anp-colorful-frame:not(.anp-card-layout) .mod-left-split .workspace-tab-header:active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout) .mod-right-split .workspace-tab-header:active .workspace-tab-header-inner-icon {
@@ -2159,7 +2159,7 @@ hr {
   background-color: var(--background-primary);
   --tab-container-background: var(--background-primary) !important;
   height: calc(var(--header-height) - 5px);
-  margin-right: var(--size-4-1);
+  margin-right: 0;
   border-radius: 0 0 var(--radius-s) var(--radius-s);
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -2176,6 +2176,14 @@ hr {
 .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-title {
   color: var(--background-primary);
+}
+
+.anp-colorful-frame:not(.anp-card-layout) .sidebar-toggle-button.mod-right {
+  border-radius: 0 0 0 var(--radius-s);
+}
+
+.anp-colorful-frame:not(.anp-card-layout).is-fullscreen:not(.is-popout-window) .sidebar-toggle-button.mod-left {
+  border-radius: 0 0 var(--radius-s) 0;
 }
 
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {

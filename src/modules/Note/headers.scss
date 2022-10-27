@@ -12,12 +12,12 @@
 .anp-header-toggle.anp-header-color-toggle,
 .markdown-rendered.anp-header-color-toggle,
 .markdown-source-view.anp-header-color-toggle {
-  --h1-color: rgba(var(--ctp-red));
-  --h2-color: rgba(var(--ctp-peach));
-  --h3-color: rgba(var(--ctp-green));
-  --h4-color: rgba(var(--ctp-teal));
-  --h5-color: rgba(var(--ctp-lavender));
-  --h6-color: rgba(var(--ctp-mauve));
+  --h1-color: var(--anp-h1-color, rgba(var(--ctp-red)));
+  --h2-color: var(--anp-h2-color, rgba(var(--ctp-peach)));
+  --h3-color: var(--anp-h3-color, rgba(var(--ctp-green)));
+  --h4-color: var(--anp-h4-color, rgba(var(--ctp-teal)));
+  --h5-color: var(--anp-h5-color, rgba(var(--ctp-lavender)));
+  --h6-color: var(--anp-h6-color, rgba(var(--ctp-mauve)));
 }
 /*-Source editor recolor application-*/
 .cm-formatting-header-1 { color: var(--h1-color); }
