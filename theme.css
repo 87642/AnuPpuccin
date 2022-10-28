@@ -2176,6 +2176,11 @@ hr {
 .anp-colorful-frame:not(.anp-card-layout).is-focused .mod-top .workspace-tab-header-new-tab .clickable-icon:hover {
   color: var(--background-secondary-alt);
 }
+.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top,
+.anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top,
+.anp-colorful-frame:not(.anp-card-layout).is-focused.is-focused.anp-mini-tab-toggle .mod-top {
+  --tab-text-color-focused-active-current: var(--background-secondary-alt);
+}
 .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header, .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active,
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout).is-focused.anp-mini-tab-toggle .mod-top .workspace-tab-header.is-active,
@@ -2186,11 +2191,29 @@ hr {
   --tab-text-color-focused: var(--background-secondary-alt);
 }
 
+.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+  --tab-text-color-focused: var(--background-secondary-alt);
+  --tab-text-color-focused-active-current: var(--background-secondary-alt);
+}
+
 .anp-colorful-frame:not(.anp-card-layout) .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon.has-active-menu,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon:active {
   --icon-color-focused: var(--background-secondary-alt);
+}
+
+.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header,
+.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header .workspace-tab-header-inner-close-button {
+  --tab-text-color-focused: var(--background-secondary-alt);
+  --tab-text-color-focused-active-current: var(--background-secondary-alt);
+}
+
+.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header.is-active,
+.anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+  --tab-text-color-focused: var(--text-faint);
+  --tab-text-color-focused-active-current: var(--text-normal);
 }
 
 .anp-colorful-frame:not(.anp-card-layout) .mod-left-split .mod-top .workspace-tab-header.is-active,
