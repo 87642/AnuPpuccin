@@ -2377,6 +2377,21 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   opacity: 0.5;
 }
 
+.anp-colorful-frame {
+  --titlebar-background: var(--color-accent);
+  --titlebar-background-focused: var(--color-accent);
+  --titlebar-text-color: var(--background-primary);
+  --titlebar-text-color-focused: var(--background-secondary-alt);
+}
+
+.anp-colorful-frame.is-hidden:not(.is-hidden-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame.is-hidden:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
+  border-radius: var(--radius-m);
+}
+
+.anp-colorful-frame:not(.is-hidden) .sidebar-toggle-button.mod-right, .anp-colorful-frame:not(.is-hidden) .sidebar-toggle-button.mod-left {
+  border-radius: var(--radius-m);
+}
+
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {
   color: rgb(var(--ctp-red));
 }
