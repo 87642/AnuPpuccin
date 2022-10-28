@@ -85,7 +85,7 @@ Markdown embeds have an alternate styling with an animated variant which can be 
 | [Nord](https://github.com/arcticicestudio/nord) | Yes | Yes | A custom darker variant of the dark theme is included as well. <br> Accent value is hardcoded into the theme.|
 | [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) | Yes | Yes | Accent value is hardcoded into the theme. |
 | [Rosé Pine](https://github.com/rose-pine/rose-pine-theme) | Yes | Yes | The second variant of the dark theme, namely Rosé Pine dawn hasn't been implemented yet. |
-| [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | - |
+| [Rosebox](https://github.com/KraXen72/rosebox) | No | Yes | Accent value is hardcoded into the theme. |
 | [Royal Velvet](https://github.com/caro401/royal-velvet) | No | Yes | - |
 | [Solarized](https://github.com/altercation/solarized) | Yes | Yes | - |
 

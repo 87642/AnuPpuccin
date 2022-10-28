@@ -8,6 +8,12 @@
     border: 2px solid var(--table-border-color);
   }
 }
+//dataview table
+.anp-table-toggle {
+  .table-view-table > tbody > tr:hover {
+    background-color: rgba(var(--ctp-surface1), 0.1) !important;
+  }
+}
 .anp-table-auto.markdown-rendered table {
   margin: 0 auto;
 }
