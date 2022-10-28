@@ -127,13 +127,12 @@ settings:
     - 
         id: anp-colorful-frame
         title: "Toggle colorful frame (WIP)"
-        description: "Only works with default layout. Inspired by kepano's Minimal theme."
         type: class-toggle
     - 
         id: anp-colorful-frame-opacity
         title: Colorful frame opacity
         type: variable-number-slider
-        default: 0.9
+        default: 1
         min: 0
         max: 1
         step: 0.05
@@ -276,6 +275,10 @@ settings:
         title: Hide metadata
         type: class-toggle
     - 
+        id: anp-hide-status-bar
+        title: Hide status bar
+        type: class-toggle
+    - 
         id: anp-tooltip-toggle
         title: Disable tooltips
         type: class-toggle
@@ -393,6 +396,13 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: anp-card-layout-padding
+        title: Card padding
+        description: Size unit is px
+        type: variable-number
+        default: 10
+        format: px
     - 
         id: anp-card-shadows
         title: Enable shadows

@@ -69,10 +69,15 @@
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
   .workspace-tab-header-inner, .workspace-tab-header-inner-title  {
-    color: var(--color-accent);
+    color: var(--text-normal);
   }
   .workspace-tab-header-inner:hover {
     background-color: rgba(var(--ctp-surface1), 0.4);
+  }
+}
+.anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked).mod-active .workspace-tab-header.is-active {
+  .workspace-tab-header-inner, .workspace-tab-header-inner-title  {
+    color: var(--color-accent);
   }
 }
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:hover {
@@ -85,4 +90,7 @@
 .anp-alternate-tab-toggle .sidebar-toggle-button.mod-left .clickable-icon,
 .anp-alternate-tab-toggle .sidebar-toggle-button.mod-right .clickable-icon {
   height: var(--tab-height);
+}
+.is-focused:not(.anp-mini-tab-toggle.anp-colorful-frame) .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, .is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--color-accent);
 }
