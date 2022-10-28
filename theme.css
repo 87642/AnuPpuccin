@@ -128,7 +128,6 @@ settings:
     - 
         id: anp-colorful-frame
         title: "Toggle colorful frame (WIP)"
-        description: "Only works with default layout. Inspired by kepano's Minimal theme."
         type: class-toggle
     - 
         id: anp-colorful-frame-opacity
@@ -1514,8 +1513,14 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   border-color: transparent;
 }
 
-.anp-disable-borders {
+body.anp-disable-borders {
   --divider-color: transparent;
+}
+
+.anp-card-layout .workspace-drop-overlay:before {
+  width: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
+  height: calc(100% - 6px - var(--anp-card-layout-padding, 0) * 2);
+  margin: auto;
 }
 
 .mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
@@ -2143,6 +2148,10 @@ hr {
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
 }
 
+.anp-colorful-frame {
+  --divider-color-hover: var(--background-secondary-alt);
+}
+
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .workspace-tab-header.is-active,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top:not(.mod-stacked) .is-focused.workspace-tab-header,
@@ -2256,7 +2265,7 @@ body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
 }
 
 body.anp-colorful-frame.anp-card-layout .workspace,
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs.mod-top {
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs {
   background-color: var(--tab-container-background);
 }
 
@@ -2324,6 +2333,12 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 
 .anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--background-secondary-alt);
+}
+
+.anp-colorful-frame.anp-card-layout .workspace-drop-overlay:before {
+  background-color: var(--background-secondary-alt);
+  border-radius: var(--radius-m);
+  opacity: 0.5;
 }
 
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {

@@ -139,6 +139,11 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 .anp-card-layout .mod-top .workspace-leaf-resize-handle {
     border-color: transparent;
 }
-.anp-disable-borders {
+body.anp-disable-borders {
     --divider-color: transparent;
+}
+.anp-card-layout .workspace-drop-overlay:before {
+  width: calc(100% - 6px - var(--anp-card-layout-padding, 0)*2);
+  height: calc(100% - 6px - var(--anp-card-layout-padding, 0)*2);
+  margin: auto;
 }

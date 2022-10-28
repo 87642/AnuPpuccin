@@ -8,6 +8,9 @@
   --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));;
 }
+.anp-colorful-frame {
+  --divider-color-hover: var(--background-secondary-alt);
+}
 .anp-colorful-frame:not(.anp-card-layout),
 .anp-colorful-frame:not(.anp-card-layout).is-focused {
   .mod-top {
@@ -117,7 +120,7 @@ body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
 }
 body.anp-colorful-frame.anp-card-layout .workspace,
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs.mod-top {
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs {
   background-color: var(--tab-container-background);
 }
 .anp-colorful-frame.anp-card-layout,
@@ -177,4 +180,9 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 }
 .anp-mini-tab-toggle.anp-colorful-frame .workspace-split:not(.mod-left-split):not(.mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header.is-active {
   border-bottom: 2px solid var(--background-secondary-alt);
+}
+.anp-colorful-frame.anp-card-layout .workspace-drop-overlay:before {
+  background-color: var(--background-secondary-alt);
+  border-radius: var(--radius-m);
+  opacity: 0.5;
 }
