@@ -89,6 +89,12 @@
   --icon-color-hover: var(--text-muted);
   --icon-color-active: var(--text-accent);
   --icon-color-focused: var(--text-normal);
+  .clickable-icon {
+    --icon-color: var(--text-muted) !important;
+    --icon-color-hover: var(--text-muted) !important;
+    --icon-color-active: var(--text-accent) !important;
+    --icon-color-focused: var(--text-normal) !important;
+  }
 }
 
 .anp-colorful-frame:not(.anp-card-layout).anp-mini-tab-toggle.is-focused .mod-active.mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
