@@ -480,6 +480,10 @@ settings:
         title: Enable custom metadata button
         type: class-toggle
     - 
+        id: anp-floating-header
+        title: Enable floating vault title
+        type: class-toggle
+    - 
         id: anp-custom-vault-toggle
         title: Enable custom vault title
         type: class-toggle
@@ -2679,6 +2683,31 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 
 .anp-speech-bubble [data-task="9"] {
   background: linear-gradient(to left, rgba(var(--ctp-lavender), var(--anp-speech-bubble-opacity)), rgba(var(--ctp-mauve), var(--anp-speech-bubble-opacity)));
+}
+
+.anp-floating-header .nav-folder.mod-root > .nav-folder-title {
+  background-color: var(--background-secondary);
+  position: fixed;
+  z-index: 1;
+  width: calc(100% - 2 * var(--size-4-3));
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+}
+
+.anp-floating-header .nav-folder.mod-root > .nav-folder-title:hover {
+  background-color: var(--background-secondary);
+  width: calc(100% - 2 * var(--size-4-3));
+}
+
+.anp-floating-header .nav-folder.mod-root > .nav-folder-children {
+  padding-top: 32px;
+}
+
+.anp-floating-header.anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-title {
+  padding-top: 10px;
+}
+.anp-floating-header.anp-custom-vault-toggle .nav-folder.mod-root > .nav-folder-children {
+  padding-top: 45px;
 }
 
 .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {
