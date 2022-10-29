@@ -1474,7 +1474,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content {
-  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .anp-card-layout .workspace-split .workspace-leaf-content[data-type=file-explorer] {
@@ -1484,7 +1484,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout.anp-card-layout-filebrowser.anp-card-shadows .workspace-split .workspace-leaf-content[data-type=file-explorer] {
-  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .anp-card-layout.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
