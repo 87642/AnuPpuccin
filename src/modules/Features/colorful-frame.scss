@@ -16,7 +16,7 @@ body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before,
   --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));;
 }
-.anp-colorful-frame {
+.anp-colorful-frame.anp-card-layout {
   --divider-color-hover: var(--background-secondary-alt);
 }
 .anp-colorful-frame:not(.anp-card-layout),
