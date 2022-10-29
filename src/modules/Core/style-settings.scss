@@ -197,6 +197,20 @@ settings:
         title: Callout fold position
         type: class-toggle
     - 
+        id: anp-custom-checkboxes-header
+        title: Custom checkboxes
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: anp-custom-checkboxes
+        title: Enable custom checkboxes
+        type: class-toggle
+    - 
+        id: anp-speech-bubble
+        title: Enable speech bubbles
+        type: class-toggle
+    - 
         id: anp-editor-header
         title: Editor
         type: heading

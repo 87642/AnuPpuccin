@@ -1,9 +1,17 @@
 .anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
-.anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
+.anp-colorful-frame.anuppuccin-accent-toggle:not(.anp-card-layout) .workspace-ribbon.mod-left:before,
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout,
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs.mod-top,
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .sidebar-toggle-button,
+.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-ribbon.mod-left:before {
   --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
 }
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container,
+body.anp-colorful-frame.anp-card-layout,
+body.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top,
+body.anp-colorful-frame.anp-card-layout .sidebar-toggle-button,
+body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before,
 .anp-colorful-frame:not(.anp-card-layout) .workspace-ribbon.mod-left:before {
   --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
   --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));;
@@ -59,6 +67,9 @@
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon.has-active-menu,
 .anp-colorful-frame:not(.anp-card-layout) .mod-top .workspace-tab-header-container .clickable-icon:active {
   --icon-color-focused: var(--background-secondary-alt);
+}
+.anp-card-layout.anp-colorful-frame .mod-vertical .workspace-tabs {
+  background-color: var(--tab-container-background);
 }
 .anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header,
 .anp-colorful-frame:not(.anp-card-layout) .workspace-tab-header .workspace-tab-header-inner-close-button {
@@ -127,20 +138,6 @@
   border-radius: 0 0 var(--radius-m) 0;
 }
 
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout,
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs.mod-top,
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .sidebar-toggle-button,
-.anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-ribbon.mod-left:before {
-  --tab-container-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
-  --titlebar-background: rgba(var(--anp-colorful-frame-color, var(--ctp-accent)), var(--anp-colorful-frame-opacity, 1));
-}
-body.anp-colorful-frame.anp-card-layout,
-body.anp-colorful-frame.anp-card-layout .workspace-tabs.mod-top,
-body.anp-colorful-frame.anp-card-layout .sidebar-toggle-button,
-body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before {
-  --tab-container-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
-  --titlebar-background: hsla(var(--anp-colorful-frame-color-hsl, var(--color-accent-hsl)), var(--anp-colorful-frame-opacity, 1));
-}
 body.anp-colorful-frame.anp-card-layout .workspace,
 .anp-colorful-frame.anuppuccin-accent-toggle.anp-card-layout .workspace-tabs {
   background-color: var(--tab-container-background);

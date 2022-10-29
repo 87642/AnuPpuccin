@@ -156,6 +156,7 @@
     --background-modifier-border: rgb(var(--ctp-surface0));
     --background-modifier-border-hover: rgb(var(--ctp-surface1));
     --background-modifier-border-focus: rgb(var(--ctp-surface2));
+    --anp-speech-bubble-opacity: var(--anp-sp-op-dark, 0.9);
 }
 .theme-light {
       color-scheme: light;
@@ -163,6 +164,7 @@
     --background-modifier-border: rgb(var(--ctp-surface1));
     --background-modifier-border-hover: rgb(var(--ctp-surface2));
     --background-modifier-border-focus: rgb(var(--ctp-overlay0));
+    --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
 }
 body {
   --anp-rainbow-folder-bg-opacity: 1;

@@ -57,6 +57,41 @@ The theme comes with many custom callout styles (which can be toggled so they wo
 The snippet also includes support for using the colors of your selected palette which means that the callouts don't ever look out of place :)<br>
 If you use the admonition plugin/have custom callout colors, they won't be affected by the recolor as it only targets vanilla callouts. However, you can make them use AnuPpuccin's palette to support dynamic per-palette theming.<br>
 
+### Custom checkboxes & Speech bubbles
+<p align="center"> <img src="assets/gh-checkbox-preview.webp" width="50%"> </p>
+Anuppuccin's custom checkboxes try to mimic the original checkbox design as much as possible, while still being optional incase you want to use your own checkbox snippet.
+Speech bubbles have been provided which are useful for language learners and RPG vault users alike.<br>Custom checkboxes have been designed to match those provided by the <a href="https://github.com/ceciliamay/obsidianmd-theme-primary">Primary</a> theme for ease of migration and consistency.
+
+| Syntax | Description |
+|--------|-------------|
+| `- [ ]`  | Unchecked   |
+| `- [x]`  | Checked     |
+| `- [>]`  | Rescheduled |
+| `- [<]`  | Scheduled   |
+| `- [!]`  | Important   |
+| `- [-]`  | Cancelled   |
+| `- [/]`  | In Progress |
+| `- [?]`  | Question    |
+| `- [*]`  | Star        |
+| `- [n]`  | Note        |
+| `- [l]`  | Location    |
+| `- [i]`  | Information |
+| `- [I]`  | Idea        |
+| `- [S]`  | Amount      |
+| `- [p]`  | Pro         |
+| `- [c]`  | Con         |
+| `- [b]`  | Bookmark    |
+| `- [0]`  | Speech bubble 0 |
+| `- [1]`  | Speech bubble 1 |
+| `- [2]`  | Speech bubble 2 |
+| `- [3]`  | Speech bubble 3 |
+| `- [4]`  | Speech bubble 4 |
+| `- [5]`  | Speech bubble 5 |
+| `- [6]`  | Speech bubble 6 |
+| `- [7]`  | Speech bubble 7 |
+| `- [8]`  | Speech bubble 8 |
+| `- [9]`  | Speech bubble 9 |
+
 ### Colorful Frames
 <p align="center"> <img src="assets/gh-colorful-frames-preview.webp"> </p>
 Adapted from Kepano's <a href="https://github.com/kepano/obsidian-minimal">Minimal</a> theme, colorful frames add some pop to your vault by displaying your accent color on the top-most bar.
