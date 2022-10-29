@@ -214,12 +214,12 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   --titlebar-text-color: var(--background-primary);
   --titlebar-text-color-focused: var(--background-secondary-alt);
 }
-.anp-colorful-frame.is-hidden:not(.is-hidden-frameless) {
+.anp-colorful-frame.is-frameless:not(.is-hidden-frameless) {
   .sidebar-toggle-button.mod-right, .sidebar-toggle-button.mod-left {
     border-radius: var(--radius-m);
   }
 }
-.anp-colorful-frame:not(.is-hidden) {
+.anp-colorful-frame:not(.is-frameless) {
   .sidebar-toggle-button.mod-right, .sidebar-toggle-button.mod-left {
     border-radius: var(--radius-m);
   }

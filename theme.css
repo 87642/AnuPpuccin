@@ -1348,6 +1348,7 @@ body.anp-card-layout,
 .anp-card-layout .sidebar-toggle-button,
 .anp-card-layout .workspace-tabs.mod-top {
   --tab-container-background: rgb(var(--ctp-crust));
+  --file-header-border: var(--border-width) dashed var(--background-modifier-border);
 }
 
 body.is-focused.anp-card-layout,
@@ -1438,18 +1439,15 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 
 .anp-card-layout .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .anp-card-layout .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-  border-left-style: dashed;
-  border-right: none;
-  border-width: 1px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
 }
 
 .anp-card-layout .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-  border-style: dashed;
-  border-color: var(--tab-outline-color);
-  border-width: 2px 0px 0px 0px !important;
-  height: 0px !important;
-  width: 30%;
-  margin-left: 35% !important;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 2px;
 }
 
 .anp-card-layout .workspace-split .workspace-leaf-content {
@@ -2384,11 +2382,11 @@ body.anp-colorful-frame.anp-card-layout .workspace,
   --titlebar-text-color-focused: var(--background-secondary-alt);
 }
 
-.anp-colorful-frame.is-hidden:not(.is-hidden-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame.is-hidden:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
+.anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame.is-frameless:not(.is-hidden-frameless) .sidebar-toggle-button.mod-left {
   border-radius: var(--radius-m);
 }
 
-.anp-colorful-frame:not(.is-hidden) .sidebar-toggle-button.mod-right, .anp-colorful-frame:not(.is-hidden) .sidebar-toggle-button.mod-left {
+.anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-right, .anp-colorful-frame:not(.is-frameless) .sidebar-toggle-button.mod-left {
   border-radius: var(--radius-m);
 }
 
