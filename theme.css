@@ -1360,8 +1360,19 @@ body {
   background-color: var(--background-secondary-alt);
 }
 
-.workspace-split:not(.mod-root) .graph-controls.is-close {
-  background-color: var(--background-primary);
+.workspace-split:not(.mod-root) .graph-controls.is-close,
+.workspace-split:not(.mod-root) .graph-controls,
+.workspace-split:not(.mod-root) .graph-controls:not(.is-close) {
+  background-color: rgb(var(--ctp-crust));
+}
+
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls.is-close,
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls,
+.anp-card-layout .workspace-split:not(.mod-root) .graph-controls:not(.is-close),
+.workspace-leaf .graph-controls.is-close,
+.workspace-leaf .graph-controls,
+.workspace-leaf .graph-controls:not(.is-close) {
+  background-color: rgb(var(--ctp-mantle));
 }
 
 body.anp-card-layout,
@@ -2950,6 +2961,10 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 #calendar-container h3 {
   font-family: var(--font-interface);
   font-weight: bold;
+}
+
+#calendar-container .right-nav .reset-button {
+  margin: auto;
 }
 
 /*------------RAINBOW FOLDERS-------------*/
