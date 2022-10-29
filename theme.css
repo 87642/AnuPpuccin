@@ -2270,6 +2270,12 @@ body.anp-colorful-frame.anp-card-layout .workspace-ribbon.mod-left:before,
   --tab-text-color-focused-active-current: var(--background-secondary-alt);
 }
 
+.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.anp-colorful-frame:not(.anp-card-layout) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: calc(100% - var(--header-height));
+}
+
 .anp-colorful-frame .sidebar-toggle-button {
   padding: var(--size-4-1) !important;
   background-color: var(--background-primary);
