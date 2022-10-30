@@ -206,7 +206,7 @@
 .anp-speech-bubble [data-task="8"],
 .anp-speech-bubble [data-task="9"] {
     margin-inline-start: -15px;
-    padding: 3px 10px;
+    padding: 3px 10px !important; //hacky but it works i guess
     border-radius: 3px 10px 10px 10px;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -221,6 +221,9 @@
     .task-list-item-checkbox {
         display: none;
     }
+    &::selection {
+        background-color: rgba(var(--ctp-text), 0.2);
+    }
 }
 .theme-dark.anp-speech-bubble {
     [data-task="0"],
@@ -234,6 +237,9 @@
     [data-task="8"],
     [data-task="9"] {
         --text-normal: var(--background-primary);
+        &::selection {
+            background-color: rgba(var(--ctp-crust), 0.2);
+        }
     }
 }
 .anp-speech-bubble [data-task="0"] { background-color: rgba(var(--ctp-red), var(--anp-speech-bubble-opacity)); }
