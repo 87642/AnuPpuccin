@@ -1,3 +1,9 @@
+/*------------CUSTOM CHECKBOXES-----------*/
+/*----------------------------------
+This feature is inspired by Cecilia May's Primary theme: https://github.com/ceciliamay/obsidianmd-theme-primary
+None of the original code was used and only the checkbox ideas were utilised.
+Icons were taken from Font Awesome: https://fontawesome.com/
+----------------------------------*/
 .anp-custom-checkboxes [data-task="x"] {
     input[type=checkbox]:checked, &[type=checkbox]:checked {
         &:after {
