@@ -19,3 +19,7 @@
 .cm-lineNumbers .cm-gutterElement.cm-active {    
   color:  var(--interactive-accent) !important;
 }
+/*-ZWSP Highlight-*/
+.ͼ2 .cm-specialChar {
+  color: rgb(var(--ctp-red));
+}
