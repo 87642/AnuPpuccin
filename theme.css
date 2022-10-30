@@ -2671,6 +2671,7 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 .theme-dark.anp-speech-bubble [data-task="8"],
 .theme-dark.anp-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
+  transition: background-color 0.2s;
 }
 .theme-dark.anp-speech-bubble [data-task="0"]::selection,
 .theme-dark.anp-speech-bubble [data-task="1"]::selection,
@@ -2683,6 +2684,20 @@ body.anp-colorful-frame.anp-card-layout .workspace,
 .theme-dark.anp-speech-bubble [data-task="8"]::selection,
 .theme-dark.anp-speech-bubble [data-task="9"]::selection {
   background-color: rgba(var(--ctp-crust), 0.2);
+}
+
+.anp-speech-bubble .is-live-preview [data-task="0"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="1"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="2"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="3"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="4"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="5"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="6"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="7"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="8"].cm-active,
+.anp-speech-bubble .is-live-preview [data-task="9"].cm-active {
+  border-radius: 0;
+  --text-normal: rgb(var(--ctp-text));
 }
 
 .anp-speech-bubble [data-task="0"] {

@@ -215,3 +215,8 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 - [EdualcLaiv](https://github.com/EdualcLaiv)
+
+## Credits and Acknowledgements
+- [Willemstad](https://github.com/tingmelvin/willemstad-x) for the inspiration for the [Willemstad callout style](https://github.com/AnubisNekhet/AnuPpuccin/blob/35a707114626223f86967b2fc61bec978e3acd8a/src/modules/Callouts/main.scss#L101)
+- [Minimal](https://github.com/kepano/obsidian-minimal) for the inspiration for [colorful frames](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/colorful-frame.scss)
+- [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary) for the [primary colorscheme](https://github.com/AnubisNekhet/AnuPpuccin/blob/35a707114626223f86967b2fc61bec978e3acd8a/snippets/extended-colorschemes.css#L470) and inspiration for [custom checkboxes](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/custom-checkboxes.scss) and [floating vault title](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/floating-title.scss)

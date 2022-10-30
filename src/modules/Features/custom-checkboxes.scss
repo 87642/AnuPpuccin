@@ -240,6 +240,24 @@
         &::selection {
             background-color: rgba(var(--ctp-crust), 0.2);
         }
+        transition: background-color 0.2s;
+    }
+}
+.anp-speech-bubble .is-live-preview {
+    [data-task="0"],
+    [data-task="1"],
+    [data-task="2"],
+    [data-task="3"],
+    [data-task="4"],
+    [data-task="5"],
+    [data-task="6"],
+    [data-task="7"],
+    [data-task="8"],
+    [data-task="9"] {
+        &.cm-active {
+           border-radius: 0;
+           --text-normal: rgb(var(--ctp-text));
+        }
     }
 }
 .anp-speech-bubble [data-task="0"] { background-color: rgba(var(--ctp-red), var(--anp-speech-bubble-opacity)); }
