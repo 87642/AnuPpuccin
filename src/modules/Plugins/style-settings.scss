@@ -68,14 +68,15 @@
       }
     }
     &.style-settings-container {
-      border: 1px solid rgba(var(--ctp-red), 0.2);
+      border: 1px solid rgba(var(--ctp-mauve), 0.2);
       border-radius: var(--radius-s);
       padding: var(--size-4-2);
       padding-left: var(--size-4-6);
       background-color: rgba(var(--ctp-crust), 0.5);
     }
   }
-  .setting-item-heading[data-id="anuppuccin-extended-colorschemes-link"] {
+  .setting-item-heading[data-id="anuppuccin-extended-colorschemes-link"],
+  .setting-item-heading[data-id="anuppuccin-theme-credits-link"] {
     border-bottom-width: 0px !important;
   }
   &[data-id="anp-rainbow-section-header"],
