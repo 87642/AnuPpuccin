@@ -149,7 +149,8 @@
     --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
     --titlebar-text-color-focused: var(--color-accent);
     --callout-title-padding: var(--size-4-2);
-    --table-border-width: var(--anp-table-thickness, 1px)
+    --table-border-width: var(--anp-table-thickness, 1px);
+    --icon-color-focused: var(--color-accent);
 }
 .theme-dark {
       color-scheme: dark;
