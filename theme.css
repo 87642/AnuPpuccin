@@ -611,6 +611,68 @@ settings:
         title: Enable custom table width
         description: Use anp-table-width for yaml syntax
         type: class-toggle
+    -
+        id: anp-th-highlight
+        title: Th highlight
+        type: class-toggle
+    -
+        id: anp-td-highlight
+        title: Td highlight
+        type: class-select
+        default: anp-td-none
+        allowEmpty: false
+        options:
+            -
+                label: None
+                value: anp-td-none
+            -
+                label: Alternate rows
+                value: anp-td-alt-rows
+            -
+                label: Alternate columns
+                value: anp-td-alt-cols
+            -
+                label: Checkered
+                value: anp-td-checkered
+            -
+                label: Full
+                value: anp-td-full
+    -
+        id: anp-table-align-th
+        title: Th text align
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Center
+                value: center
+            -
+                label: Left
+                value: left
+            -
+                label: Right
+                value: right
+    -
+        id: anp-table-align-td
+        title: Td text align
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Center
+                value: center
+            -
+                label: Left
+                value: left
+            -
+                label: Right
+                value: right
+    -
+        id: anp-table-thickness
+        title: Custom table border width
+        type: variable-number
+        default: 2
+        format: px
     - 
         id: anp-table-width-pct
         title: Custom table width
@@ -1765,16 +1827,37 @@ hr {
 }
 
 /*-Recolor table borders-*/
-.anp-table-toggle .markdown-rendered table {
-  background-color: rgba(var(--ctp-mantle), 0.5);
-}
 .anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
-  text-align: center;
-  border: 2px solid var(--table-border-color);
+  border: var(--anp-table-thickness, 2px) solid var(--table-border-color);
+}
+.anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
+  text-align: var(--anp-table-align-th, center);
+}
+.anp-table-toggle .markdown-rendered td {
+  text-align: var(--anp-table-align-td, center);
 }
 
 .anp-table-toggle .table-view-table > tbody > tr:hover {
   background-color: rgba(var(--ctp-surface1), 0.1) !important;
+}
+
+.anp-table-toggle.anp-th-highlight .markdown-rendered th {
+  background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle.anp-td-alt-rows .markdown-rendered table tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle.anp-td-alt-cols .markdown-rendered table tr td:nth-child(2n) {
+  background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle.anp-td-checkered .markdown-rendered table tr td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-rendered table tr:nth-child(2n) td {
+  background-color: rgba(var(--ctp-mantle), 0.5);
+}
+.anp-table-toggle.anp-td-checkered .markdown-rendered table tr:nth-child(2n) td:nth-child(2n) {
+  background-color: rgba(var(--ctp-crust), 0.5);
+}
+.anp-table-toggle.anp-td-full .markdown-rendered table td {
+  background-color: rgba(var(--ctp-mantle), 0.5);
 }
 
 .anp-table-auto.markdown-rendered table {
@@ -1785,11 +1868,11 @@ hr {
   width: var(--anp-table-width-pct);
 }
 
-.anp-table-auto .markdown-rendered table {
+.anp-table-auto.anp-table-toggle .markdown-rendered table {
   margin: 0 auto;
 }
 
-.anp-table-width .markdown-rendered table {
+.anp-table-width.anp-table-toggle .markdown-rendered table {
   width: var(--anp-table-width-pct);
 }
 
@@ -2925,7 +3008,7 @@ None of the original code was used and the feature was implemented from scratch.
   --button-gray-3: rgb(var(--ctp-crust));
   --button-special-active-bg-color: rgb(var(--ctp-base));
   --dialog-border-color: rgb(var(--ctp-surface1));
-  --focus-highlight-color: rgb(var(--ctp-accent, --ctp-teal));
+  --focus-highlight-color: rgb(var(--ctp-accent, var(--ctp-teal)));
   --icon-fill-color: var(--text-normal);
   --icon-green-fill-color: rgb(var(--ctp-green));
   --default-bg-color: rgb(var(--ctp-base));
@@ -2960,6 +3043,10 @@ None of the original code was used and the feature was implemented from scratch.
 
 [data-type=excalidraw] .view-header {
   margin: 0;
+}
+
+body .excalidraw .library-menu-items-container .library-actions--load, body .excalidraw .library-menu-items-container .library-actions--load:hover {
+  background-color: var(--color-accent);
 }
 
 .obsidian-icon-folder-icon {

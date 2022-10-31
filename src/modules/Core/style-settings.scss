@@ -610,6 +610,68 @@ settings:
         title: Enable custom table width
         description: Use anp-table-width for yaml syntax
         type: class-toggle
+    -
+        id: anp-th-highlight
+        title: Th highlight
+        type: class-toggle
+    -
+        id: anp-td-highlight
+        title: Td highlight
+        type: class-select
+        default: anp-td-none
+        allowEmpty: false
+        options:
+            -
+                label: None
+                value: anp-td-none
+            -
+                label: Alternate rows
+                value: anp-td-alt-rows
+            -
+                label: Alternate columns
+                value: anp-td-alt-cols
+            -
+                label: Checkered
+                value: anp-td-checkered
+            -
+                label: Full
+                value: anp-td-full
+    -
+        id: anp-table-align-th
+        title: Th text align
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Center
+                value: center
+            -
+                label: Left
+                value: left
+            -
+                label: Right
+                value: right
+    -
+        id: anp-table-align-td
+        title: Td text align
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Center
+                value: center
+            -
+                label: Left
+                value: left
+            -
+                label: Right
+                value: right
+    -
+        id: anp-table-thickness
+        title: Custom table border width
+        type: variable-number
+        default: 2
+        format: px
     - 
         id: anp-table-width-pct
         title: Custom table width
