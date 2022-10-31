@@ -2770,7 +2770,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .theme-dark.anp-speech-bubble [data-task="8"],
 .theme-dark.anp-speech-bubble [data-task="9"] {
   --text-normal: var(--background-primary);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, background 0.2s;
 }
 .theme-dark.anp-speech-bubble [data-task="0"]::selection,
 .theme-dark.anp-speech-bubble [data-task="1"]::selection,
@@ -2798,6 +2798,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .anp-speech-bubble .is-live-preview [data-task="9"].cm-active {
   border-radius: 0;
   --text-normal: rgb(var(--ctp-text));
+  background: rgba(var(--ctp-surface1), 0.4);
 }
 
 .anp-speech-bubble [data-task="0"] {
