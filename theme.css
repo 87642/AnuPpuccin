@@ -2868,31 +2868,78 @@ None of the original code was used and the feature was implemented from scratch.
   padding-top: 45px;
 }
 
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"] .setting-item-name {
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="1"].setting-item-heading .setting-item-name {
   color: rgb(var(--ctp-red));
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="1"].style-settings-heading {
-  border-bottom: 1px solid rgba(var(--ctp-red), 0.5);
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="1"].setting-item-heading.style-settings-heading {
+  border-bottom: 1px solid rgba(var(--ctp-red), 0.2);
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="2"] .setting-item-name {
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="1"].setting-item-heading.style-settings-heading:not(.is-collapsed) {
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="1"].style-settings-container {
+  border: 1px solid rgba(var(--ctp-red), 0.2);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-2);
+  padding-left: var(--size-4-6);
+  background-color: rgba(var(--ctp-crust), 0.1);
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="2"].setting-item-heading .setting-item-name {
   color: rgb(var(--ctp-green));
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="2"].style-settings-heading {
-  border-bottom: 1px solid rgba(var(--ctp-green), 0.5);
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="2"].setting-item-heading.style-settings-heading {
+  border-bottom: 1px solid rgba(var(--ctp-green), 0.2);
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="3"] .setting-item-name {
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="2"].setting-item-heading.style-settings-heading:not(.is-collapsed) {
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="2"].style-settings-container {
+  border: 1px solid rgba(var(--ctp-green), 0.2);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-2);
+  padding-left: var(--size-4-6);
+  background-color: rgba(var(--ctp-crust), 0.2);
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="3"].setting-item-heading .setting-item-name {
   color: rgb(var(--ctp-blue));
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="3"].style-settings-heading {
-  border-bottom: 1px solid rgba(var(--ctp-blue), 0.5);
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="3"].setting-item-heading.style-settings-heading {
+  border-bottom: 1px solid rgba(var(--ctp-blue), 0.2);
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="4"] .setting-item-name {
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="3"].setting-item-heading.style-settings-heading:not(.is-collapsed) {
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="3"].style-settings-container {
+  border: 1px solid rgba(var(--ctp-blue), 0.2);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-2);
+  padding-left: var(--size-4-6);
+  background-color: rgba(var(--ctp-crust), 0.35);
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="4"].setting-item-heading .setting-item-name {
   color: rgb(var(--ctp-mauve));
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-level="4"].style-settings-heading {
-  border-bottom: 1px solid rgba(var(--ctp-mauve), 0.5);
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="4"].setting-item-heading.style-settings-heading {
+  border-bottom: 1px solid rgba(var(--ctp-mauve), 0.2);
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-rainbow-section-header], .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-full-rainbow-folder-settings], .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-simple-rainbow-folder-settings] {
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="4"].setting-item-heading.style-settings-heading:not(.is-collapsed) {
+  border-color: transparent;
+  margin-bottom: 0px;
+}
+.anp-plugin-style-settings-header-color .style-settings-container [data-level="4"].style-settings-container {
+  border: 1px solid rgba(var(--ctp-red), 0.2);
+  border-radius: var(--radius-s);
+  padding: var(--size-4-2);
+  padding-left: var(--size-4-6);
+  background-color: rgba(var(--ctp-crust), 0.5);
+}
+.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anuppuccin-extended-colorschemes-link] {
+  border-bottom-width: 0px !important;
+}
+.anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-rainbow-section-header], .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-full-rainbow-folder-settings], .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-simple-rainbow-folder-settings] {
   background: linear-gradient(to right, rgba(var(--ctp-red), 1), rgba(var(--ctp-peach), 1), rgba(var(--ctp-yellow), 1), rgba(var(--ctp-green), 1), rgba(var(--ctp-teal), 1), rgba(var(--ctp-blue), 1), rgba(var(--ctp-mauve), 1), rgba(var(--ctp-pink), 1)) !important;
   padding-bottom: 3px;
   padding-top: 0px;
@@ -2900,13 +2947,13 @@ None of the original code was used and the feature was implemented from scratch.
   border-bottom-width: 0 !important;
   margin-top: 3px;
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-rainbow-section-header] .setting-item-info, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-full-rainbow-folder-settings] .setting-item-info, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-simple-rainbow-folder-settings] .setting-item-info {
+.anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-rainbow-section-header] .setting-item-info, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-info, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-info {
   background-color: var(--background-primary);
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-rainbow-section-header] .setting-item-name, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-full-rainbow-folder-settings] .setting-item-name, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-simple-rainbow-folder-settings] .setting-item-name {
+.anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-rainbow-section-header] .setting-item-name, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-name, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-name {
   line-height: 37px;
 }
-.anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-rainbow-section-header] .setting-item-control, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-full-rainbow-folder-settings] .setting-item-control, .anp-plugin-style-settings-header-color .style-settings-container .setting-item-heading[data-id=anp-simple-rainbow-folder-settings] .setting-item-control {
+.anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-rainbow-section-header] .setting-item-control, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-full-rainbow-folder-settings] .setting-item-control, .anp-plugin-style-settings-header-color .style-settings-container[data-id=anp-simple-rainbow-folder-settings] .setting-item-control {
   background-color: var(--background-primary);
   height: 37px;
 }
@@ -2934,7 +2981,7 @@ None of the original code was used and the feature was implemented from scratch.
   border-radius: 5px;
 }
 .style-settings-heading[data-id=anuppuccin-theme-settings], .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
-  border-color: hsla(var(--color-accent-hsl), 0.5);
+  border-color: hsla(var(--color-accent-hsl), 0.2);
 }
 .style-settings-heading[data-id=anuppuccin-theme-settings] .setting-item-name, .style-settings-heading[data-id=anuppuccin-theme-settings-extended] .setting-item-name {
   color: var(--color-accent);
@@ -2950,7 +2997,7 @@ None of the original code was used and the feature was implemented from scratch.
 }
 
 .anuppuccin-accent-toggle .style-settings-heading[data-id=anuppuccin-theme-settings], .anuppuccin-accent-toggle .style-settings-heading[data-id=anuppuccin-theme-settings-extended] {
-  border-color: rgba(var(--ctp-accent), 0.5);
+  border-color: rgba(var(--ctp-accent), 0.2);
 }
 
 .style-settings-container:empty {
