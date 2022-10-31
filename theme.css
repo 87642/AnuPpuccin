@@ -1297,6 +1297,7 @@ settings:
   --nav-indentation-guide-color: rgba(var(--ctp-crust), 0.4);
   --titlebar-text-color-focused: var(--color-accent);
   --callout-title-padding: var(--size-4-2);
+  --table-border-width: var(--anp-table-thickness, 1px) ;
 }
 
 .theme-dark {
@@ -1828,7 +1829,8 @@ hr {
 
 /*-Recolor table borders-*/
 .anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
-  border: var(--anp-table-thickness, 2px) solid var(--table-border-color);
+  border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
+  --table-border-width: var(--anp-table-thickness, 1px) ;
 }
 .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
   text-align: var(--anp-table-align-th, center);

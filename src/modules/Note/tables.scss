@@ -1,7 +1,7 @@
 /*-Recolor table borders-*/
 .anp-table-toggle .markdown-rendered {
     table, td, th , thead tr > th:first-child, thead tr > th, thead tr > th:last-child {
-        border: var(--anp-table-thickness, 2px) solid var(--table-border-color);
+        border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
     }
     th , thead tr > th:first-child, thead tr > th, thead tr > th:last-child {
         text-align: var(--anp-table-align-th, center);
