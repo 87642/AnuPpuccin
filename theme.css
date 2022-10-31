@@ -1830,7 +1830,6 @@ hr {
 /*-Recolor table borders-*/
 .anp-table-toggle .markdown-rendered table, .anp-table-toggle .markdown-rendered td, .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
   border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
-  --table-border-width: var(--anp-table-thickness, 1px) ;
 }
 .anp-table-toggle .markdown-rendered th, .anp-table-toggle .markdown-rendered thead tr > th:first-child, .anp-table-toggle .markdown-rendered thead tr > th, .anp-table-toggle .markdown-rendered thead tr > th:last-child {
   text-align: var(--anp-table-align-th, center);
@@ -2784,6 +2783,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
 .theme-dark.anp-speech-bubble [data-task="8"]::selection,
 .theme-dark.anp-speech-bubble [data-task="9"]::selection {
   background-color: rgba(var(--ctp-crust), 0.2);
+  background: rgba(var(--ctp-crust), 0.2);
 }
 
 .anp-speech-bubble .is-live-preview [data-task="0"].cm-active,

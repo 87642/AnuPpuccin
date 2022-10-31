@@ -245,6 +245,7 @@ Icons were taken from Font Awesome: https://fontawesome.com/
         --text-normal: var(--background-primary);
         &::selection {
             background-color: rgba(var(--ctp-crust), 0.2);
+            background: rgba(var(--ctp-crust), 0.2);
         }
         transition: background-color 0.2s;
     }
