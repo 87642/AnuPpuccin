@@ -93,10 +93,16 @@
 	&.anp-h6-lavender { --h6-color: rgb(var(--ctp-lavender)); }
 }
 .anp-h1-divider .markdown-rendered h1,
+.anp-h1-divider .HyperMD-header-1,
 .anp-h2-divider .markdown-rendered h2,
+.anp-h2-divider .HyperMD-header-2,
 .anp-h3-divider .markdown-rendered h3,
+.anp-h3-divider .HyperMD-header-3,
 .anp-h4-divider .markdown-rendered h4,
+.anp-h4-divider .HyperMD-header-4,
 .anp-h5-divider .markdown-rendered h5,
+.anp-h5-divider .HyperMD-header-5,
+.anp-h6-divider .HyperMD-header-6,
 .anp-h6-divider .markdown-rendered h6 { border-bottom: var(--hr-thickness) solid var(--background-modifier-border); }
 /*-Source editor recolor application-*/
 .cm-formatting-header-1 { color: var(--h1-color); }
@@ -114,10 +120,11 @@
    margin-block-start: var(--anp-header-margin-value);
   margin-block-end: var(--anp-header-margin-value);
 }
-.anp-header-divider.anp-header-toggle {
-  .markdown-preview-view, .is-live-preview {
-    h1, h2, h3, h4, h5, h6 {
-    	border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
-    }
-	}
+.anp-editor-font-toggle .markdown-source-view {
+	--h1-font: var(--anp-editor-font);
+	--h2-font: var(--anp-editor-font);
+	--h3-font: var(--anp-editor-font);
+	--h4-font: var(--anp-editor-font);
+	--h5-font: var(--anp-editor-font);
+	--h6-font: var(--anp-editor-font);
 }
