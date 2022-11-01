@@ -13,11 +13,10 @@ I've made this theme primarily for my own purposes and it's completely free, but
 
 <details>
 <summary><h2>Installation</h2></summary>
-- Grab the latest release from the <a href="https://github.com/AnubisNekhet/AnuPpuccin/releases/tag/Release">releases</a> page. <br>
-- For latest commits, clone the repo to your obsidian/themes folder. <br>
-<code>
-git clone https://github.com/AnubisNekhet/AnuPpuccin.git
-</code>
+### Normal Installation
+Install from the theme store in Obsidian.
+### Building
+Clone the github repo and run <code>sass src/base.scss theme.css</code> in the root folder.
 </details>
 
 ## Features
