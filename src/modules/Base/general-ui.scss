@@ -26,6 +26,10 @@
 .popover.hover-popover.is-loaded {
   animation: fade .2s;
 }
+.popover .markdown-embed-link {
+  --icon-color: var(--text-normal);
+  --icon-color-hover: var(--text-faint);
+}
 /*-Recolor tooltips-*/
 .tooltip {
   color: rgb(var(--text));

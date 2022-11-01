@@ -19,30 +19,30 @@
 .anp-table-toggle {
     &.anp-th-highlight .markdown-rendered {
         th {
-            background-color: rgba(var(--ctp-mantle), 0.5);
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
     &.anp-td-alt-rows .markdown-rendered {
         table tr:nth-child(2n) td {
-            background-color: rgba(var(--ctp-mantle), 0.5);
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
     &.anp-td-alt-cols .markdown-rendered {
         table tr td:nth-child(2n) {
-            background-color: rgba(var(--ctp-mantle), 0.5);
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
     &.anp-td-checkered .markdown-rendered {
         table tr td:nth-child(2n), table tr:nth-child(2n) td {
-            background-color: rgba(var(--ctp-mantle), 0.5);
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
         table tr:nth-child(2n) td:nth-child(2n) {
-            background-color: rgba(var(--ctp-crust), 0.5);
+            background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
         }
     }
     &.anp-td-full .markdown-rendered {
         table td {
-            background-color: rgba(var(--ctp-mantle), 0.5);
+            background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
 }

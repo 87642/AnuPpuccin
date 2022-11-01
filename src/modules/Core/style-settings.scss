@@ -1070,6 +1070,14 @@ settings:
                 label: Full
                 value: anp-td-full
     -
+        id: anp-table-highlight-opacity
+        title: Highlight opacity
+        default: 0.5
+        type: variable-number-slider
+        min: 0
+        max: 1
+        step: 0.1
+    -
         id: anp-table-align-th
         title: Th text align
         type: variable-select
