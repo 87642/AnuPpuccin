@@ -13,9 +13,9 @@ I've made this theme primarily for my own purposes and it's completely free, but
 
 <details>
 <summary><h2>Installation</h2></summary>
-### Normal Installation
+<h3>Normal Installation</h3>
 Install from the theme store in Obsidian.
-### Building
+<h3>Building</h3>
 Clone the github repo and run <code>sass src/base.scss theme.css</code> in the root folder.
 </details>
 
