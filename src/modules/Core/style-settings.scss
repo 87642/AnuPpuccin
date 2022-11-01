@@ -851,6 +851,13 @@ settings:
         default: 10
         format: px
     - 
+        id: anp-card-header-left-padding
+        title: Tab left padding
+        description: Size unit is px
+        type: variable-number
+        default: 20
+        format: px
+    - 
         id: anp-card-shadows
         title: Enable shadows
         type: class-toggle

@@ -852,6 +852,13 @@ settings:
         default: 10
         format: px
     - 
+        id: anp-card-header-left-padding
+        title: Tab left padding
+        description: Size unit is px
+        type: variable-number
+        default: 20
+        format: px
+    - 
         id: anp-card-shadows
         title: Enable shadows
         type: class-toggle
@@ -1963,7 +1970,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 
 .anp-card-layout .mod-vertical .workspace-tab-header-container {
-  padding-left: 20px;
+  padding-left: var(--anp-card-header-left-padding, 20px);
 }
 
 .anp-card-layout .mod-vertical .workspace-tab-header-container-inner {
@@ -2100,6 +2107,24 @@ body.anp-disable-borders {
 .mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
   margin-top: -24px !important;
   margin-left: 24px !important;
+}
+
+.modal.mod-settings,
+.modal.mod-community-theme,
+.modal.mod-community-plugin {
+  --h1-font: var(--font-interface);
+  --h2-font: var(--font-interface);
+  --h3-font: var(--font-interface);
+  --h4-font: var(--font-interface);
+  --h5-font: var(--font-interface);
+  --h6-font: var(--font-interface);
+  --h1-weight: 600;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
 }
 
 body {
@@ -3750,6 +3775,10 @@ None of the original code was used and the feature was implemented from scratch.
 
 .style-settings-container:empty {
   display: none;
+}
+
+.modal {
+  --h1-font: var(--interface-font);
 }
 
 /*-Fix dataview table header size-*/
