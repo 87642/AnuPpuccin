@@ -32,6 +32,10 @@
     --color-primary-light: rgb(var(--ctp-base));
   }
 }
+.excalidraw-tooltip {
+  background: rgb(var(--ctp-crust)) !important;
+  color: var(--text-normal) !important;
+}
 .excalidraw {
   .ToolIcon--plain,
   .reset-zoom-button,
@@ -39,6 +43,17 @@
   .ToolIcon[aria-label="Zoom out"],
   .ToolIcon[aria-label="Reset the canvas"] {
     background-color: rgb(var(--ctp-crust)) !important;
+  }
+  .Dialog__titleContent {
+    font-family: var(--font-interface) !important;
+    font-variant-caps: normal;
+    --h2-color: var(--color-accent);
+  }
+  .confirm-dialog--confirm.ToolIcon_type_button {
+    background-color: rgb(var(--ctp-red)) !important;
+  }
+  .confirm-dialog--confirm.ToolIcon_type_button .ToolIcon__icon {
+    color: var(--background-primary) !important;
   }
 }
 //Reset excalidraw title margins

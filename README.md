@@ -214,6 +214,7 @@ Note: Themes are toggled via style settings, the default themes are **Latte** fo
 ### Special thanks to:
 - [Chuck Harmston](https://github.com/chuckharmston) for his amazing alternate tabs snippet.
 - [EdualcLaiv](https://github.com/EdualcLaiv)
+- [Paul Ryley](https://github.com/pryley) for his gorgeous numbered codeblock snippet and style inputs on kanban cards and safari-style tabs.
 
 ## Credits and Acknowledgements
 - [@tingmelvin's](https://github.com/tingmelvin) [Willemstad](https://github.com/tingmelvin/willemstad-x) for the inspiration for the [Willemstad callout style](https://github.com/AnubisNekhet/AnuPpuccin/blob/35a707114626223f86967b2fc61bec978e3acd8a/src/modules/Callouts/main.scss#L101)

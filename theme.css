@@ -916,6 +916,10 @@ settings:
         level: 2
         collapsed: true
     - 
+        id: anp-codeblock-numbers
+        title: Enable codeblock numbering
+        type: class-toggle
+    - 
         id: anp-button-metadata-toggle
         title: Enable custom metadata button
         type: class-toggle
@@ -1092,11 +1096,11 @@ settings:
         default: center
         options:
             -
-                label: Center
-                value: center
-            -
                 label: Left
                 value: left
+            -
+                label: Center
+                value: center
             -
                 label: Right
                 value: right
@@ -1107,11 +1111,11 @@ settings:
         default: center
         options:
             -
-                label: Center
-                value: center
-            -
                 label: Left
                 value: left
+            -
+                label: Center
+                value: center
             -
                 label: Right
                 value: right
@@ -1170,6 +1174,64 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        id: anp-safari-tab-radius
+        title: Tab radius
+        type: variable-number
+        description: Size unit is px
+        default: 6
+        format: px
+    -
+        id: anp-safari-tab-gap
+        title: Tab gap
+        type: variable-number
+        description: Size unit is px
+        default: 10
+        format: px
+    -
+        id: anp-safari-border-width
+        title: Tab border width
+        type: variable-number
+        description: Size unit is px
+        default: 1
+        format: px
+    -
+        id: anp-safari-tab-align
+        title: Tab align
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Left
+                value: left
+            -
+                label: Center
+                value: center
+            -
+                label: Right
+                value: right
+    -
+        id: anp-tags-header
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tag-border-width
+        title: Tag border width
+        type: variable-number
+        description: Size unit is px
+        default: 0
+        format: px
+    -
+        id: tag-radius
+        title: Tag radius
+        type: variable-number-slider
+        default: 2
+        max: 2
+        min: 0
+        step: 0.1
+        format: em
     - 
         id: anp-decor-header
         title: Text decorations
@@ -2573,7 +2635,7 @@ span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .ma
   margin-block-end: var(--anp-header-margin-value);
 }
 
-.anp-editor-font-toggle .markdown-source-view {
+.anp-editor-font-toggle .markdown-source-view:not(.is-live-preview) {
   --h1-font: var(--anp-editor-font);
   --h2-font: var(--anp-editor-font);
   --h3-font: var(--anp-editor-font);
@@ -2675,24 +2737,25 @@ hr {
 .anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
 .anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   align-items: center;
-  justify-content: center;
+  justify-content: var(--anp-safari-tab-align, center);
   margin: 0;
   width: 100%;
+  gap: var(--anp-safari-tab-gap, 10px);
 }
 
 .anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header,
 .anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   background: var(--tab-background);
-  border-radius: 6px;
+  border-radius: var(--anp-safari-tab-radius, 6px);
   box-shadow: none !important;
   height: var(--tab-height);
-  margin-left: 12px;
   padding: 0 !important;
   transition: 400ms, background-color 150ms ease-in-out;
 }
 
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
   max-width: var(--tab-max-width) !important;
+  border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
 }
 
 .anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
@@ -3640,6 +3703,41 @@ None of the original code was used and the feature was implemented from scratch.
   padding-top: 45px;
 }
 
+.anp-codeblock-numbers .HyperMD-codeblock-begin {
+  counter-reset: line-numbers;
+}
+
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end) {
+  padding-left: 5em;
+  position: relative;
+}
+
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
+  align-items: flex-end;
+  border-right: 1px solid var(--scrollbar-thumb-bg);
+  color: var(--text-faint);
+  content: counter(line-numbers);
+  counter-increment: line-numbers;
+  display: flex;
+  font-size: 0.8em;
+  height: 100%;
+  justify-content: flex-end;
+  left: 0;
+  padding-right: 0.5em;
+  padding-top: 1px;
+  position: absolute;
+  text-align: right;
+  width: 3em;
+}
+
+.anp-codeblock-numbers .HyperMD-codeblock.cm-line.cm-active:not(.HyperMD-codeblock-begin):not(.HyperMD-codeblock-end)::before {
+  color: var(--color-accent);
+}
+
+.anp-codeblock-numbers .HyperMD-codeblock .cm-foldPlaceholder::before {
+  display: none;
+}
+
 .anp-plugin-style-settings-header-color .style-settings-container [data-level="1"].setting-item-heading .setting-item-name {
   color: rgb(var(--ctp-red));
 }
@@ -3823,6 +3921,10 @@ None of the original code was used and the feature was implemented from scratch.
   padding-bottom: 5px;
   border-radius: 4px;
 }
+.kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
+  color: var(--text-muted);
+  text-decoration-line: line-through;
+}
 
 .theme-dark .excalidraw, .theme-dark .excalidraw.theme--dark, .theme-light .excalidraw, .theme-light .excalidraw.theme--dark {
   --button-destructive-bg-color: rgba(var(--ctp-red), 0.2);
@@ -3857,12 +3959,28 @@ None of the original code was used and the feature was implemented from scratch.
   --color-primary-light: rgb(var(--ctp-base));
 }
 
+.excalidraw-tooltip {
+  background: rgb(var(--ctp-crust)) !important;
+  color: var(--text-normal) !important;
+}
+
 .excalidraw .ToolIcon--plain,
 .excalidraw .reset-zoom-button,
 .excalidraw .ToolIcon[aria-label="Zoom in"],
 .excalidraw .ToolIcon[aria-label="Zoom out"],
 .excalidraw .ToolIcon[aria-label="Reset the canvas"] {
   background-color: rgb(var(--ctp-crust)) !important;
+}
+.excalidraw .Dialog__titleContent {
+  font-family: var(--font-interface) !important;
+  font-variant-caps: normal;
+  --h2-color: var(--color-accent);
+}
+.excalidraw .confirm-dialog--confirm.ToolIcon_type_button {
+  background-color: rgb(var(--ctp-red)) !important;
+}
+.excalidraw .confirm-dialog--confirm.ToolIcon_type_button .ToolIcon__icon {
+  color: var(--background-primary) !important;
 }
 
 [data-type=excalidraw] .view-header {
