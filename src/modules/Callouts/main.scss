@@ -83,7 +83,7 @@ None of the code was used, and the callout was written from scratch.
       padding: 0px;
       .callout-title {
         background-color: rgba(var(--callout-color), 0.1);
-        padding: var(--callout-title-padding) 0px var(--callout-title-padding) var(--callout-title-padding);
+        padding: var(--callout-title-padding);
         border-color: rgba(var(--callout-color), 0.4);
       }
     }

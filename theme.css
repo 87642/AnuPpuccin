@@ -2075,6 +2075,28 @@ body.anp-disable-borders {
   background-color: var(--tab-container-background);
 }
 
+.markdown-rendered.rtl .list-bullet {
+  float: right;
+  margin-right: -12px;
+}
+.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header {
+  left: unset;
+  right: calc(100% - 32px);
+}
+.anp-button-metadata-toggle .markdown-rendered.rtl .frontmatter-container .frontmatter-container-header:after {
+  margin-left: unset;
+  margin-right: 7px;
+}
+.markdown-rendered.rtl blockquote {
+  border-right: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  border-left: none;
+}
+.markdown-rendered.rtl .collapse-indicator {
+  float: right;
+  margin-left: unset;
+  margin-right: -22px;
+}
+
 .mod-community-theme summary h1:first-child, .mod-community-theme summary h2:first-child, .mod-community-theme summary h3:first-child, .mod-community-theme summary h4:first-child, .mod-community-theme summary h5:first-child, .mod-community-theme summary h6:first-child {
   margin-top: -24px !important;
   margin-left: 24px !important;
@@ -2820,7 +2842,7 @@ None of the code was used, and the callout was written from scratch.
 }
 .anp-callout-toggle.anp-callout-sleek .callout:not(.is-collapsible) .callout-title {
   background-color: rgba(var(--callout-color), 0.1);
-  padding: var(--callout-title-padding) 0px var(--callout-title-padding) var(--callout-title-padding);
+  padding: var(--callout-title-padding);
   border-color: rgba(var(--callout-color), 0.4);
 }
 .anp-callout-toggle.anp-callout-sleek .callout .list-collapse-indicator {
