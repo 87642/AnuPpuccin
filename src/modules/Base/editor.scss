@@ -23,3 +23,19 @@
 .ͼ2 .cm-specialChar {
   color: rgb(var(--ctp-red));
 }
+/*-Block edit button-*/
+.markdown-source-view.mod-cm6 .edit-block-button {
+  background-color: var(--background-secondary);
+  cursor: pointer;
+  border: 1px solid var(--background-modifer-border);
+  &:hover {
+    background-color: var(--background-secondary);
+  background-color: var(--background-secondary);
+    opacity: 1;
+  }
+}
+.markdown-source-view.mod-cm6 .cm-embed-block:hover .edit-block-button:hover {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--background-modifer-border);
+  opacity: 1;
+}
