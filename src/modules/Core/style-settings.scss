@@ -844,6 +844,13 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: anp-card-radius
+        title: Card radius
+        description: Size unit is px
+        type: variable-number
+        default: 16
+        format: px
+    - 
         id: anp-card-layout-padding
         title: Card padding
         description: Size unit is px

@@ -39,13 +39,13 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     padding: var(--ribbon-padding);
 }
 .anp-card-layout-actions.anp-card-layout .side-dock-actions {
-    border-radius: 0px var(--radius-xl) var(--radius-xl) 0px;
+    border-radius: 0px var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0px;
     border: 1px solid var(--tab-outline-color);
     background-color: var(--background-primary);
     margin-top: 2px
 }
 .anp-card-layout-actions.anp-card-layout .side-dock-settings {
-    border-radius: 0px var(--radius-xl) 0px 0px;
+    border-radius: 0px var(--anp-card-radius, var(--radius-xl)) 0px 0px;
     border: 1px solid var(--tab-outline-color);
     background-color: var(--background-primary);
 }
@@ -87,7 +87,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     border-width: 2px;
 }
 .anp-card-layout .workspace-split .workspace-leaf-content {
-    border-radius: var(--radius-xl);
+    border-radius: var(--anp-card-radius, var(--radius-xl));
     background-color: var(--background-primary);
     border: 1px solid var(--tab-outline-color);
     margin-bottom: var(--anp-card-layout-padding, 10px);
@@ -118,7 +118,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
 }
 .anp-card-layout .mod-stacked .workspace-tab-header {
     border-style: solid;
-    border-radius: var(--radius-xl) 0px 0px var(--radius-xl) !important;
+    border-radius: var(--anp-card-radius, var(--radius-xl)) 0px 0px var(--anp-card-radius, var(--radius-xl)) !important;
     border-width: var(--tab-outline-width);
     border-color: var(--tab-outline-color);
     border-right: var(--tab-outline-width) dashed var(--tab-outline-color);
@@ -129,7 +129,7 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
     border-bottom-width: var(--tab-outline-width);
     border-style: solid;
     border-color: var(--tab-outline-color);
-    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+    border-radius: 0 var(--anp-card-radius, var(--radius-xl)) var(--anp-card-radius, var(--radius-xl)) 0;
 }
 .anp-card-layout .mod-stacked .workspace-tab-container {
     padding-bottom: var(--anp-card-layout-padding, 10px);
