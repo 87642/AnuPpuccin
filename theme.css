@@ -1889,6 +1889,20 @@ body {
   opacity: 1;
 }
 
+/*-Vim Terminal-*/
+.ͼ2 .cm-panels-bottom {
+  border-top: 1px solid rgb(var(--ctp-surface1));
+}
+.ͼ2 .cm-panels-bottom input {
+  background-color: transparent;
+  font-family: var(--font-monospace);
+  width: 100%;
+}
+.ͼ2 .cm-panels-bottom input:hover, .ͼ2 .cm-panels-bottom input:focus, .ͼ2 .cm-panels-bottom input:focus-visible {
+  border: none;
+  box-shadow: none;
+}
+
 /*----------FILE PREVIEW MARGINS--------------*/
 .anp-toggle-preview .markdown-preview-section {
   width: var(--anp-preview-width-pct);
@@ -2260,6 +2274,20 @@ body.is-translucent {
 /*-Blockquote spacing-*/
 .markdown-rendered blockquote {
   padding: 5px 5px 5px 10px;
+}
+
+.anp-list-toggle ul.has-list-bullet > li > ul.has-list-bullet > li .list-bullet::after {
+  border: 1px solid var(--list-marker-color);
+  background-color: transparent;
+  width: calc(var(--list-bullet-size) - 1px);
+  height: calc(var(--list-bullet-size) - 1px);
+}
+.anp-list-toggle ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li .list-bullet::after {
+  border-radius: 0;
+  background-color: var(--list-marker-color);
+}
+.anp-list-toggle ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li > ul.has-list-bullet > li .list-bullet::after {
+  background-color: transparent;
 }
 
 /*-Decorations for bold and italics-*/
