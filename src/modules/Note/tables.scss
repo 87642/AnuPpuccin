@@ -1,5 +1,5 @@
 /*-Recolor table borders-*/
-.anp-table-toggle .markdown-rendered {
+.anp-table-toggle .markdown-rendered:not(.cards) {
     table, td, th , thead tr > th:first-child, thead tr > th, thead tr > th:last-child {
         border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
     }
@@ -17,22 +17,22 @@
   }
 }
 .anp-table-toggle {
-    &.anp-th-highlight .markdown-rendered {
+    &.anp-th-highlight .markdown-rendered:not(.cards) {
         th {
             background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
-    &.anp-td-alt-rows .markdown-rendered {
+    &.anp-td-alt-rows .markdown-rendered:not(.cards) {
         table tr:nth-child(2n) td {
             background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
-    &.anp-td-alt-cols .markdown-rendered {
+    &.anp-td-alt-cols .markdown-rendered:not(.cards) {
         table tr td:nth-child(2n) {
             background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
-    &.anp-td-checkered .markdown-rendered {
+    &.anp-td-checkered .markdown-rendered:not(.cards) {
         table tr td:nth-child(2n), table tr:nth-child(2n) td {
             background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
@@ -40,23 +40,47 @@
             background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
         }
     }
-    &.anp-td-full .markdown-rendered {
+    &.anp-td-full .markdown-rendered:not(.cards) {
         table td {
             background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
         }
     }
 }
-.anp-table-auto.markdown-rendered table {
+.anp-table-auto.markdown-rendered:not(.cards) table {
     margin: 0 auto;
 }
-.anp-table-width.markdown-rendered table {
+.anp-table-width.markdown-rendered:not(.cards) table {
     width: var(--anp-table-width-pct);
 }
-.anp-table-auto.anp-table-toggle .markdown-rendered table {
+.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards) table {
     margin: 0 auto;
 }
-.anp-table-width.anp-table-toggle .markdown-rendered table {
+.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards) table {
     width: var(--anp-table-width-pct);
     margin-left: calc(50% - var(--anp-table-width-pct)/2);
     margin-right: calc(50% - var(--anp-table-width-pct)/2);
+}
+/*-------Tweak for Minimal Cards--------------
+Minimal cards are a snippet designed by Kepano for the Minimal theme.
+None of the original code was used in this theme, and the following code is merely some tweaks to the snippet.
+--------------------------------------------*/
+.cards {
+    .table-view-table {
+        > tbody > tr> td {
+            border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+            &:last-child {
+                border-bottom-color: transparent !important;
+            }
+            &:first-child {
+                    width: 100% !important;
+            border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+                span {
+                    margin: 2px calc(var(--cards-padding)*0.5) 0 calc(var(--cards-padding)*0.5);
+                    a {
+                    padding: 0 !important;
+                    }
+                }
+            }
+        }
+    }
 }
