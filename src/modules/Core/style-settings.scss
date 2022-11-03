@@ -273,11 +273,10 @@ settings:
         format: px
     - 
         id: anp-tab-stacked-pane-width
-        title: Stacked tabs pane width
-        description: In percentage
+        title: Stacked tabs pane width multiplier
+        description: Multiplies the stack tab pane with which depends on file line width
         type: variable-number
-        default: 100
-        format: "%"
+        default: 1
     - 
         id: anp-ui-header
         title: General UI
