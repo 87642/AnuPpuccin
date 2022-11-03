@@ -2852,14 +2852,14 @@ None of the original code was used in this theme, and the following code is mere
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 }
 .cards .table-view-table > tbody > tr > td {
-  border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+  border-bottom: 1px dashed var(--background-modifier-border) !important;
 }
 .cards .table-view-table > tbody > tr > td:last-child {
   border-bottom-color: transparent !important;
 }
 .cards .table-view-table > tbody > tr > td:first-child {
   width: 100% !important;
-  border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+  border-bottom: 1px dashed var(--background-modifier-border) !important;
 }
 .cards .table-view-table > tbody > tr > td:first-child span {
   margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5);

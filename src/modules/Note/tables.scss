@@ -100,13 +100,13 @@ None of the original code was used in this theme, and the following code is mere
     .table-view-table {
         --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
         > tbody > tr> td {
-            border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+            border-bottom: 1px dashed var(--background-modifier-border) !important;
             &:last-child {
                 border-bottom-color: transparent !important;
             }
             &:first-child {
                     width: 100% !important;
-            border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
+            border-bottom: 1px dashed var(--background-modifier-border) !important;
                 span {
                     margin: 2px calc(var(--cards-padding)*0.5) 0 calc(var(--cards-padding)*0.5);
                     a {
