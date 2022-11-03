@@ -944,7 +944,7 @@ settings:
         type: class-toggle
     - 
         id: anp-plugin-header
-        title: Plugin integrations
+        title: "Plugin/Snippet integrations"
         type: heading
         level: 2
         collapsed: true
@@ -955,6 +955,52 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: anp-snippet-minimal-cards
+        title: Minimal Cards
+        description: "The snippet is available at: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: cards-min-width
+        title: Card minimum width
+        type: variable-text
+        default: 180px
+    -
+        id: cards-max-width
+        title: Card maximum width
+        description: Default fills the available width, accepts valid CSS units
+        type: variable-text
+        default: 1fr
+    -
+        id: cards-mobile-width
+        title: Card minimum width on mobile
+        type: variable-text
+        default: 120px
+    -
+        id: cards-padding
+        title: Card padding
+        type: variable-text
+        default: 1.2em
+    -
+        id: cards-image-height
+        title: Card maximum image height
+        type: variable-text
+        default: 400px
+    -
+        id: cards-border-width
+        title: Card border width
+        type: variable-text
+        default: 1px
+    -
+        id: cards-background
+        title: Card background color
+        type: variable-themed-color
+        format: "rgb-values"
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+    -
         id: anp-rainbow-section-header
         title: Rainbow folder
         type: heading
@@ -1785,7 +1831,6 @@ settings:
   --background-modifier-error: rgba(var(--ctp-red), 1);
   --background-modifier-error-rgb: var(--ctp-red);
   --background-modifier-error-hover: rgba(var(--ctp-red), 0.9);
-  --background-modifier-cover: rgba(var(--ctp-mantle), 0.4);
   --background-modifier-message: rgba(var(--ctp-crust), 0.9);
   --modal-border-color:rgb(var(--ctp-surface0));
   --text-normal: rgb(var(--ctp-text));
@@ -1821,6 +1866,7 @@ settings:
   --background-modifier-border-hover: rgb(var(--ctp-surface1));
   --background-modifier-border-focus: rgb(var(--ctp-surface2));
   --anp-speech-bubble-opacity: var(--anp-sp-op-dark, 0.9);
+  --background-modifier-cover: rgba(var(--ctp-mantle), 0.4);
 }
 
 .theme-light {
@@ -1830,6 +1876,7 @@ settings:
   --background-modifier-border-hover: rgb(var(--ctp-surface2));
   --background-modifier-border-focus: rgb(var(--ctp-overlay0));
   --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
+  --background-modifier-cover: #00000022 ;
 }
 
 body {
@@ -1900,6 +1947,10 @@ body {
 .ͼ2 .cm-panels-bottom input:hover, .ͼ2 .cm-panels-bottom input:focus, .ͼ2 .cm-panels-bottom input:focus-visible {
   border: none;
   box-shadow: none;
+}
+
+.ͼp .cm-vim-panel {
+  font-family: var(--font-monospace);
 }
 
 /*----------FILE PREVIEW MARGINS--------------*/
@@ -2704,52 +2755,90 @@ hr {
 }
 
 /*-Recolor table borders-*/
-.anp-table-toggle .markdown-rendered:not(.cards) table, .anp-table-toggle .markdown-rendered:not(.cards) td, .anp-table-toggle .markdown-rendered:not(.cards) th, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th:first-child, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th:last-child {
+.anp-table-toggle .markdown-preview-view:not(.cards) table,
+.anp-table-toggle .markdown-preview-view:not(.cards) table td,
+.anp-table-toggle .markdown-preview-view:not(.cards) table th,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table td,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table th,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th:last-child,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview),
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) td,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) th,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th:last-child {
   border: var(--anp-table-thickness, 1px) solid var(--table-border-color);
 }
-.anp-table-toggle .markdown-rendered:not(.cards) th, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th:first-child, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th, .anp-table-toggle .markdown-rendered:not(.cards) thead tr > th:last-child {
+.anp-table-toggle .markdown-preview-view:not(.cards) table th,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th,
+.anp-table-toggle .markdown-preview-view:not(.cards) table thead tr > th:last-child,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table th,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th:first-child,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table thead tr > th:last-child,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) th,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th:first-child,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) thead tr > th:last-child {
   text-align: var(--anp-table-align-th, center);
 }
-.anp-table-toggle .markdown-rendered:not(.cards) td {
+.anp-table-toggle .markdown-preview-view:not(.cards) table td,
+.anp-table-toggle .markdown-preview-view.cards table:not(.dataview) .anp-table-toggle .is-live-preview:not(.cards) table td,
+.anp-table-toggle .is-live-preview.cards table:not(.dataview) td {
   text-align: var(--anp-table-align-td, center);
 }
 
-.anp-table-toggle .table-view-table > tbody > tr:hover {
+.anp-table-toggle table.dataview.table-view-table > tbody > tr:hover {
   background-color: rgba(var(--ctp-surface1), 0.1) !important;
 }
 
-.anp-table-toggle.anp-th-highlight .markdown-rendered:not(.cards) th {
+.anp-table-toggle.anp-th-highlight .markdown-preview-view:not(.cards) th, .anp-table-toggle.anp-th-highlight .markdown-preview-view.cards table:not(.dataview) th, .anp-table-toggle.anp-th-highlight .is-live-preview:not(.cards) th, .anp-table-toggle.anp-th-highlight .is-live-preview.cards table:not(.dataview) th {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-rows .markdown-rendered:not(.cards) table tr:nth-child(2n) td {
+.anp-table-toggle.anp-td-alt-rows .markdown-preview-view:not(.cards) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .markdown-preview-view.cards table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview:not(.cards) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-alt-rows .is-live-preview.cards table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-alt-cols .markdown-rendered:not(.cards) table tr td:nth-child(2n) {
+.anp-table-toggle.anp-td-alt-cols .markdown-preview-view:not(.cards) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .markdown-preview-view.cards table:not(.dataview) tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview:not(.cards) table tr td:nth-child(2n), .anp-table-toggle.anp-td-alt-cols .is-live-preview.cards table:not(.dataview) tr td:nth-child(2n) {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-rendered:not(.cards) table tr td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-rendered:not(.cards) table tr:nth-child(2n) td {
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards) table tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .markdown-preview-view.cards table:not(.dataview) tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards) table tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards) table tr:nth-child(2n) td, .anp-table-toggle.anp-td-checkered .is-live-preview.cards table:not(.dataview) tr td:nth-child(2n),
+.anp-table-toggle.anp-td-checkered .is-live-preview.cards table:not(.dataview) tr:nth-child(2n) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-checkered .markdown-rendered:not(.cards) table tr:nth-child(2n) td:nth-child(2n) {
+.anp-table-toggle.anp-td-checkered .markdown-preview-view:not(.cards) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .markdown-preview-view.cards table:not(.dataview) tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview:not(.cards) table tr:nth-child(2n) td:nth-child(2n), .anp-table-toggle.anp-td-checkered .is-live-preview.cards table:not(.dataview) tr:nth-child(2n) td:nth-child(2n) {
   background-color: rgba(var(--ctp-crust), var(--anp-table-highlight-opacity, 0.5));
 }
-.anp-table-toggle.anp-td-full .markdown-rendered:not(.cards) table td {
+.anp-table-toggle.anp-td-full .markdown-preview-view:not(.cards) table td, .anp-table-toggle.anp-td-full .markdown-preview-view.cards table:not(.dataview) td, .anp-table-toggle.anp-td-full .is-live-preview:not(.cards) table td, .anp-table-toggle.anp-td-full .is-live-preview.cards table:not(.dataview) td {
   background-color: rgba(var(--ctp-mantle), var(--anp-table-highlight-opacity, 0.5));
 }
 
-.anp-table-auto.markdown-rendered:not(.cards) table {
+.anp-table-auto.markdown-rendered:not(.cards) table,
+.anp-table-auto.markdown-rendered.cards table:not(.dataview) {
   margin: 0 auto;
 }
 
-.anp-table-width.markdown-rendered:not(.cards) table {
+.anp-table-width.markdown-rendered:not(.cards) table,
+.anp-table-width.markdown-rendered.cards table:not(.dataview) {
   width: var(--anp-table-width-pct);
 }
 
-.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards) table {
+.anp-table-auto.anp-table-toggle .markdown-rendered:not(.cards) table,
+.anp-table-auto.anp-table-toggle .markdown-rendered.cards table:not(.dataview) {
   margin: 0 auto;
 }
 
-.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards) table {
+.anp-table-width.anp-table-toggle .markdown-rendered:not(.cards) table,
+.anp-table-width.anp-table-toggle .markdown-rendered.cards table:not(.dataview) {
   width: var(--anp-table-width-pct);
   margin-left: calc(50% - var(--anp-table-width-pct) / 2);
   margin-right: calc(50% - var(--anp-table-width-pct) / 2);
@@ -2774,6 +2863,21 @@ None of the original code was used in this theme, and the following code is mere
 }
 .cards .table-view-table > tbody > tr > td:first-child span a {
   padding: 0 !important;
+}
+
+.cards.cards-bookmark .table-view-table .table-view-tbody tr::after {
+  content: " ";
+  width: 25px;
+  height: 25px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--!  --%3E%3Cpath d='M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--color-accent);
+  position: absolute;
+  margin-top: calc(-2px + -1 * var(--cards-border-width));
+  margin-left: 5px;
+}
+.cards.cards-bookmark .table-view-table tbody tr > td:first-child span {
+  margin: 2px calc(var(--cards-padding) * 0.5) 0 calc(var(--cards-padding) * 0.5 + 20px);
 }
 
 .anp-alternate-tab-toggle, .anp-default-tab {
@@ -2829,7 +2933,7 @@ None of the original code was used in this theme, and the following code is mere
 }
 
 .anp-alternate-tab-toggle.anp-alt-tab-anim-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
-  transition: 400ms;
+  transition: 400ms, background-color 150ms ease-in-out;
 }
 
 .anp-alternate-tab-toggle .workspace-tabs:not(.mod-stacked) .workspace-tab-header:first-child {
@@ -2842,7 +2946,7 @@ None of the original code was used in this theme, and the following code is mere
 
 .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
-  transition: 400ms;
+  transition: 400ms, background-color 150ms ease-in-out;
 }
 .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
   color: var(--text-muted);

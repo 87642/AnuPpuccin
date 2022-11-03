@@ -943,7 +943,7 @@ settings:
         type: class-toggle
     - 
         id: anp-plugin-header
-        title: Plugin integrations
+        title: "Plugin/Snippet integrations"
         type: heading
         level: 2
         collapsed: true
@@ -954,6 +954,52 @@ settings:
         level: 3
         collapsed: true
     - 
+        id: anp-snippet-minimal-cards
+        title: Minimal Cards
+        description: "The snippet is available at: https://github.com/kepano/obsidian-minimal/blob/master/src/scss/features/cards.scss"
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: cards-min-width
+        title: Card minimum width
+        type: variable-text
+        default: 180px
+    -
+        id: cards-max-width
+        title: Card maximum width
+        description: Default fills the available width, accepts valid CSS units
+        type: variable-text
+        default: 1fr
+    -
+        id: cards-mobile-width
+        title: Card minimum width on mobile
+        type: variable-text
+        default: 120px
+    -
+        id: cards-padding
+        title: Card padding
+        type: variable-text
+        default: 1.2em
+    -
+        id: cards-image-height
+        title: Card maximum image height
+        type: variable-text
+        default: 400px
+    -
+        id: cards-border-width
+        title: Card border width
+        type: variable-text
+        default: 1px
+    -
+        id: cards-background
+        title: Card background color
+        type: variable-themed-color
+        format: "rgb-values"
+        opacity: false
+        default-light: '#'
+        default-dark: '#'
+    -
         id: anp-rainbow-section-header
         title: Rainbow folder
         type: heading

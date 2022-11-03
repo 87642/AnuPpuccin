@@ -125,7 +125,6 @@
     --background-modifier-error: rgba(var(--ctp-red), 1);
     --background-modifier-error-rgb: var(--ctp-red);
     --background-modifier-error-hover: rgba(var(--ctp-red), 0.9);
-    --background-modifier-cover: rgba(var(--ctp-mantle), 0.4);
     --background-modifier-message: rgba(var(--ctp-crust), 0.9);
     --modal-border-color:rgb(var(--ctp-surface0));
     --text-normal: rgb(var(--ctp-text));
@@ -160,6 +159,7 @@
     --background-modifier-border-hover: rgb(var(--ctp-surface1));
     --background-modifier-border-focus: rgb(var(--ctp-surface2));
     --anp-speech-bubble-opacity: var(--anp-sp-op-dark, 0.9);
+    --background-modifier-cover: rgba(var(--ctp-mantle), 0.4);
 }
 .theme-light {
       color-scheme: light;
@@ -168,6 +168,7 @@
     --background-modifier-border-hover: rgb(var(--ctp-surface2));
     --background-modifier-border-focus: rgb(var(--ctp-overlay0));
     --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
+    --background-modifier-cover: #00000022
 }
 body {
   --anp-rainbow-folder-bg-opacity: 1;
