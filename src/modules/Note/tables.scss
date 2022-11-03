@@ -23,7 +23,7 @@
     }
 }
 //dataview table
-.anp-table-toggle table.dataview.table-view-table {
+table.dataview.table-view-table {
    > tbody > tr:hover {
     background-color: rgba(var(--ctp-surface1), 0.1) !important;
   }
@@ -98,6 +98,7 @@ None of the original code was used in this theme, and the following code is mere
 --------------------------------------------*/
 .cards {
     .table-view-table {
+        --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
         > tbody > tr> td {
             border-bottom: 1px dashed rgba(var(--ctp-subtext0), 0.2) !important;
             &:last-child {
