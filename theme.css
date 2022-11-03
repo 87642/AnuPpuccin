@@ -1840,7 +1840,7 @@ body {
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 10px;
   --anp-header-font: "Noto Serif";
-  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width)*var(--file-line-width));
+  --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1)*var(--file-line-width));
   --anp-table-width-pct: 100%;
 }
 
