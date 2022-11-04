@@ -993,14 +993,6 @@ settings:
         type: variable-text
         default: 1px
     -
-        id: cards-background
-        title: Card background color
-        type: variable-themed-color
-        format: "rgb-values"
-        opacity: false
-        default-light: '#'
-        default-dark: '#'
-    -
         id: anp-rainbow-section-header
         title: Rainbow folder
         type: heading
@@ -1959,6 +1951,28 @@ body {
   margin: 0 auto;
 }
 
+/*---------------HIGHLIGHTS-----------------*/
+.markdown-rendered .search-highlight > div {
+  box-shadow: none;
+  opacity: 0.3;
+  background-color: rgba(var(--ctp-text), 0.4);
+  mix-blend-mode: var(--highlight-mix-blend-mode);
+  border-radius: 2px;
+}
+
+.markdown-rendered .search-highlight > div.is-active {
+  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
+  background-color: rgba(var(--ctp-yellow), 0.2);
+  opacity: 1;
+}
+
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  box-shadow: 0 0 0px 2px rgba(var(--ctp-yellow), 0.5);
+  background-color: rgba(var(--ctp-yellow), 0.2);
+  mix-blend-mode: var(--highlight-mix-blend-mode);
+  border-radius: 2px;
+}
+
 /*-Slider checkboxes-*/
 .checkbox-container.is-enabled:after {
   background-color: var(--background-primary);
@@ -2698,6 +2712,7 @@ span[alt=anp-embed] .markdown-embed .markdown-embed-title, .anp-embed-toggle .ma
 .anp-h6-divider .HyperMD-header-6,
 .anp-h6-divider .markdown-rendered h6 {
   border-bottom: var(--hr-thickness) solid var(--background-modifier-border);
+  padding-bottom: 2px;
 }
 
 /*-Source editor recolor application-*/
@@ -3253,8 +3268,8 @@ None of the original code was used in this theme, and the following code is mere
 .cards .table-view-table > tbody > tr > td:first-child span a {
   padding: 0 !important; /*-0 padding on link-*/
 }
-.cards:not(.cards-cols-1):not(.cards-cols-2):not(.cards-cols-3):not(.cards-cols-4):not(.cards-cols-5):not(.cards-cols-6):not(.cards-cols-7):not(.cards-cols-8) {
-  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); /*-force card width to be obeyed-*/
+.cards:not([class*=cards-cols-]) {
+  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); /*-force card width to be obeyed on notes not having cards-cols css class-*/
 }
 
 .cards.cards-bookmark .table-view-table .table-view-tbody tr::after {
@@ -4344,7 +4359,8 @@ body .excalidraw .library-menu-items-container .library-actions--load, body .exc
   --italic-color: var(--text-normal) !important;
 }
 
-.decorations-normal-toggle.markdown-rendered .table-view-table {
+.decorations-normal-toggle.markdown-rendered .table-view-table,
+.decorations-normal-toggle.is-live-preview .table-view-table {
   --bold-color: var(--text-muted) !important;
   --italic-color: var(--text-muted) !important;
 }

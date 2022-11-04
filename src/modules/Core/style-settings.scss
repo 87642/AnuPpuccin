@@ -992,14 +992,6 @@ settings:
         type: variable-text
         default: 1px
     -
-        id: cards-background
-        title: Card background color
-        type: variable-themed-color
-        format: "rgb-values"
-        opacity: false
-        default-light: '#'
-        default-dark: '#'
-    -
         id: anp-rainbow-section-header
         title: Rainbow folder
         type: heading
