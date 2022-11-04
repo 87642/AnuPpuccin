@@ -1191,8 +1191,11 @@ settings:
                 label: Minimalistic
                 value: anp-mini-tab-toggle
             - 
-                label: Safari-style
+                label: Safari-style (Animated)
                 value: anp-alternate-tab-toggle
+            - 
+                label: Safari-style (Vanilla)
+                value: anp-safari-tab-toggle
     - 
         id: anp-alt-tab-custom-height
         title: Custom tab height
@@ -1210,6 +1213,16 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    - 
+        id: anp-safari-vanilla-tab-header
+        title: Vanilla Safari-style Tab settings
+        type: heading
+        level: 3
+        collapsed: true
+    - 
+        id: anp-safari-tab-animated
+        title: Enable WIP animated safari tabs
+        type: class-toggle
     - 
         id: anp-safari-tab-header
         title: Safari-style Tab settings
