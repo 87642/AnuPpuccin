@@ -1201,6 +1201,10 @@ settings:
         default: 40
         format: px
     - 
+        id: anp-disable-newtab-align
+        title: Disable new tab button right alignment
+        type: class-toggle
+    - 
         id: anp-mini-tab-header
         title: Minimalistic Tab settings
         type: heading

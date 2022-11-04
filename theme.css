@@ -1202,6 +1202,10 @@ settings:
         default: 40
         format: px
     - 
+        id: anp-disable-newtab-align
+        title: Disable new tab button right alignment
+        type: class-toggle
+    - 
         id: anp-mini-tab-header
         title: Minimalistic Tab settings
         type: heading
@@ -2859,6 +2863,13 @@ table.dataview.table-view-table > tbody > tr:hover {
   margin-right: calc(50% - var(--anp-table-width-pct) / 2);
 }
 
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-tab-header-spacer {
+  display: none;
+}
+body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-tab-header-new-tab {
+  margin-left: auto;
+}
+
 .anp-alternate-tab-toggle, .anp-default-tab {
   --header-height: var(--anp-alt-tab-custom-height, 40px);
   --tab-stacked-header-width: var(--anp-stacked-header-width, 40px);
@@ -2893,6 +2904,12 @@ table.dataview.table-view-table > tbody > tr:hover {
   justify-content: var(--anp-safari-tab-align, center);
   margin: 0;
   width: 100%;
+  gap: var(--anp-safari-tab-gap, 10px);
+}
+
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-vertical:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner,
+.anp-disable-newtab-align.anp-alternate-tab-toggle .mod-horizontal:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+  width: unset;
   gap: var(--anp-safari-tab-gap, 10px);
 }
 
