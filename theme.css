@@ -2176,18 +2176,17 @@ body.is-focused.anp-card-layout .workspace-tabs.mod-top {
   margin-bottom: var(--anp-card-layout-padding, 10px);
 }
 
-.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content {
-  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
+.anp-card-layout.anp-card-shadows .workspace-split .workspace-leaf-content, .anp-card-layout.anp-card-shadows .side-dock-actions {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
+}
+.anp-card-layout.anp-card-shadows.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
+  box-shadow: 0 3px 4px 0px rgba(0, 0, 0, 0.05);
 }
 
 .anp-card-layout .workspace-split .workspace-leaf-content[data-type=file-explorer] {
   background-color: var(--tab-container-background);
   box-shadow: none;
   border-width: 0px;
-}
-
-.anp-card-layout.anp-card-layout-filebrowser.anp-card-shadows .workspace-split .workspace-leaf-content[data-type=file-explorer] {
-  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .anp-card-layout.anp-card-layout-filebrowser .workspace-split .workspace-leaf-content[data-type=file-explorer] {
@@ -2924,7 +2923,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-ta
 }
 
 .anp-alternate-tab-toggle .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
-  max-width: var(--tab-max-width) !important;
+  max-width: var(--tab-max-width);
   border: var(--anp-safari-border-width, 1px) solid var(--tab-outline-color);
 }
 
@@ -2942,7 +2941,7 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-ta
 
 .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner {
   padding: 0 4px 0 8px;
-  transition: 400ms, background-color 150ms ease-in-out;
+  transition: 400ms, background-color 150ms ease-in-out, max-width 400ms;
 }
 .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-close-button, .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
   color: var(--text-muted);
@@ -2953,8 +2952,8 @@ body:not(.anp-alternate-tab-toggle):not(.anp-disable-newtab-align) .workspace-ta
 }
 
 .anp-alternate-tab-toggle .mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
-  flex-grow: 1.67 !important;
-  max-width: var(--tab-max-width-active) !important;
+  flex-grow: 1.67;
+  max-width: var(--tab-max-width-active);
   background-color: var(--background-primary);
 }
 
